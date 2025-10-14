@@ -5,7 +5,6 @@ if (unsafeWindow.d20plus) {
 }
 
 unsafeWindow.d20plus = {};
-
 const betteR20Base = function () {
 	/* eslint-disable */
 	CONSOLE_LOG = console.log;

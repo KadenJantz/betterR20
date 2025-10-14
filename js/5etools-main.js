@@ -281,6 +281,15 @@ const betteR205etoolsMain = function () {
 			"macro": "",
 			"spellDc": "@{spell_save_dc}",
 		},
+		"2024": {
+			"cr": "@{npc_challenge}",
+			"ac": "@{ac}",
+			"npcac": "@{npc_ac}",
+			"hp": "@{hp}",
+			"pp": "@{passive_wisdom}",
+			"macro": "",
+			"spellDc": "@{spell_save_dc}",
+		},
 		"community": {
 			"cr": "@{npc_challenge}",
 			"ac": "@{AC}",
@@ -669,7 +678,7 @@ const betteR205etoolsMain = function () {
 			d20plus.importer.bindFakeCompendiumDraggable($(e));
 		});
 
-		function importData (character, data, event) {
+		d20plus.importer.importData = function importData (character, data, event) {
 			// TODO remove feature import workarounds below when roll20 and sheets supports their drag-n-drop properly
 			if (data.data.Category === "Feats") {
 				d20plus.feats.importFeat(character, data);
@@ -696,11 +705,32 @@ const betteR205etoolsMain = function () {
 
 		d20.Campaign.characters.models.each(function (v, i) {
 			/* eslint-disable */
-
+			
 			// region BEGIN ROLL20 CODE
 			v.view.compendiumDragOver = function (e, t) {
 				if (this.popoutWindow) return
-				this.$currentDropTarget = this.childWindow.d20.compendiumDragOver(e, t)
+				if (d20plus.sheet != "2024") this.$currentDropTarget = this.childWindow.d20.compendiumDragOver(e, t);
+				else {
+					/*
+					if (!e || !t) return;
+					const {
+						pageName: P,
+						categoryName: B,
+						expansionId: R
+					} = this.compendiumDropData;
+					this.relay.dragOver({
+						coordinates: {
+							left: e,
+							top: t
+						},
+						dragData: {
+							pageName: P,
+							categoryName: B,
+							expansionId: R
+						}
+					})
+					*/
+				}
 
 				// Cache the last drop target, since it has a habit of disappearing every other loop.
 				// This probably breaks other things, but, who cares!
@@ -714,14 +744,37 @@ const betteR205etoolsMain = function () {
 				const e = this;
 
 				this.$compendiumDropTarget.droppable({
-					accept: ".compendium-item",
+					accept: ".compendium-item, .compendium-page__upper",
 					tolerance: "pointer",
+					activate(M, P) {
+						/*
+						e.compendiumDropData = {};
+						const t = window.__wpRequire(20417).J;
+						$(t).attr("data-pagename", "roll20");
+						const B = $(P.helper[0]),
+							R = (0, t)(B);
+						e.compendiumDropData = R
+						*/
+					},
 					over() {
 						e.dragOver = !0
 					},
 					out() {
-						e.dragOver = !1,
-						e.childWindow.d20.deactivateDrop()
+						if (d20plus.sheet = "2024") {
+							/*
+							e.dragOver = !1, e.relay.dragOver({
+								coordinates: {
+									left: null,
+									top: null
+								},
+								dragData: null
+								})
+							*/
+						}
+						else {
+							e.dragOver = !1,
+							e.childWindow.d20.deactivateDrop()
+						}
 					},
 					drop(t, i) {
 						const characterid = $(".characterdialog").has(t.target).attr("data-characterid");
@@ -732,8 +785,21 @@ const betteR205etoolsMain = function () {
 							console.log("Handout item dropped onto target!");
 							t.originalEvent.dropHandled = !0;
 							if (e.activeDrop) {
-								e.dragOver = !1;
-                            	e.childWindow.d20.deactivateDrop();
+								if (d20plus.sheet = "2024") {
+									/*
+									e.dragOver = !1, e.relay.dragOver({
+										coordinates: {
+											left: null,
+											top: null
+										},
+										dragData: null
+									})
+									*/
+								}
+								else {
+									e.dragOver = !1,
+									e.childWindow.d20.deactivateDrop()
+								}
 							}
 
 							if ($hlpr.hasClass(`player-imported`)) {
@@ -771,47 +837,92 @@ const betteR205etoolsMain = function () {
 
 						console.log("Compendium item dropped onto target!");
 						// region BEGIN ROLL20 CODE
-						t.originalEvent.dropHandled = !0,
-						e.activeDrop && (e.dragOver = !1,
-						e.childWindow.d20.deactivateDrop(),
-						e.$currentDropTarget && window.wantsToReceiveDrop(this, t, ()=>{
-								const t = $(i.helper[0]).attr("data-pagename"),
-								n = $(i.helper[0]).attr("data-subhead"),
-								v = $(i.helper[0]).attr('data-expansionid');
-								$.ajax({
-									url: "/compendium/compendium/getPages",
-									data: {
-										bookName: d20.compendium.shortName,
-										pages: [t],
-										sharedCompendium: campaign_id,
-										expansionId: v,
-										dragDropRequest: !0
+						if (d20plus.sheet == "2024") {
+							/*
+							t.originalEvent.dropHandled = !0,
+							e.activeDrop && (e.dragOver = !1,
+							window.wantsToReceiveDrop(this, t, () => {
+								const {
+									pageName: P,
+									categoryName: B,
+									expansionId: R
+								} = e.compendiumDropData, I = e.$el.offset(), V = t.pageX - I.left, X = t.pageY - I.top;
+								e.relay.dropOver({
+									coordinates: {
+										left: V,
+										top: X
 									},
-									cache: !1,
-									dataType: "JSON"
-								}).done(i=>{
-										const o = JSON.parse(i[0]),
-										r = _.clone(o.data);
-										r.Name = o.name,
-										r.data = o.data,
-										r.data = JSON.stringify(r.data),
-										r.uniqueName = t,
-										r.Content = o.content,
-										r.dropSubhead = n,
-										e.$currentDropTarget.find("*[accept]").each(function() {
-											const t = $(this),
-											i = t.attr("accept");
-											r[i] && ("input" === t[0].tagName.toLowerCase() && "checkbox" === t.attr("type") || "input" === t[0].tagName.toLowerCase() && "radio" === t.attr("type") ? t.val() === r[i] ? t.prop("checked", !0) : t.prop("checked", !1) : "select" === t[0].tagName.toLowerCase() ? t.find("option").each(function() {
-												const e = $(this);
-												e.val() !== r[i] && e.text() !== r[i] || e.prop("selected", !0)
-											}) : $(this).val(r[i]),
-												e.saveSheetValues(this, "compendium"))
-										})
+									dropData: {
+										pageName: P,
+										categoryName: B,
+										expansionId: R
 									}
-								)
-							}
-						))
+								})
+							}))
+							*/
+						}
+						else {
+							t.originalEvent.dropHandled = !0,
+							e.activeDrop && (e.dragOver = !1,
+							e.childWindow.d20.deactivateDrop(),
+							e.$currentDropTarget && window.wantsToReceiveDrop(this, t, ()=>{
+									const t = $(i.helper[0]).attr("data-pagename"),
+									n = $(i.helper[0]).attr("data-subhead"),
+									v = $(i.helper[0]).attr('data-expansionid');
+									$.ajax({
+										url: "/compendium/compendium/getPages",
+										data: {
+											bookName: d20.compendium.shortName,
+											pages: [t],
+											sharedCompendium: campaign_id,
+											expansionId: v,
+											dragDropRequest: !0
+										},
+										cache: !1,
+										dataType: "JSON"
+									}).done(i=>{
+											const o = JSON.parse(i[0]),
+											r = _.clone(o.data);
+											r.Name = o.name,
+											r.data = o.data,
+											r.data = JSON.stringify(r.data),
+											r.uniqueName = t,
+											r.Content = o.content,
+											r.dropSubhead = n,
+											e.$currentDropTarget.find("*[accept]").each(function() {
+												const t = $(this),
+												i = t.attr("accept");
+												r[i] && ("input" === t[0].tagName.toLowerCase() && "checkbox" === t.attr("type") || "input" === t[0].tagName.toLowerCase() && "radio" === t.attr("type") ? t.val() === r[i] ? t.prop("checked", !0) : t.prop("checked", !1) : "select" === t[0].tagName.toLowerCase() ? t.find("option").each(function() {
+													const e = $(this);
+													e.val() !== r[i] && e.text() !== r[i] || e.prop("selected", !0)
+												}) : $(this).val(r[i]),
+													e.saveSheetValues(this, "compendium"))
+											})
+										}
+									)
+								}))
+						}
 						// endregion END ROLL20 CODE
+					},
+					drop(M) {
+						M.originalEvent.dropHandled = !0, e.activeDrop && (e.dragOver = !1, window.wantsToReceiveDrop(this, M, () => {
+							const {
+								pageName: P,
+								categoryName: B,
+								expansionId: R
+							} = e.compendiumDropData, I = e.$el.offset(), V = M.pageX - I.left, X = M.pageY - I.top;
+							e.relay.dropOver({
+								coordinates: {
+									left: V,
+									top: X
+								},
+								dropData: {
+									pageName: P,
+									categoryName: B,
+									expansionId: R
+								}
+							})
+						}))
 					}
 				})
 			}
@@ -922,6 +1033,7 @@ const betteR205etoolsMain = function () {
 		}
 		if (d20.journal.customSheets.layouthtml.indexOf("shaped_d20") > 0) d20plus.sheet = "shaped";
 		if (d20.journal.customSheets.layouthtml.indexOf("DnD5e_Character_Sheet") > 0) d20plus.sheet = "community";
+		if (CHARSHEET_NAME === "dnd2024byroll20") d20plus.sheet = "2024";
 		d20plus.ut.log(`Switched Character Sheet Template to ${d20plus.sheet}`);
 	};
 

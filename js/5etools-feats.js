@@ -95,6 +95,25 @@ function d20plusFeats () {
 			attrs.add(`repeating_traits_${rowId}_name`, featName);
 			attrs.add(`repeating_traits_${rowId}_description`, featText);
 			attrs.add(`repeating_traits_${rowId}_source`, "Feat");
+		} else if (d20plus.sheet === "2024") {
+			attrs.addIntegrant(rowId, {
+				_enabled: true,
+				_label: "",
+				arrayPosition: attrs.getIntegrantCount(),
+				builderDisplayName: "",
+				childIDs: "[]",
+				compendiumPageID: "",
+				createdTime: Date.now(),
+				description: featText,
+				name: featName,
+				overwriteDisabled: false,
+				parentDisabled: false,
+				parentID: "",
+				recordName: featName,
+				shortID: "",
+				source: "Feat",
+				type: "Features"
+			})
 		} else if (d20plus.sheet === "shaped") {
 			attrs.add(`repeating_feat_${rowId}_name`, featName);
 			attrs.add(`repeating_feat_${rowId}_content`, featText);

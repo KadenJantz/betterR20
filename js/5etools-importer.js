@@ -24,6 +24,25 @@ function d20plusImporter () {
 		await BrewUtil2.pAddBrewFromUrl(url);
 	};
 
+	/*
+	// Inject module into roll20 webpack
+	window.addEventListener('load', function() {
+		// Pushing our module
+		window["webpackChunkvtt"].push([
+		["_userscriptModule"],
+		{
+			hackermans: (module, exports, webpackRequire) => {
+				window.__wpRequire = webpackRequire;
+			}
+		},
+		(webpackRequire) => {
+			console.log('Injected Module!');
+			webpackRequire('hackermans');
+		}
+		]);
+	}, false);
+	*/
+
 	d20plus.importer.getCleanText = function (str) {
 		if (!str || !str.trim()) return "";
 
@@ -1363,6 +1382,15 @@ function d20plusImporter () {
 				: d20plus.ut.generateRowId();
 		}
 
+		getIntegrantCount() {
+			let inteCount = 0;
+
+			for (const inte in this.character.model.attribs.at(0).attributes.current.integrants.integrants)
+				inteCount++;
+
+			return inteCount;
+		}
+
 		add (name, current, max) {
 			this.character.model.attribs.create({
 				name: name,
@@ -1370,6 +1398,12 @@ function d20plusImporter () {
 				...(max == null ? {} : {max: max}),
 			}).save();
 			this._changedAttrs.push(name);
+		}
+
+		// Used for 2024 sheet
+		addIntegrant (name, integrant) {
+			this.character.model.attribs.at(0).attributes.current.integrants.integrants[name] = integrant;
+			return integrant;
 		}
 
 		addOrUpdate (name, current, max) {
@@ -1388,6 +1422,32 @@ function d20plusImporter () {
 		notifySheetWorkers () {
 			d20.journal.notifyWorkersOfAttrChanges(this.character.model.id, this._changedAttrs);
 			this._changedAttrs = [];
+		}
+
+		// Used for 2024 sheet
+		generateSense(name, sense, range) {
+			const titleCaseSense = sense.charAt(0).toUpperCase() + sense.slice(1);
+			
+			return {
+				_id: "custom-species-" + sense + "-sense",
+				parentID: "custom-species-" + sense,
+				recordName: name + " | " + titleCaseSense + " | Sense | custom-species-" + sense + "-sense",
+				visible: false,
+				_active: false,
+				metadata: {
+					builderDisplayName: "Custom Species " + titleCaseSense,
+					createdByCustomSpeciesToggle: true,
+					isGeneral: true
+				},
+				payload: {
+					type: "Sense",
+					recordName: "Custom Species " + titleCaseSense,
+					name: "Darkvision"
+				},
+				calculation: "Set Base",
+				valueFormula: { flatValue: range },
+				children: "[]"
+			};
 		}
 	};
 }

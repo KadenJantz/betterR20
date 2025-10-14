@@ -478,6 +478,181 @@ function tools5eTool () {
 				});
 			},
 		},
+		{
+			name: "5e 2024 Sheet Importer",
+			desc: "Import handouts into Roll20's 5e 2024 sheet",
+			html: `
+				<div id="d20plus-2024import" title="Better20 - 5e 2024 Sheet Importer">
+					<div id="2024import-selectors">
+						<div>
+						<div name="data-loading-message"></div>
+						<select name="sheet-select" style="margin-bottom: 0;">
+						<!-- populate with JS-->
+						</select><hr>
+						<p style="display: flex; justify-content: space-between"><label><input type="checkbox" title="Select all" id="2024import-selectall"> Select All</label> <a class="btn" href="#" id="2024import-btn-submit">Import Selected</a></p>
+						<div id="2024import-container">
+							<input class="search" autocomplete="off" placeholder="Search list..." style="width: 100%;">
+							<br><br>
+							<ul class="list 2024import" style="max-height: 380px; overflow-y: scroll; display: block; margin: 0;"></ul>
+						</div>
+						</div>
+					</div>
+				</div>
+				`,
+			dialogFn: () => {
+				$("#d20plus-2024import").dialog({
+					autoOpen: false,
+					resizable: true,
+					width: 800,
+					height: 650,
+				});
+			},
+			openFn: async () => {
+				const $win = $("#d20plus-2024import");
+				$win.dialog("open");
+
+				// Create a variable for each box
+				const $cbMode = $win.find(".cb-mode");
+
+				const $cbAll = $("#2024import-selectall").unbind("click");
+
+				const $btnDel = $(`#2024import-btn-submit`).off("click");
+
+				const $selSheet = $win.find(`[name="sheet-select"]`);
+
+				// When a a different box gets checked, populate the list
+				$cbMode.off("change").on("change", () => populateList());
+
+				// Don't even ask why populateList needs to be called twice
+				populateList();
+
+				function populateList () {
+					// collect a list of all journal items
+					function getAllJournalItems () {
+						const out = [];
+
+						function recurse (entry, pos, isRoot) {
+							if (entry.i) {
+								if (!isRoot) pos.push(entry.n);
+								entry.i.forEach(nxt => recurse(nxt, pos));
+								pos.pop();
+							} else out.push({id: entry, path: MiscUtil.copy(pos)});
+						}
+
+						const root = {i: d20plus.ut.getJournalFolderObj()};
+						recurse(root, [], true);
+						return out.map(it => getItemFromId(it.id, it.path.join(" / ")));
+					}
+
+					// Modified to not return sheets, only handouts
+					function getItemFromId (itId, path = "") {
+						// Get handout object, undefined if item is not a handout
+						const handout = d20.Campaign.handouts.get(itId);
+						if (handout && (handout.get("name") === CONFIG_HANDOUT || handout.get("name") === ART_HANDOUT)) return null; // skip 5etools handouts
+
+						// Return based on which object isn't empty
+						if (handout) return {type: "handouts", id: itId, name: handout.get("name"), path: path, archived: handout.attributes.archived};
+
+						// If empty, check if item is a folder and return a folder type
+						if (d20plus.journal.checkDirExistsByPath(path.split(" / "))) return {type: "folder", id: itId, name: "", path: path, archived: false, folder: true}
+					}
+
+					function getJournalItems () {
+						// For the all files option
+						return getAllJournalItems().filter(Boolean);
+					}
+
+					// Populate the list of journal items
+					const journalItems = getJournalItems();
+
+					sheetCounter = 0;
+
+					// Populate the sheet dropdown
+					d20.Campaign.characters.models.forEach(sheet => {
+						$selSheet.append(`<option value="${sheetCounter}">${sheet.attributes.name}</option>`);
+					});
+
+					// Display found items
+					const $impList = $win.find(`.list`);
+					$impList.empty();
+
+					journalItems.forEach((it, i) => {
+						$impList.append(`
+							<label class="import-cb-label" data-listid="${i}">
+								<input type="checkbox">
+								<span class="name readable">${it.path ? `${it.path} / ` : ""}${it.name}</span>
+								${it.archived ? `<span class="name readable">(archived)</span>` : ""}
+								${it.table ? `<span class="name readable">(table)</span>` : ""}
+								${it.folder ? `<span class="name readable">(folder)</span>` : ""}
+							</label>
+						`);
+					});
+
+					// init list library
+					const impList = new List("2024import-container", {
+						valueNames: ["name"],
+						listClass: "2024import",
+					});
+
+					$cbAll.prop("checked", false);
+					$cbAll.off("click").click(() => d20plus.importer._importToggleSelectAll(impList, $cbAll));
+
+					$btnDel.off("click").on("click", event => {
+						const sel = impList.items
+							.filter(it => $(it.elm).find(`input`).prop("checked"))
+							.map(it => journalItems[$(it.elm).attr("data-listid")])
+							.reverse();
+
+						if (!sel.length) {
+							alert("No items selected!");
+						} else if (confirm(`Are you sure you want to import the ${sel.length} selected item${sel.length > 1 ? "s" : ""}?`)) {
+							$win.dialog("close");
+							$("a.ui-tabs-anchor[href='#journal']").trigger("click");
+							const character = d20.Campaign.characters.models[$selSheet[0].value].view;
+							sel.forEach(toImp => {
+								// Try to import the d20 object
+								const handout = d20.Campaign[toImp.type].get(toImp.id);
+
+								// Take a JSON that may be a URI encoded string and return it in non URI format
+								function decodeIfURI (notes) {
+									if (!notes) return "";
+
+									if (notes.charAt(0) == "%") return decodeURIComponent(notes);
+
+									return notes;
+								}
+
+								if (window.is_gm) {
+									handout._getLatestBlob("gmnotes", function (gmnotes) {
+										data = decodeIfURI(gmnotes);
+										handout.updateBlobs({gmnotes: gmnotes});
+										d20plus.importer.importData(character, JSON.parse(data), event);
+									});
+								} else {
+									handout._getLatestBlob("notes", function (notes) {
+										data = $(decodeIfURI(notes)).filter("del").html();
+										d20plus.importer.importData(character, JSON.parse(data), event);
+									});
+								}
+							});
+
+							// Refresh, and close if not open
+							if (character.popoutWindow || character.el.offsetParent != null)
+								character.render();
+							else {
+								character.render();
+
+								// Close if opened now, otherwise close the blank window that appears
+								if (character.popoutWindow || character.el.offsetParent != null)
+									character.popoutWindowElement.close();
+								else
+									window.open('', 'iframe_' + character.model.id).close();
+							}
+						}
+					});
+				}
+			},
+		},
 	]);
 }
 
