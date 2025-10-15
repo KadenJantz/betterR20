@@ -54,7 +54,7 @@ const analyticsBlocking = `
 
 function getHeader (name, info) {
 	return `// ==UserScript==
-// @name         betteR20-beta-${name}-death
+// @name         betteR20-beta-${name}-2024Sheet
 // @namespace    https://5e.tools/
 // @license      MIT (https://opensource.org/licenses/MIT)
 // @version      ${SCRIPT_VERSION}

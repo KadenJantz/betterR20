@@ -566,10 +566,12 @@ function tools5eTool () {
 					const journalItems = getJournalItems();
 
 					sheetCounter = 0;
+					$selSheet.empty();
 
 					// Populate the sheet dropdown
 					d20.Campaign.characters.models.forEach(sheet => {
 						$selSheet.append(`<option value="${sheetCounter}">${sheet.attributes.name}</option>`);
+						sheetCounter += 1;
 					});
 
 					// Display found items
