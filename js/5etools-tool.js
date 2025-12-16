@@ -611,6 +611,11 @@ function tools5eTool () {
 							$win.dialog("close");
 							$("a.ui-tabs-anchor[href='#journal']").trigger("click");
 							const character = d20.Campaign.characters.models[$selSheet[0].value].view;
+
+							// Wait for character to load if hasn't been loaded yet.
+							if (character.model.attribs.length <= 0)
+								character.ensureIframe()
+
 							sel.forEach(toImp => {
 								// Try to import the d20 object
 								const handout = d20.Campaign[toImp.type].get(toImp.id);
