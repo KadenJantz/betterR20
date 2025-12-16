@@ -566,6 +566,7 @@ function tools5eTool () {
 					const journalItems = getJournalItems();
 
 					sheetCounter = 0;
+					const tempVal = $selSheet[0].value;
 					$selSheet.empty();
 
 					// Populate the sheet dropdown
@@ -573,6 +574,8 @@ function tools5eTool () {
 						$selSheet.append(`<option value="${sheetCounter}">${sheet.attributes.name}</option>`);
 						sheetCounter += 1;
 					});
+					if (isNaN(tempVal) && tempVal >= 0)
+						$selSheet[0].value = tempVal;
 
 					// Display found items
 					const $impList = $win.find(`.list`);
