@@ -574,7 +574,7 @@ function tools5eTool () {
 						$selSheet.append(`<option value="${sheetCounter}">${sheet.attributes.name}</option>`);
 						sheetCounter += 1;
 					});
-					if (isNaN(tempVal) && tempVal >= 0)
+					if (tempVal.length > 0 && tempVal >= 0 && tempVal < $selSheet[0].length)
 						$selSheet[0].value = tempVal;
 
 					// Display found items
