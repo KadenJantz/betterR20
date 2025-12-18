@@ -1400,7 +1400,7 @@ function d20plusImporter () {
 		getIntegrantIdsWith(key, value) {
 			const ids = [];
 
-			Object.keys(this.character.model.attribs.at(0).attributes.current.integrants.integrants).forEach(elementintegrant => {
+			Object.keys(this.character.model.attribs.at(0).attributes.current.integrants.integrants).forEach(integrant => {
 				if (this.getIntegrant(integrant)[key] == value)
 					ids.add(integrant);
 			})
@@ -1453,10 +1453,10 @@ function d20plusImporter () {
 
 		// Used for 2024 sheet
 		deleteChildIntegrants (name) {
-			const parent = attrs.getIntegrant(name);
+			const parent = this.getIntegrant(name);
 			try {
 				// Try to clear out any children
-				if (parent["childIDs"] != null) {
+				if ("childIDs" in parent) {
 					JSON.parse(parent.childIDs).forEach(childId => {
 						this.deleteIntegrant(childId);
 					})
