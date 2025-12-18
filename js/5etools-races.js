@@ -212,18 +212,6 @@ function d20plusRaces () {
 			for (const vision of ["darkvision", "blindsight", "tremorsense", "truesight"]) {
 				if (race[vision]) {
 					const visionId = d20plus.ut.generateRowId();
-
-					// Add as child of parent integrant, if one exists
-					let parentId = "";
-					for (const childId in childIds)
-						if (attrs.getIntegrant(childIds[childId]).name.toLowerCase() == vision) {
-							attrs.getIntegrant(childIds[childId]).childIDs = '[' + visionId + ']';
-							parentId = childIds[childId];
-
-							// Found it, don't need to go further
-							break;
-						}
-
 					const titleCaseSense = vision.charAt(0).toUpperCase() + vision.slice(1);
 
 					// Add the integrant that actually causes the sense to appear
@@ -238,7 +226,7 @@ function d20plusRaces () {
 						name: titleCaseSense,
 						overwriteDisabled: false,
 						parentDisabled: false,
-						parentID: parentId,
+						parentID: sourceId,
 						shortID: visionId.substring(0,9),
 						source: "Species",
 						sourceID: sourceId,
