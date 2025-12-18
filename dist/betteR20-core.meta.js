@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         betteR20-beta-core-death
+// @name         betteR20-beta-core-2024Sheet
 // @namespace    https://5e.tools/
 // @license      MIT (https://opensource.org/licenses/MIT)
 // @version      1.35.186.14i
