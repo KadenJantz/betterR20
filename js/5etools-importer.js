@@ -1391,6 +1391,33 @@ function d20plusImporter () {
 			return inteCount;
 		}
 
+		// Used for 2024 sheet
+		getIntegrant(name) {
+			return this.character.model.attribs.at(0).attributes.current.integrants.integrants[name];
+		}
+
+		// Used for 2024 sheet
+		getIntegrantIdsWith(key, value) {
+			const ids = [];
+
+			Object.keys(this.character.model.attribs.at(0).attributes.current.integrants.integrants).forEach(elementintegrant => {
+				if (this.getIntegrant(integrant)[key] == value)
+					ids.add(integrant);
+			})
+
+			return ids;
+		}
+
+		// Used for 2024 sheet
+		getFirstIntegrantIdWith(key, value) {
+			Object.keys(this.character.model.attribs.at(0).attributes.current.integrants.integrants).forEach(integrant => {
+				if (this.getIntegrant(integrant)[key] == value)
+					return integrant;
+			})
+
+			return null;
+		}
+
 		add (name, current, max) {
 			this.character.model.attribs.create({
 				name: name,
@@ -1398,12 +1425,6 @@ function d20plusImporter () {
 				...(max == null ? {} : {max: max}),
 			}).save();
 			this._changedAttrs.push(name);
-		}
-
-		// Used for 2024 sheet
-		addIntegrant (name, integrant) {
-			this.character.model.attribs.at(0).attributes.current.integrants.integrants[name] = integrant;
-			return integrant;
 		}
 
 		addOrUpdate (name, current, max) {
@@ -1419,35 +1440,34 @@ function d20plusImporter () {
 			}
 		}
 
-		notifySheetWorkers () {
-			d20.journal.notifyWorkersOfAttrChanges(this.character.model.id, this._changedAttrs);
-			this._changedAttrs = [];
+		// Used for 2024 sheet
+		addIntegrant (name, integrant) {
+			this.character.model.attribs.at(0).attributes.current.integrants.integrants[name] = integrant;
+			return integrant;
 		}
 
 		// Used for 2024 sheet
-		generateSense(name, sense, range) {
-			const titleCaseSense = sense.charAt(0).toUpperCase() + sense.slice(1);
-			
-			return {
-				_id: "custom-species-" + sense + "-sense",
-				parentID: "custom-species-" + sense,
-				recordName: name + " | " + titleCaseSense + " | Sense | custom-species-" + sense + "-sense",
-				visible: false,
-				_active: false,
-				metadata: {
-					builderDisplayName: "Custom Species " + titleCaseSense,
-					createdByCustomSpeciesToggle: true,
-					isGeneral: true
-				},
-				payload: {
-					type: "Sense",
-					recordName: "Custom Species " + titleCaseSense,
-					name: "Darkvision"
-				},
-				calculation: "Set Base",
-				valueFormula: { flatValue: range },
-				children: "[]"
-			};
+		deleteIntegrant (name) {
+			delete this.character.model.attribs.at(0).attributes.current.integrants.integrants[name];
+		}
+
+		// Used for 2024 sheet
+		deleteChildIntegrants (name) {
+			const parent = attrs.getIntegrant(name);
+			try {
+				// Try to clear out any children
+				if (parent["childIDs"] != null) {
+					JSON.parse(parent.childIDs).forEach(childId => {
+						this.deleteIntegrant(childId);
+					})
+				}
+			}
+			catch (e) { }
+		}
+
+		notifySheetWorkers () {
+			d20.journal.notifyWorkersOfAttrChanges(this.character.model.id, this._changedAttrs);
+			this._changedAttrs = [];
 		}
 	};
 }
