@@ -615,10 +615,11 @@ function tools5eTool () {
 							$("a.ui-tabs-anchor[href='#journal']").trigger("click");
 							const character = d20.Campaign.characters.models[$selSheet[0].value].view;
 
-							// Wait for character to load if hasn't been loaded yet.
+							// Force character to load if hasn't been loaded yet.
 							if (character.model.attribs.length <= 0)
 								character.ensureIframe()
 
+							const promises = []
 							sel.forEach(toImp => {
 								// Try to import the d20 object
 								const handout = d20.Campaign[toImp.type].get(toImp.id);
@@ -633,31 +634,46 @@ function tools5eTool () {
 								}
 
 								if (window.is_gm) {
-									handout._getLatestBlob("gmnotes", function (gmnotes) {
-										data = decodeIfURI(gmnotes);
-										handout.updateBlobs({gmnotes: gmnotes});
-										d20plus.importer.importData(character, JSON.parse(data), event);
-									});
+									promises.push(new Promise(function(myResolve, myReject) {
+										handout._getLatestBlob("gmnotes", function (gmnotes) {
+											data = decodeIfURI(gmnotes);
+											handout.updateBlobs({gmnotes: gmnotes});
+											d20plus.importer.importData(character, JSON.parse(data), event);
+											myResolve();
+										});
+									}));
 								} else {
-									handout._getLatestBlob("notes", function (notes) {
-										data = $(decodeIfURI(notes)).filter("del").html();
-										d20plus.importer.importData(character, JSON.parse(data), event);
-									});
+									promises.push(new Promise(function(myResolve, myReject) {
+										handout._getLatestBlob("notes", function (notes) {
+											data = $(decodeIfURI(notes)).filter("del").html();
+											d20plus.importer.importData(character, JSON.parse(data), event);
+											myResolve();
+										});
+									}));
 								}
 							});
 
-							// Refresh, and close if not open
-							if (character.popoutWindow || character.el.offsetParent != null)
-								character.render();
-							else {
-								character.render();
+							Promise.all(promises)
+								.then(() => {
+									// Refresh, and close if not open
+									if (character.popoutWindow || character.el.offsetParent != null) {
+                                        character.ensureIframe();
+										character.render();
+									}
+									else {
+                                        character.ensureIframe();
+										character.render();
 
-								// Close if opened now, otherwise close the blank window that appears
-								if (character.popoutWindow || character.el.offsetParent != null)
-									character.popoutWindowElement.close();
-								else
-									window.open('', 'iframe_' + character.model.id).close();
-							}
+										// Close if opened now, otherwise close the blank window that appears
+										if (character.popoutWindow || character.el.offsetParent != null)
+											character.popoutWindowElement.close();
+										else
+											window.open('', 'iframe_' + character.model.id).close();
+									}
+								})
+								.catch((e) => {
+									console.log(e);
+								});
 						}
 					});
 				}
