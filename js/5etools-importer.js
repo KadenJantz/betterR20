@@ -1447,6 +1447,30 @@ function d20plusImporter () {
 		}
 
 		// Used for 2024 sheet
+		setSpeed (name, type, calc, value, source = "", sourceId = "") {
+			this.addIntegrant(name, {
+				shortID: name.substring(0,9),
+				name: "Custom Species Base " + type + " Speed",
+				builderDisplayName: "",
+				_label: "",
+				createdTime:  Date.now(),
+				type: "Speed",
+				_enabled: true,
+				source: source,
+				sourceID: sourceId,
+				childIDs: "[]",
+				parentID: sourceId,
+				overwriteDisabled: false,
+				parentDisabled: false,
+				recordName: "Custom Species Speed",
+				speed: type,
+				calculation: calc,
+				valueFormula: { flatValue: value },
+				arrayPosition: this.getIntegrantCount()
+			});
+		}
+
+		// Used for 2024 sheet
 		deleteIntegrant (name) {
 			delete this.character.model.attribs.at(0).attributes.current.integrants.integrants[name];
 		}

@@ -240,28 +240,27 @@ function d20plusRaces () {
 				}
 			}
 
-			// Apply speed
-			childIds.push(d20plus.ut.generateRowId());
-			attrs.addIntegrant(childIds[childIds.length-1], {
-				shortID: childIds[childIds.length-1].substring(0,9),
-				name: "Custom Species Base Walk Speed",
-				builderDisplayName: "",
-				_label: "",
-				createdTime:  Date.now(),
-				type: "Speed",
-				_enabled: true,
-				source: "Species",
-				sourceID: sourceId,
-				childIDs: "[]",
-				parentID: sourceId,
-				overwriteDisabled: false,
-				parentDisabled: false,
-				recordName: "Custom Species Speed",
-				speed: "Walk",
-				calculation: "Set Base",
-				valueFormula: { flatValue: race.speed },
-				arrayPosition: attrs.getIntegrantCount()
-			});
+			// Apply walk speed if it is all that this species has
+			if (race.speed.toFixed)
+			{
+				childIds.push(d20plus.ut.generateRowId());
+				attrs.setSpeed(childIds[childIds.length-1], "Walk", "Set Base", race.speed, "Species", sourceId)
+			}
+			// Otherwise iterate through each
+			else
+			{
+				for (const key in race.speed) {
+					childIds.push(d20plus.ut.generateRowId());
+					const speedType = key.charAt(0).toUpperCase() + key.slice(1);
+					
+					// Try to grab walk speed if a number is not provided
+					var value = race.speed[key];
+					if (!value.toFixed && "walk" in race.speed)
+						value = race.speed["walk"];
+
+					attrs.setSpeed(childIds[childIds.length-1], speedType, "Set Base", value, "Species", sourceId)
+				}
+			}
 
 			// If one already exists, remove it and its children
 			attrs.getIntegrantIdsWith("type", "Species").forEach(oldSourceId => {
