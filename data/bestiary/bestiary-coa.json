@@ -152,7 +152,6 @@
 				}
 			],
 			"tokenCredit": "Mate Lukacs",
-			"tokenCustom": true,
 			"attachedItems": [
 				"warhammer|phb"
 			],
@@ -558,7 +557,6 @@
 				}
 			],
 			"tokenCredit": "jameszapata",
-			"tokenCustom": true,
 			"senseTags": [
 				"SD",
 				"U"
@@ -760,7 +758,6 @@
 				}
 			],
 			"tokenCredit": "Jeferson Cordeiro",
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -1309,7 +1306,6 @@
 				}
 			],
 			"tokenCredit": "sμ (smew)",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Spider Climb"
@@ -2060,7 +2056,6 @@
 				"name": "Bel",
 				"source": "CoA"
 			},
-			"tokenCustom": true,
 			"attachedItems": [
 				"greatsword|phb"
 			],
@@ -3166,7 +3161,6 @@
 				"slashing"
 			],
 			"tokenCredit": "Unknown",
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -3294,7 +3288,6 @@
 				}
 			],
 			"tokenCredit": "Rahzy",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances"
 			],
@@ -3816,7 +3809,6 @@
 				}
 			],
 			"tokenCredit": "Donggeon Son",
-			"tokenCustom": true,
 			"traitTags": [
 				"Regeneration"
 			],
@@ -4122,7 +4114,6 @@
 				}
 			],
 			"tokenCredit": "Paizo",
-			"tokenCustom": true,
 			"senseTags": [
 				"D"
 			],
@@ -4332,9 +4323,6 @@
 			"damageTags": [
 				"F"
 			],
-			"miscTags": [
-				"AOE"
-			],
 			"savingThrowForced": [
 				"dexterity",
 				"wisdom"
@@ -4541,7 +4529,6 @@
 				}
 			],
 			"tokenCredit": "Artguyonthefly",
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -4966,7 +4953,6 @@
 			},
 			"spellcasting": null,
 			"tokenCredit": "Irene Meniconi",
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -5232,7 +5218,6 @@
 				"cold"
 			],
 			"tokenCredit": "Caverns of the Snow Witch",
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -5560,7 +5545,6 @@
 				}
 			},
 			"tokenCredit": "CrazyMind351",
-			"tokenCustom": true,
 			"damageTags": [
 				"B",
 				"L",
@@ -7215,7 +7199,6 @@
 			"wis": 16,
 			"cha": 16,
 			"tokenCredit": "Konstantin Vavilov",
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -7425,7 +7408,6 @@
 				}
 			],
 			"tokenCredit": "Bufflewump, Kekai Kotaki",
-			"tokenCustom": true,
 			"senseTags": [
 				"D"
 			],
@@ -7873,7 +7855,6 @@
 				}
 			],
 			"tokenCredit": "V-OneShot",
-			"tokenCustom": true,
 			"traitTags": [
 				"Devil's Sight",
 				"Magic Resistance"
@@ -8686,7 +8667,6 @@
 				}
 			],
 			"tokenCredit": "RussFairchild",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -9217,7 +9197,6 @@
 				"name": "Zariel",
 				"source": "CoA"
 			},
-			"tokenCustom": true,
 			"attachedItems": [
 				"flail|phb",
 				"longsword|phb"

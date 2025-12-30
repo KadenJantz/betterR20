@@ -7037,6 +7037,76 @@
 			]
 		}
 	},
+	"TDCSR": {
+		"Freedom of the Waves": {
+			"classVariant": [
+				{
+					"name": "Druid",
+					"source": "PHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Ranger",
+					"source": "PHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Druid",
+					"source": "XPHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Ranger",
+					"source": "XPHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "XPHB",
+					"definedInSource": "TDCSR"
+				}
+			]
+		},
+		"Freedom of the Winds": {
+			"classVariant": [
+				{
+					"name": "Druid",
+					"source": "PHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "PHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Ranger",
+					"source": "PHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Druid",
+					"source": "XPHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Sorcerer",
+					"source": "XPHB",
+					"definedInSource": "TDCSR"
+				},
+				{
+					"name": "Ranger",
+					"source": "XPHB",
+					"definedInSource": "TDCSR"
+				}
+			]
+		}
+	},
 	"XGE": {
 		"Abi-Dalzim's Horrid Wilting": {
 			"classVariant": [
@@ -9871,7 +9941,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -9899,7 +9969,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -9915,7 +9985,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -9931,7 +10001,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -10003,7 +10073,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -10051,7 +10121,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -10079,7 +10149,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -10092,10 +10162,6 @@
 				{
 					"name": "Wizard",
 					"source": "XPHB"
-				},
-				{
-					"name": "Artificer",
-					"source": "EFA"
 				}
 			]
 		},
@@ -10327,7 +10393,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -10431,7 +10497,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -10447,7 +10513,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -10600,10 +10666,6 @@
 				{
 					"name": "Paladin",
 					"source": "XPHB"
-				},
-				{
-					"name": "Artificer",
-					"source": "EFA"
 				}
 			]
 		},
@@ -10919,7 +10981,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -10991,7 +11053,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11035,7 +11097,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11091,7 +11153,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11111,7 +11173,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11151,7 +11213,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11275,7 +11337,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11351,7 +11413,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11415,7 +11477,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11528,10 +11590,6 @@
 				{
 					"name": "Wizard",
 					"source": "XPHB"
-				},
-				{
-					"name": "Artificer",
-					"source": "EFA"
 				}
 			]
 		},
@@ -11607,7 +11665,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11624,10 +11682,6 @@
 				{
 					"name": "Wizard",
 					"source": "XPHB"
-				},
-				{
-					"name": "Artificer",
-					"source": "EFA"
 				}
 			]
 		},
@@ -11659,7 +11713,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11683,7 +11737,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11767,7 +11821,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11799,7 +11853,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11815,7 +11869,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11831,7 +11885,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11871,7 +11925,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -11971,7 +12025,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12087,7 +12141,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12187,7 +12241,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12335,7 +12389,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12375,7 +12429,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12419,7 +12473,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12455,7 +12509,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12543,7 +12597,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12587,7 +12641,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12771,7 +12825,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12863,7 +12917,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12899,7 +12953,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12943,7 +12997,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12983,7 +13037,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -12999,7 +13053,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13023,7 +13077,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13139,7 +13193,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13175,7 +13229,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13231,7 +13285,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13255,7 +13309,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13384,6 +13438,10 @@
 				{
 					"name": "Wizard",
 					"source": "XPHB"
+				},
+				{
+					"name": "Artificer",
+					"source": "TCE"
 				}
 			]
 		},
@@ -13407,7 +13465,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13583,7 +13641,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13607,7 +13665,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13683,7 +13741,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13847,7 +13905,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -13967,7 +14025,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14055,7 +14113,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14103,7 +14161,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14123,7 +14181,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14179,7 +14237,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14251,7 +14309,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14303,7 +14361,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14315,7 +14373,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14335,7 +14393,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14399,7 +14457,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14523,7 +14581,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14635,7 +14693,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14707,7 +14765,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14803,7 +14861,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14827,7 +14885,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -14903,7 +14961,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -15171,7 +15229,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -15199,7 +15257,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -15372,10 +15430,6 @@
 				{
 					"name": "Wizard",
 					"source": "XPHB"
-				},
-				{
-					"name": "Artificer",
-					"source": "EFA"
 				}
 			]
 		},
@@ -15487,7 +15541,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -15531,7 +15585,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -15555,7 +15609,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -15571,7 +15625,7 @@
 				},
 				{
 					"name": "Artificer",
-					"source": "EFA"
+					"source": "TCE"
 				}
 			]
 		},
@@ -15684,334 +15738,6 @@
 				{
 					"name": "Paladin",
 					"source": "XPHB"
-				}
-			]
-		}
-	},
-	"FRHoF": {
-		"Alustriel's Mooncloak": {
-			"class": [
-				{
-					"name": "Bard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Druid",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Ranger",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Backlash": {
-			"class": [
-				{
-					"name": "Bard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Warlock",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Blade of Disaster": {
-			"class": [
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Warlock",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Cacophonic Shield": {
-			"class": [
-				{
-					"name": "Bard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Conjure Constructs": {
-			"class": [
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Death Armor": {
-			"class": [
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Deryan's Helpful Homunculi": {
-			"class": [
-				{
-					"name": "Cleric",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Dirge": {
-			"class": [
-				{
-					"name": "Bard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Cleric",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Doomtide": {
-			"class": [
-				{
-					"name": "Bard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Cleric",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Warlock",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Elminster's Effulgent Spheres": {
-			"class": [
-				{
-					"name": "Druid",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Elminster's Elusion": {
-			"class": [
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Holy Star of Mystra": {
-			"class": [
-				{
-					"name": "Cleric",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Laeral's Silver Lance": {
-			"class": [
-				{
-					"name": "Cleric",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Simbul's Synostodweomer": {
-			"class": [
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Songal's Elemental Suffusion": {
-			"class": [
-				{
-					"name": "Druid",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Spellfire Flare": {
-			"class": [
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Spellfire Storm": {
-			"class": [
-				{
-					"name": "Sorcerer",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Syluné's Viper": {
-			"class": [
-				{
-					"name": "Druid",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		},
-		"Wardaway": {
-			"class": [
-				{
-					"name": "Bard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Cleric",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Paladin",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				},
-				{
-					"name": "Wizard",
-					"source": "XPHB",
-					"definedInSource": "FRHoF"
-				}
-			]
-		}
-	},
-	"EFA": {
-		"Homunculus Servant": {
-			"class": [
-				{
-					"name": "Artificer",
-					"source": "EFA"
 				}
 			]
 		}

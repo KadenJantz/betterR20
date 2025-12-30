@@ -135,8 +135,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Bombard Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Bombard Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -145,10 +143,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Bombard Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -178,8 +172,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Damselfly Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Damselfly Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -188,10 +180,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Damselfly Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -273,8 +261,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Flying Fish Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Flying Fish Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -283,10 +269,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Flying Fish Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -456,8 +438,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Hammerhead Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Hammerhead Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -466,10 +446,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Hammerhead Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -601,8 +577,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Lamprey Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Lamprey Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -611,10 +585,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Lamprey Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -645,8 +615,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Living Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Living Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -655,10 +623,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Living Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -753,32 +717,6 @@
 			]
 		},
 		{
-			"name": "Lyrandar Air Cruiser",
-			"source": "EFA",
-			"entries": [
-				"Haloed by their enormous rings of elemental energy, Lyrandar Air Cruisers cast imposing shadows as they sail through the skies. These airships are the largest and most iconic means of air travel in {@book Khorvaire|ERLW|5|Nations of Khorvaire}, ferrying the wealthy and elite across the {@book Five Nations|ERLW|0|The Five Nations} and beyond. Though airships have become marginally more common since their introduction a few years ago, a fully operational air cruiser is still an impressive sight."
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "vehicles/EFA/Lyrandar Air Cruiser.webp"
-					},
-					"credit": "Dave Sarabia",
-					"width": 850,
-					"height": 465
-				}
-			]
-		},
-		{
-			"name": "Lyrandar Skyskiff",
-			"source": "EFA",
-			"entries": [
-				"A recent innovation, the Lyrandar Skyskiff is a nimble and compact airship used for short-range travel and rescue missions. When larger airships are marooned in the sky due to elemental engine failures or other malfunctions, crews often enlist a fleet of skyskiffs to tow the marooned ships to a docking tower for maintenance."
-			]
-		},
-		{
 			"name": "Mechanical Beholder",
 			"source": "AI",
 			"entries": [
@@ -835,8 +773,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Nautiloid Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Nautiloid Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -845,10 +781,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Nautiloid Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -878,8 +810,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Nightspider Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Nightspider Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -888,10 +818,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Nightspider Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -1192,8 +1118,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Scorpion Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Scorpion Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -1202,10 +1126,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Scorpion Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -1234,8 +1154,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Shrike Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Shrike Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -1244,10 +1162,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Shrike Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -1275,8 +1189,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Space Galleon Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Space Galleon Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -1285,10 +1197,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Space Galleon Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -1317,8 +1225,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Squid Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Squid Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -1327,10 +1233,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Squid Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -1359,8 +1261,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Star Moth Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Star Moth Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -1370,49 +1270,8 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Star Moth Map Player Version.webp"
 					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
-					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
-				}
-			]
-		},
-		{
-			"name": "Strider Airship",
-			"source": "EFA",
-			"entries": [
-				"The Strider Airship is favored by independent merchants, explorers, and privateers. Larger than a skyskiff but smaller than an air cruiser, these reliable vessels provide ample speed and protection for ferrying cargo across the skies.",
-				"Many strider crews take a personal shine to their vessels, modifying stations and adding unique decorative flairs to reflect the crew's composition. One ship might have gold filigree and clockwork wings flanking its hull, while another might have a flaming ballista proudly mounted on its bow."
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "vehicles/EFA/Strider Airship.webp"
-					},
-					"imageType": "map",
-					"id": "000",
-					"title": "Strider Airship Map",
-					"credit": "Sean Macdonald",
-					"width": 3165,
-					"height": 4096
-				},
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "vehicles/EFA/Strider Airship Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
-					},
-					"title": "Player Version",
-					"width": 3165,
-					"height": 4096
 				}
 			]
 		},
@@ -1464,8 +1323,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Turtle Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Turtle Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -1474,10 +1331,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Turtle Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -1507,8 +1360,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Tyrant Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Tyrant Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -1517,10 +1368,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Tyrant Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"
@@ -1791,8 +1638,6 @@
 						"type": "internal",
 						"path": "vehicles/AAG/Wasp Ship Map.webp"
 					},
-					"imageType": "map",
-					"id": "000",
 					"title": "Wasp Ship Deck Plans",
 					"credit": "Dyson Logos"
 				},
@@ -1801,10 +1646,6 @@
 					"href": {
 						"type": "internal",
 						"path": "vehicles/AAG/Wasp Ship Map Player Version.webp"
-					},
-					"imageType": "mapPlayer",
-					"mapParent": {
-						"id": "000"
 					},
 					"title": "Unlabeled Version",
 					"credit": "Dyson Logos"

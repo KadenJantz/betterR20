@@ -102,7 +102,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Regeneration"
 			],
@@ -120,7 +119,6 @@
 				"Y"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"hasToken": true,
@@ -273,7 +271,6 @@
 					}
 				]
 			},
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Magic Resistance"
@@ -606,7 +603,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Flyby",
 				"Pack Tactics",
@@ -964,7 +960,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"senseTags": [
 				"D"
 			],
@@ -1253,7 +1248,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Amorphous"
 			],
@@ -1511,7 +1505,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"shortsword|phb"
 			],
@@ -1681,7 +1674,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Death Burst",
 				"Devil's Sight",
@@ -1704,7 +1696,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"hasToken": true,
@@ -1861,9 +1852,6 @@
 					"source": "ERLW",
 					"page": 62
 				}
-			],
-			"reprintedAs": [
-				"Homunculus Servant|EFA"
 			],
 			"summonedByClass": "Artificer|TCE",
 			"size": [
@@ -2336,7 +2324,6 @@
 				"C"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"conditionInflict": [
@@ -2412,9 +2399,6 @@
 					"source": "ERLW",
 					"page": 61
 				}
-			],
-			"reprintedAs": [
-				"Steel Defender|EFA"
 			],
 			"summonedByClass": "Artificer|TCE",
 			"size": [
@@ -2603,7 +2587,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Incorporeal Movement"
 			],

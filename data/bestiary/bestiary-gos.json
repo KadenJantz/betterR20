@@ -11,8 +11,7 @@
 				"TftYP": "GoS",
 				"PotA": "GoS",
 				"ToA": "GoS",
-				"MTF": "GoS",
-				"MM": "GoS"
+				"MTF": "GoS"
 			}
 		}
 	},
@@ -3571,7 +3570,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"light crossbow|phb",
 				"trident|phb"
@@ -3626,7 +3624,6 @@
 				"Abyssal",
 				"Draconic"
 			],
-			"tokenCustom": true,
 			"languageTags": [
 				"AB",
 				"C",
@@ -4163,7 +4160,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"quarterstaff|phb"
 			],
@@ -5255,7 +5251,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"dagger|phb"
 			],
@@ -5420,7 +5415,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Magic Resistance",
 				"Water Breathing"
@@ -5640,7 +5634,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -6115,7 +6108,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Immutable Form",
 				"Legendary Resistances"
@@ -6167,7 +6159,6 @@
 				}
 			},
 			"type": "undead",
-			"tokenCustom": true,
 			"traitTags": [
 				"Sunlight Sensitivity"
 			],

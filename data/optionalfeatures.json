@@ -43,14 +43,13 @@
 						"level": 2,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
 			],
 			"entries": [
-				"Choose one of your known {@filter Warlock cantrips|spells|level=0|class=Warlock|damage type=acid;bludgeoning;cold;fire;force;lightning;necrotic;piercing;poison;psychic;radiant;slashing;thunder} that deals damage. You can add your Charisma modifier to that spell's damage rolls.",
+				"Choose one of your known {@filter Warlock cantrips|spells|level=0|class=Warlock} that deals damage. You can add your Charisma modifier to that spell's damage rolls.",
 				{
 					"type": "entries",
 					"entries": [
@@ -275,8 +274,7 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -532,9 +530,6 @@
 			"source": "PHB",
 			"page": 110,
 			"srd": true,
-			"reprintedAs": [
-				"Pact of the Tome|XPHB"
-			],
 			"featureType": [
 				"EI"
 			],
@@ -571,12 +566,6 @@
 				{
 					"source": "ERLW",
 					"page": 62
-				}
-			],
-			"reprintedAs": [
-				{
-					"uid": "Boots of the Winding Path|EFA",
-					"tag": "item"
 				}
 			],
 			"featureType": [
@@ -700,33 +689,6 @@
 			},
 			"entries": [
 				"When you cast a spell that forces other creatures to make a saving throw, you can protect some of those creatures from the spell's full force. To do so, spend 1 Sorcery Point and choose a number of those creatures up to your Charisma modifier (minimum of one creature). A chosen creature automatically succeeds on its saving throw against the spell, and it takes no damage if it would normally take half damage on a successful save."
-			]
-		},
-		{
-			"name": "Celebrated in House",
-			"source": "EFA",
-			"featureType": [
-				"RP"
-			],
-			"prerequisite": [
-				{
-					"otherSummary": {
-						"entry": "Renown 25+ with a {@book Dragonmarked House|EFA|5|Dragonmarked House Renown}",
-						"entrySummary": "Dragonmarked House Renown 25+"
-					}
-				}
-			],
-			"entries": [
-				"When you request a favor from your house (as decribed under \"{@optfeature Favored in House|EFA}\"), it can take one of the following additional forms:",
-				{
-					"type": "list",
-					"items": [
-						"A dragonmarked member of the house casts for you a level 3 or 4 spell associated with the house's mark at no cost.",
-						"A member of the house casts for you a different spell of level 6 or lower at half the usual cost.",
-						"You gain a bodyguard for the duration of your next mission for the house (maximum of 1 week). The bodyguard\u2014a creature with a {@variantrule Challenge Rating|XPHB} no higher than half your level (round up)\u2014is appropriate to your house."
-					]
-				},
-				"In addition, your house stipend increases to support your Wealthy lifestyle (4 GP per day)."
 			]
 		},
 		{
@@ -961,8 +923,7 @@
 						"level": 2,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -984,8 +945,7 @@
 						"level": 12,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					},
 					"optionalfeature": [
@@ -1279,8 +1239,7 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					},
 					"optionalfeature": [
@@ -1335,14 +1294,13 @@
 						"level": 2,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
 			],
 			"entries": [
-				"Choose one of your known {@filter Warlock cantrips|spells|level=0|class=Warlock|damage type=acid;bludgeoning;cold;fire;force;lightning;necrotic;piercing;poison;psychic;radiant;slashing;thunder|range=point} that deals damage and has a range of 10+ feet. When you cast that spell, its range increases by a number of feet equal to 30 times your Warlock level.",
+				"Choose one of your known {@filter Warlock cantrips|spells|level=0|class=Warlock} that deals damage and has a range of 10+ feet. When you cast that spell, its range increases by a number of feet equal to 30 times your Warlock level.",
 				{
 					"type": "entries",
 					"entries": [
@@ -1666,32 +1624,6 @@
 			]
 		},
 		{
-			"name": "Favored in House",
-			"source": "EFA",
-			"featureType": [
-				"RP"
-			],
-			"prerequisite": [
-				{
-					"otherSummary": {
-						"entry": "Renown 3+ with a {@book Dragonmarked House|EFA|5|Dragonmarked House Renown}",
-						"entrySummary": "Dragonmarked House Renown 3+"
-					}
-				}
-			],
-			"entries": [
-				"You can request a favor from your house, which can take one of the following forms:",
-				{
-					"type": "list",
-					"items": [
-						"A member of the house casts for you a different spell of level 3 or lower at half the usual cost."
-					]
-				},
-				"You can request such a favor a number of times equal to your Renown Score. If your Renown Score falls below the total number of favors you have requested, a higher-ranking member of the house might call in a favor from you, sending you on a mission for house or personal business.",
-				"In addition, your house pays you a stipend that supports your Modest lifestyle (1 GP per day)."
-			]
-		},
-		{
 			"name": "Feinting Attack",
 			"source": "PHB",
 			"page": 74,
@@ -1760,8 +1692,7 @@
 						"level": 2,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -1897,8 +1828,7 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -1981,8 +1911,7 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -2062,8 +1991,7 @@
 						"level": 9,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					},
 					"optionalfeature": [
@@ -2259,12 +2187,6 @@
 			"name": "Helm of Awareness",
 			"source": "TCE",
 			"page": 21,
-			"reprintedAs": [
-				{
-					"uid": "Helm of Awareness|EFA",
-					"tag": "item"
-				}
-			],
 			"featureType": [
 				"AI"
 			],
@@ -2421,8 +2343,7 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					},
 					"optionalfeature": [
@@ -2505,8 +2426,7 @@
 						"level": 2,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -2578,8 +2498,7 @@
 						"level": 9,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					},
 					"optionalfeature": [
@@ -2715,8 +2634,7 @@
 						"level": 2,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -2782,8 +2700,7 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -2836,12 +2753,6 @@
 			"name": "Mind Sharpener",
 			"source": "TCE",
 			"page": 22,
-			"reprintedAs": [
-				{
-					"uid": "Mind Sharpener|EFA",
-					"tag": "item"
-				}
-			],
 			"featureType": [
 				"AI"
 			],
@@ -3003,8 +2914,7 @@
 						"level": 2,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -3061,8 +2971,7 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -3128,8 +3037,7 @@
 						"level": 2,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -3404,32 +3312,6 @@
 			]
 		},
 		{
-			"name": "Preeminent in House",
-			"source": "EFA",
-			"featureType": [
-				"RP"
-			],
-			"prerequisite": [
-				{
-					"otherSummary": {
-						"entry": "Renown 50+ with a {@book Dragonmarked House|EFA|5|Dragonmarked House Renown}",
-						"entrySummary": "Dragonmarked House Renown 50+"
-					}
-				}
-			],
-			"entries": [
-				"When you request a favor from your house (as decribed under \"{@optfeature Favored in House|EFA}\"), it can take one of the following additional forms:",
-				{
-					"type": "list",
-					"items": [
-						"A dragonmarked member of the house casts for you a level 5 spell associated with the house's mark at no cost.",
-						"A member of the house casts for you a different spell of level 8 or lower at half the usual cost."
-					]
-				},
-				"In addition, your house stipend increases to support your Aristocratic lifestyle (10 GP per day)."
-			]
-		},
-		{
 			"name": "Protection",
 			"source": "PHB",
 			"page": 72,
@@ -3639,33 +3521,6 @@
 			]
 		},
 		{
-			"name": "Recognized in House",
-			"source": "EFA",
-			"featureType": [
-				"RP"
-			],
-			"prerequisite": [
-				{
-					"otherSummary": {
-						"entry": "Renown 10+ with a {@book Dragonmarked House|EFA|5|Dragonmarked House Renown}",
-						"entrySummary": "Dragonmarked House Renown 10+"
-					}
-				}
-			],
-			"entries": [
-				"When you request a favor from your house (as decribed under \"{@optfeature Favored in House|EFA}\"), it can take one of the following additional forms:",
-				{
-					"type": "list",
-					"items": [
-						"A dragonmarked member of the house casts for you a level 2 spell associated with the house's mark at no cost.",
-						"A member of the house casts for you a different spell of level 4 or lower at half the usual cost.",
-						"Whenever you take a Bastion turn, you can issue an order to your house as if it were a special facility in your Bastion. Your house determines the type of special facility available to you, as noted in each house's description later in this chapter."
-					]
-				},
-				"In addition, your house stipend increases to support your Comfortable lifestyle (2 GP per day)."
-			]
-		},
-		{
 			"name": "Relentless Hex",
 			"source": "XGE",
 			"page": 57,
@@ -3697,12 +3552,6 @@
 				{
 					"source": "ERLW",
 					"page": 62
-				}
-			],
-			"reprintedAs": [
-				{
-					"uid": "Repeating Shot|EFA",
-					"tag": "item"
 				}
 			],
 			"featureType": [
@@ -3763,14 +3612,13 @@
 						"level": 2,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
 			],
 			"entries": [
-				"Choose one of your known {@filter Warlock cantrips|spells|level=0|class=Warlock|spell attack=m;r;o} that requires an attack roll. When you hit a Large or smaller creature with that cantrip, you can push the creature up to 10 feet straight away from you.",
+				"Choose one of your known {@filter Warlock cantrips|spells|level=0|class=Warlock} that requires an attack roll. When you hit a Large or smaller creature with that cantrip, you can push the creature up to 10 feet straight away from you.",
 				{
 					"type": "entries",
 					"entries": [
@@ -4073,12 +3921,6 @@
 					"page": 63
 				}
 			],
-			"reprintedAs": [
-				{
-					"uid": "Repulsion Shield|EFA",
-					"tag": "item"
-				}
-			],
 			"featureType": [
 				"AI"
 			],
@@ -4140,12 +3982,6 @@
 				{
 					"source": "ERLW",
 					"page": 63
-				}
-			],
-			"reprintedAs": [
-				{
-					"uid": "Returning Weapon|EFA",
-					"tag": "item"
 				}
 			],
 			"featureType": [
@@ -4478,12 +4314,6 @@
 			"name": "Spell-Refueling Ring",
 			"source": "TCE",
 			"page": 23,
-			"reprintedAs": [
-				{
-					"uid": "Spell-Refueling Ring|EFA",
-					"tag": "item"
-				}
-			],
 			"featureType": [
 				"AI"
 			],
@@ -4759,8 +4589,7 @@
 						"level": 5,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					},
 					"optionalfeature": [
@@ -5090,8 +4919,7 @@
 						"level": 9,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -5224,8 +5052,7 @@
 						"level": 7,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}
@@ -5282,8 +5109,7 @@
 						"level": 15,
 						"class": {
 							"name": "Warlock",
-							"source": "XPHB",
-							"visibleStats": true
+							"source": "XPHB"
 						}
 					}
 				}

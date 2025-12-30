@@ -88,7 +88,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Keen Senses"
 			],
@@ -185,7 +184,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"senseTags": [
 				"D"
 			],
@@ -432,7 +430,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Aggressive"
 			],
@@ -516,7 +513,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"senseTags": [
 				"D"
 			],

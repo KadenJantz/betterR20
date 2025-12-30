@@ -121,7 +121,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Incorporeal Movement",
 				"Legendary Resistances",
@@ -278,7 +277,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"quarterstaff|phb"
 			],
@@ -437,7 +435,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Shapechanger"
 			],

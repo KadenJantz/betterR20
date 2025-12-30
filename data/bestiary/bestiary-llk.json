@@ -5,11 +5,6 @@
 				"MM",
 				"VGM"
 			]
-		},
-		"otherSources": {
-			"monster": {
-				"MM": "LLK"
-			}
 		}
 	},
 	"monster": [
@@ -247,7 +242,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -342,7 +336,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -370,7 +363,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -773,7 +765,6 @@
 				"CL"
 			],
 			"miscTags": [
-				"AOE",
 				"MLW",
 				"MW"
 			],
@@ -857,7 +848,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -939,7 +929,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"senseTags": [
 				"B"
 			],
@@ -992,7 +981,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		}
 	]

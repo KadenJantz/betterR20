@@ -211,7 +211,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -268,7 +267,6 @@
 				"canHover": true
 			},
 			"cr": "12",
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -535,7 +533,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"battleaxe|phb"
 			],
@@ -1109,7 +1106,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -2672,7 +2668,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -2883,7 +2878,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -3740,7 +3734,6 @@
 					"displayAs": "action"
 				}
 			],
-			"tokenCustom": true,
 			"spellcastingTags": [
 				"P"
 			],

@@ -843,9 +843,6 @@
 				"O",
 				"Y"
 			],
-			"miscTags": [
-				"AOE"
-			],
 			"conditionInflict": [
 				"stunned"
 			],
@@ -5349,7 +5346,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"savingThrowForced": [
@@ -5498,7 +5494,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -7156,7 +7151,6 @@
 				"P"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"conditionInflict": [
@@ -8774,9 +8768,6 @@
 			"damageTags": [
 				"O"
 			],
-			"miscTags": [
-				"AOE"
-			],
 			"conditionInflict": [
 				"frightened",
 				"stunned"
@@ -9141,7 +9132,6 @@
 				"T"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -10183,7 +10173,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MLW",
 				"MW",
 				"RW"
@@ -15092,7 +15081,6 @@
 				"CW"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"conditionInflict": [
@@ -15689,7 +15677,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RW"
 			],
@@ -16823,7 +16810,6 @@
 				"T"
 			],
 			"miscTags": [
-				"AOE",
 				"MLW",
 				"MW",
 				"RW"
@@ -17517,7 +17503,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"hasToken": true,
@@ -19369,7 +19354,6 @@
 				"Y"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -21088,7 +21072,6 @@
 				"Y"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -23274,7 +23257,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"MLW",
 				"MW",
 				"RCH"

@@ -2,7 +2,7 @@
 	"_meta": {
 		"otherSources": {
 			"monster": {
-				"MM": "HftT"
+				"MM": "HtfT"
 			}
 		}
 	},
@@ -199,7 +199,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"quarterstaff|phb"
 			],
@@ -345,7 +344,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],

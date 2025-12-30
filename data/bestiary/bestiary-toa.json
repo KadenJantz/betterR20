@@ -304,7 +304,6 @@
 				"CW"
 			],
 			"miscTags": [
-				"AOE",
 				"CUR",
 				"MLW",
 				"MW"
@@ -1609,7 +1608,6 @@
 				"N",
 				"E"
 			],
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -1972,7 +1970,6 @@
 				"N",
 				"E"
 			],
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -2670,7 +2667,6 @@
 				"L",
 				"G"
 			],
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -3761,7 +3757,6 @@
 				"L",
 				"G"
 			],
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -4314,7 +4309,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Magic Resistance"
 			],
@@ -4802,7 +4796,6 @@
 				"Elvish",
 				"Halfling"
 			],
-			"tokenCustom": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -5079,7 +5072,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"damageTags": [
 				"P"
 			],
@@ -5550,9 +5542,6 @@
 			"isNamedCreature": true,
 			"source": "ToA",
 			"page": 58,
-			"reprintedAs": [
-				"Valindra Shadowmantle|FRAiF"
-			],
 			"size": [
 				"M"
 			],
@@ -6646,7 +6635,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{

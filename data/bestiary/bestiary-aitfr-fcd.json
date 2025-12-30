@@ -1,11 +1,4 @@
 {
-	"_meta": {
-		"otherSources": {
-			"monster": {
-				"MM": "AitFR-FCD"
-			}
-		}
-	},
 	"monster": [
 		{
 			"name": "Mercenary Envoy",
@@ -84,7 +77,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"heavy crossbow|phb",
 				"longsword|phb"
@@ -317,7 +309,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"dagger|phb"
 			],

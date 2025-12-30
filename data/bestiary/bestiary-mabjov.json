@@ -9637,9 +9637,6 @@
 			"spellcastingTags": [
 				"O"
 			],
-			"miscTags": [
-				"AOE"
-			],
 			"conditionInflictSpell": [
 				"poisoned"
 			],

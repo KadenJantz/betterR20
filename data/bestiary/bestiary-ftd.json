@@ -625,9 +625,6 @@
 			"name": "Adult Deep Dragon",
 			"source": "FTD",
 			"page": 174,
-			"reprintedAs": [
-				"Adult Deep Dragon|FRAiF"
-			],
 			"size": [
 				"H"
 			],
@@ -2663,7 +2660,6 @@
 				}
 			],
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -3342,9 +3338,6 @@
 			"name": "Ancient Deep Dragon",
 			"source": "FTD",
 			"page": 173,
-			"reprintedAs": [
-				"Ancient Deep Dragon|FRAiF"
-			],
 			"size": [
 				"G"
 			],
@@ -4865,11 +4858,6 @@
 			"name": "Ancient Sea Serpent",
 			"source": "FTD",
 			"page": 219,
-			"otherSources": [
-				{
-					"source": "FRAiF"
-				}
-			],
 			"size": [
 				"G"
 			],
@@ -6153,7 +6141,6 @@
 			],
 			"dragonCastingColor": "black",
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -6758,7 +6745,6 @@
 			],
 			"dragonCastingColor": "brass",
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -7080,7 +7066,6 @@
 			],
 			"dragonCastingColor": "bronze",
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -7402,7 +7387,6 @@
 			],
 			"dragonCastingColor": "copper",
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -7932,7 +7916,6 @@
 				}
 			],
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -7984,9 +7967,6 @@
 			"name": "Deep Dragon Wyrmling",
 			"source": "FTD",
 			"page": 175,
-			"reprintedAs": [
-				"Deep Dragon Wyrmling|FRAiF"
-			],
 			"size": [
 				"M"
 			],
@@ -9283,7 +9263,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"senseTags": [
 				"B",
 				"D"
@@ -11818,7 +11797,6 @@
 				}
 			],
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -12400,7 +12378,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"damageTags": [
 				"P"
 			],
@@ -12694,7 +12671,6 @@
 			],
 			"dragonCastingColor": "gold",
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -12986,7 +12962,6 @@
 			],
 			"dragonCastingColor": "green",
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -15726,7 +15701,6 @@
 				}
 			],
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -16021,7 +15995,6 @@
 			],
 			"dragonCastingColor": "white",
 			"dragonAge": "greatwyrm",
-			"tokenCustom": true,
 			"traitTags": [
 				"Legendary Resistances",
 				"Unusual Nature"
@@ -16556,9 +16529,6 @@
 			"name": "Young Deep Dragon",
 			"source": "FTD",
 			"page": 175,
-			"reprintedAs": [
-				"Young Deep Dragon|FRAiF"
-			],
 			"size": [
 				"L"
 			],

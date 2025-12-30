@@ -72,8 +72,7 @@ function baseChat () {
 
 	function availableLanguages (charId) {
 		const char = d20.Campaign.characters.get(charId);
-		const firstCharSheet = d20.journal.characterSheetsManager.getAllSheets().first();
-		const langId = firstCharSheet.availableAttributes.repeating_proficiencies_prof_type;
+		const langId = d20.journal.customSheets.availableAttributes.repeating_proficiencies_prof_type;
 		if (!char) return [];
 		if (!char.attribs.length) {
 			const fetched = d20plus.ut.fetchCharAttribs(char);
@@ -878,9 +877,7 @@ function baseChat () {
 		}
 		const macroJS = d20plus.cfg.getOrDefault("chat", "executeJSMacro");
 
-		// Added check: typeof params[0] === "string"
-		// This prevents the script from crashing in Jumpgate when params[0] is an object or null
-		if (macroJS !== "none" && typeof params[0] === "string") {
+		if (macroJS !== "none") {
 			const template = /#(?<macroid>[^ ^#]+)/g;
 			params[0] = params[0].replace(template, (...match) => {
 				const macroId = match.last().macroid;
@@ -902,7 +899,7 @@ function baseChat () {
 		}
 
 		return r20outgoing(...params);
-	};
+	}
 
 	d20plus.chat.r20incoming = (r20incoming, params) => {
 		const msg = params[1];

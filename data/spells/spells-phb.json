@@ -5298,8 +5298,7 @@
 				"If any of this spell's area overlaps with an area of light created by a spell of 2nd level or lower, the spell that created the light is dispelled."
 			],
 			"miscTags": [
-				"OBJ",
-				"OBS"
+				"OBJ"
 			],
 			"areaTags": [
 				"S"
@@ -10081,8 +10080,7 @@
 				"charisma"
 			],
 			"miscTags": [
-				"LGT",
-				"OBS"
+				"LGT"
 			]
 		},
 		{
@@ -10936,8 +10934,7 @@
 				"dexterity"
 			],
 			"miscTags": [
-				"DFT",
-				"OBS"
+				"DFT"
 			],
 			"areaTags": [
 				"S"

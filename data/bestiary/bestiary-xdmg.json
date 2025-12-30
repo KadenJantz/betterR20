@@ -33,7 +33,7 @@
 			"wis": 16,
 			"cha": 16,
 			"senses": [
-				"Truesight 60 ft."
+				"truesight 60 ft."
 			],
 			"passive": 13,
 			"immune": [
@@ -126,7 +126,7 @@
 			"wis": 10,
 			"cha": 3,
 			"senses": [
-				"Darkvision 60 ft."
+				"darkvision 60 ft."
 			],
 			"passive": 10,
 			"cr": {

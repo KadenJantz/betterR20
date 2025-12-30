@@ -185,33 +185,6 @@ function baseToolModule () {
 
 			let selected = getFreshSelected();
 
-			function preprocessModuleData (data) {
-				// Recursively fix all S3 URLs in the module data
-				const fixUrlsInObject = (obj) => {
-					if (!obj || typeof obj !== 'object') return;
-
-					// Fix common image URL properties
-					if (obj.imgsrc) obj.imgsrc = d20plus.ut.fixS3Url(obj.imgsrc);
-					if (obj.sides) obj.sides = d20plus.ut.fixS3Url(obj.sides);
-					if (obj.avatar) obj.avatar = d20plus.ut.fixS3Url(obj.avatar);
-					if (obj.thumbnail) obj.thumbnail = d20plus.ut.fixS3Url(obj.thumbnail);
-
-					// Recursively process nested objects and arrays
-					for (const key in obj) {
-						if (obj.hasOwnProperty(key) && obj[key]) {
-							if (Array.isArray(obj[key])) {
-								obj[key].forEach(item => fixUrlsInObject(item));
-							} else if (typeof obj[key] === 'object') {
-								fixUrlsInObject(obj[key]);
-							}
-						}
-					}
-				};
-
-				fixUrlsInObject(data);
-				return data;
-			}
-
 			function handleLoadedData (data) {
 				lastLoadedData = data;
 				selected = getFreshSelected();
@@ -396,51 +369,12 @@ function baseToolModule () {
 								switch (prop) {
 									case "maps": {
 										const map = d20.Campaign.pages.create(entry.attributes);
+										entry.graphics.forEach(it => map.thegraphics.create(it));
+										entry.paths.forEach(it => map.thepaths.create(it));
+										entry.text.forEach(it => map.thetexts.create(it));
+										entry.doors?.forEach(it => map.doors.create(it));
+										entry.windows?.forEach(it => map.windows.create(it));
 										map.save();
-
-										// Wait for Roll20 to initialize, then add graphics
-										setTimeout(async () => {
-											const savedMap = d20.Campaign.pages.get(map.id);
-											if (!savedMap) return;
-
-											// Roll20 creates thegraphics on page load, not page creation
-											// We need to fully load the page to initialize thegraphics
-											if (!savedMap.thegraphics) {
-												await savedMap.fullyLoadPage();
-											}
-
-											// Helper to fix S3 URLs to files.d20.io
-											const fixImageUrls = (obj) => {
-												if (obj.imgsrc) obj.imgsrc = d20plus.ut.fixS3Url(obj.imgsrc, false);
-												if (obj.sides) obj.sides = d20plus.ut.fixS3Url(obj.sides, false);
-												if (obj.avatar) obj.avatar = d20plus.ut.fixS3Url(obj.avatar, false);
-											};
-
-											// Process graphics with URL fixes
-											entry.graphics?.forEach(it => {
-												fixImageUrls(it);
-												it.page_id = savedMap.id;
-												savedMap.thegraphics && savedMap.thegraphics.create(it);
-											});
-
-											// Process other elements
-											entry.paths?.forEach(it => {
-												it.page_id = savedMap.id;
-												savedMap.thepaths && savedMap.thepaths.create(it);
-											});
-											entry.text?.forEach(it => {
-												it.page_id = savedMap.id;
-												savedMap.thetexts && savedMap.thetexts.create(it);
-											});
-											entry.doors?.forEach(it => {
-												it.page_id = savedMap.id;
-												savedMap.doors && savedMap.doors.create(it);
-											});
-											entry.windows?.forEach(it => {
-												it.page_id = savedMap.id;
-												savedMap.windows && savedMap.windows.create(it);
-											});
-										}, 100);
 										break;
 									}
 									case "rolltables": {
@@ -565,7 +499,6 @@ function baseToolModule () {
 						DataUtil.loadJSON(`${DATA_URL_MODULES}/roll20-module-${sel.id.toLowerCase()}.json`)
 							.then(moduleFile => {
 								$wrpDataLoadingMessage.html("");
-								preprocessModuleData(moduleFile);
 								return handleLoadedData(moduleFile);
 							})
 							.catch(e => {
@@ -626,7 +559,6 @@ function baseToolModule () {
 						DataUtil.loadJSON(`${urlbase}${sel.filename}`)
 							.then(moduleFile => {
 								$wrpDataLoadingMessage.html("");
-								preprocessModuleData(moduleFile);
 								return handleLoadedData(moduleFile);
 							})
 							.catch(e => {
@@ -648,10 +580,7 @@ function baseToolModule () {
 			$btnLoadFile.off("click").click(async () => {
 				const data = await InputUiUtil.pGetUserUploadJson();
 				// Due to the new util functon, need to account for data being an array
-				data.jsons.forEach(d => {
-					preprocessModuleData(d);
-					handleLoadedData(d);
-				});
+				data.jsons.forEach(d => handleLoadedData(d));
 			});
 
 			const $winExportP1 = $("#d20plus-module-importer-select-exports-p1");
@@ -689,11 +618,6 @@ function baseToolModule () {
 						// eslint-disable-next-line no-console
 						console.log("Exporting maps..."); // shoutouts to Stormy
 						maps = await Promise.all(d20.Campaign.pages.models.map(async map => {
-							// Ensure the page is fully loaded so we get all graphics/elements
-							if (!map.thegraphics) {
-								await map.fullyLoadPage();
-							}
-
 							const getOut = () => {
 								return {
 									attributes: map.attributes,

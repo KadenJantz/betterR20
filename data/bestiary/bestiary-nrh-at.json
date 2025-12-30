@@ -8,8 +8,7 @@
 		"otherSources": {
 			"monster": {
 				"NRH-TCMC": "NRH-AT",
-				"NRH-ASS": "NRH-AT",
-				"MM": "NRH-AT"
+				"NRH-ASS": "NRH-AT"
 			}
 		}
 	},
@@ -124,7 +123,6 @@
 					]
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -145,7 +143,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -237,7 +234,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"club|phb",
 				"hand crossbow|phb"

@@ -245,7 +245,6 @@
 				"Common",
 				"Giant Owl"
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Keen Senses",
 				"Sneak Attack"
@@ -406,7 +405,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"light crossbow|phb"
 			],
@@ -483,7 +481,6 @@
 			"speed": {
 				"walk": 20
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -516,7 +513,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"languageTags": [
 				"C",
 				"D",
@@ -569,7 +565,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"spellcastingTags": [
 				"I"
 			],
@@ -612,7 +607,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -743,7 +737,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"shortsword|phb"
 			],
@@ -1162,7 +1155,6 @@
 				"Common",
 				"Primordial"
 			],
-			"tokenCustom": true,
 			"languageTags": [
 				"C",
 				"P"
@@ -1282,7 +1274,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"spear|phb"
 			],
@@ -1336,7 +1327,6 @@
 				"exhaustion",
 				"poisoned"
 			],
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -1358,7 +1348,6 @@
 				"exhaustion",
 				"poisoned"
 			],
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -1380,7 +1369,6 @@
 				"exhaustion",
 				"poisoned"
 			],
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -1402,7 +1390,6 @@
 				"exhaustion",
 				"poisoned"
 			],
-			"tokenCustom": true,
 			"hasToken": true
 		},
 		{
@@ -1439,7 +1426,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"damageTags": [
 				"S",
 				"Y"
@@ -1476,7 +1462,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"damageTags": [
 				"B",
 				"F",
@@ -1949,7 +1934,6 @@
 				"name": "Thessalkraken",
 				"source": "IMR"
 			},
-			"tokenCustom": true,
 			"traitTags": [
 				"Amphibious"
 			],
@@ -2019,7 +2003,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"languageTags": [
 				"C",
 				"I",
@@ -2106,7 +2089,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Hold Breath"
 			],

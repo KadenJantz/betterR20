@@ -1730,7 +1730,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -2839,9 +2838,6 @@
 			"spellcastingTags": [
 				"CW"
 			],
-			"miscTags": [
-				"AOE"
-			],
 			"conditionInflict": [
 				"poisoned"
 			],
@@ -3619,7 +3615,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"MLW",
 				"MW"
 			],
@@ -3844,7 +3839,6 @@
 				"Y"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"conditionInflict": [
@@ -4195,7 +4189,6 @@
 				"L"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"savingThrowForced": [
@@ -5848,7 +5841,6 @@
 				"CW"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"conditionInflict": [
@@ -6483,7 +6475,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"MLW",
 				"MW"
 			],
@@ -6665,7 +6656,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"MLW",
 				"MW",
 				"RW",
@@ -7742,7 +7732,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"HPR",
 				"MW"
 			],
@@ -8184,7 +8173,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -9136,7 +9124,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MW"
 			],
 			"conditionInflict": [

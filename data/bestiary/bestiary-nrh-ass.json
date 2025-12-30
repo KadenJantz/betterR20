@@ -2,8 +2,7 @@
 	"_meta": {
 		"otherSources": {
 			"monster": {
-				"NRH-TCMC": "NRH-ASS",
-				"MM": "NRH-ASS"
+				"NRH-TCMC": "NRH-ASS"
 			}
 		}
 	},
@@ -72,7 +71,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"scimitar|phb"
 			],

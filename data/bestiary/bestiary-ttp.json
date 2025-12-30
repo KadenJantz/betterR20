@@ -7,8 +7,7 @@
 		},
 		"otherSources": {
 			"monster": {
-				"MTF": "TTP",
-				"MM": "TTP"
+				"MTF": "TTP"
 			}
 		}
 	},

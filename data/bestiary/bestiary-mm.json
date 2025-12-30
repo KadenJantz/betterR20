@@ -2480,9 +2480,6 @@
 				},
 				{
 					"source": "JttRC"
-				},
-				{
-					"source": "WDH"
 				}
 			],
 			"reprintedAs": [
@@ -3126,9 +3123,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -4626,9 +4620,6 @@
 				},
 				{
 					"source": "TCE"
-				},
-				{
-					"source": "SKT"
 				}
 			],
 			"reprintedAs": [
@@ -7969,9 +7960,6 @@
 				},
 				{
 					"source": "CRCotN"
-				},
-				{
-					"source": "SKT"
 				}
 			],
 			"reprintedAs": [
@@ -8527,9 +8515,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -9312,9 +9297,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "FRAiF"
 				}
 			],
 			"reprintedAs": [
@@ -9522,9 +9504,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -9624,9 +9603,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -9799,7 +9775,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MLW",
 				"MW",
 				"RCH"
@@ -10849,9 +10824,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -11273,9 +11245,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -11453,9 +11422,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -13298,9 +13264,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "HotDQ"
 				}
 			],
 			"reprintedAs": [
@@ -13646,9 +13609,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "ToA"
 				}
 			],
 			"reprintedAs": [
@@ -13792,11 +13752,6 @@
 			"source": "MM",
 			"page": 106,
 			"srd": true,
-			"otherSources": [
-				{
-					"source": "OoW"
-				}
-			],
 			"reprintedAs": [
 				"Brass Dragon Wyrmling|XMM"
 			],
@@ -14555,9 +14510,6 @@
 				},
 				{
 					"source": "CRCotN"
-				},
-				{
-					"source": "NRH-AT"
 				}
 			],
 			"size": [
@@ -14928,6 +14880,12 @@
 				"type": "internal",
 				"path": "bestiary/bullywug.mp3"
 			},
+			"altArt": [
+				{
+					"name": "Blacktongue Bullywug",
+					"source": "WDMM"
+				}
+			],
 			"attachedItems": [
 				"spear|phb"
 			],
@@ -15375,9 +15333,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -15613,9 +15568,6 @@
 				},
 				{
 					"source": "WDMM"
-				},
-				{
-					"source": "SKT"
 				}
 			],
 			"reprintedAs": [
@@ -15873,9 +15825,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "WDH"
 				}
 			],
 			"reprintedAs": [
@@ -16051,9 +16000,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -16844,7 +16790,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -17100,9 +17045,6 @@
 				},
 				{
 					"source": "WBtW"
-				},
-				{
-					"source": "OoW"
 				}
 			],
 			"reprintedAs": [
@@ -18325,9 +18267,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "HotDQ"
 				}
 			],
 			"reprintedAs": [
@@ -19232,9 +19171,6 @@
 				},
 				{
 					"source": "AATM"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -19368,9 +19304,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "WDMM"
 				}
 			],
 			"reprintedAs": [
@@ -19613,9 +19546,6 @@
 				},
 				{
 					"source": "VEoR"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -19850,9 +19780,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -20542,7 +20469,6 @@
 				"N"
 			],
 			"miscTags": [
-				"AOE",
 				"CUR",
 				"HPR"
 			],
@@ -21784,9 +21710,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -21921,9 +21844,6 @@
 				},
 				{
 					"source": "VEoR"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -22204,9 +22124,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -22439,9 +22356,6 @@
 				},
 				{
 					"source": "PaBTSO"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -22932,9 +22846,6 @@
 				},
 				{
 					"source": "GoS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -23797,9 +23708,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -26140,11 +26048,6 @@
 			"name": "Faerie Dragon (Orange)",
 			"source": "MM",
 			"page": 133,
-			"otherSources": [
-				{
-					"source": "CM"
-				}
-			],
 			"reprintedAs": [
 				"Faerie Dragon Youth|XMM"
 			],
@@ -27757,9 +27660,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -27897,9 +27797,6 @@
 				},
 				{
 					"source": "KftGV"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -28175,9 +28072,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -28880,9 +28774,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -28972,7 +28863,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"DIS",
 				"MW"
 			],
@@ -29015,9 +28905,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -29722,9 +29609,6 @@
 			"otherSources": [
 				{
 					"source": "GoS"
-				},
-				{
-					"source": "ToA"
 				}
 			],
 			"reprintedAs": [
@@ -30825,9 +30709,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -32913,9 +32794,6 @@
 				},
 				{
 					"source": "PSX"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -33064,9 +32942,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -34302,9 +34177,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -34908,9 +34780,6 @@
 				},
 				{
 					"source": "PaBTSO"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -36245,9 +36114,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -36570,9 +36436,6 @@
 				},
 				{
 					"source": "VEoR"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -36880,7 +36743,7 @@
 					"name": "Tentacles",
 					"entries": [
 						"{@atk mw} {@hit 4} to hit, reach 10 ft., one creature. {@h}7 ({@damage 1d10 + 2}) piercing damage, and the target must succeed on a {@dc 11} Constitution saving throw or be {@condition poisoned} for 1 minute. The {@condition poisoned} target is {@condition paralyzed}, and it can repeat the saving throw at the end of each of its turns, ending the effect on a success.",
-						"The target is also {@condition grappled} (escape {@dc 15}). If the target is Medium or smaller, it is also {@condition restrained} until this grapple ends. While grappling the target, the grell has advantage on attack rolls against it and can't use this attack against other targets. When the grell moves, any Medium or smaller target it is grappling moves with it."
+						"The target is also {@condition grappled} (escape {@dc 15}). If the target is Medium or smaller, it is also {@condition restrained} until this grapple ends. While grappling the target, the grell has advantage on attack rolls against it and can 't use this attack against other targets. When the grell moves, any Medium or smaller target it is grappling moves with it."
 					]
 				},
 				{
@@ -37092,9 +36955,6 @@
 				},
 				{
 					"source": "PaBTSO"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -37362,9 +37222,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -37874,9 +37731,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "LLK"
 				}
 			],
 			"reprintedAs": [
@@ -38235,9 +38089,6 @@
 				},
 				{
 					"source": "IMR"
-				},
-				{
-					"source": "HotDQ"
 				}
 			],
 			"reprintedAs": [
@@ -40703,9 +40554,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "WDMM"
 				}
 			],
 			"reprintedAs": [
@@ -41334,9 +41182,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -41511,9 +41356,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -42026,9 +41868,6 @@
 			"otherSources": [
 				{
 					"source": "GoS"
-				},
-				{
-					"source": "ToA"
 				}
 			],
 			"reprintedAs": [
@@ -42899,9 +42738,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "SKT"
 				}
 			],
 			"reprintedAs": [
@@ -44152,9 +43988,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "PotA"
 				}
 			],
 			"reprintedAs": [
@@ -46022,9 +45855,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -46928,9 +46758,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -47074,9 +46901,6 @@
 				},
 				{
 					"source": "JttRC"
-				},
-				{
-					"source": "SKT"
 				}
 			],
 			"reprintedAs": [
@@ -47596,9 +47420,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -47776,9 +47597,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -47949,9 +47767,6 @@
 				},
 				{
 					"source": "SatO"
-				},
-				{
-					"source": "LLK"
 				}
 			],
 			"reprintedAs": [
@@ -48374,9 +48189,6 @@
 				},
 				{
 					"source": "VEoR"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -48514,9 +48326,6 @@
 				},
 				{
 					"source": "ToFW"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -49043,7 +48852,6 @@
 			],
 			"miscTags": [
 				"CUR",
-				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -49327,9 +49135,7 @@
 				"CC"
 			],
 			"miscTags": [
-				"AOE",
 				"CUR",
-				"HPR",
 				"MW"
 			],
 			"conditionInflict": [
@@ -49381,9 +49187,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -49548,9 +49351,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -49728,9 +49528,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -49847,9 +49644,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -50003,7 +49797,6 @@
 				"S"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -54286,9 +54079,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "WDMM"
 				}
 			],
 			"reprintedAs": [
@@ -55555,9 +55345,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -55847,9 +55634,6 @@
 				},
 				{
 					"source": "PaBTSO"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -55965,9 +55749,6 @@
 				},
 				{
 					"source": "IDRotF"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -56244,9 +56025,6 @@
 				},
 				{
 					"source": "VEoR"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -56537,9 +56315,6 @@
 				},
 				{
 					"source": "VEoR"
-				},
-				{
-					"source": "WDH"
 				}
 			],
 			"reprintedAs": [
@@ -56728,9 +56503,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "SKT"
 				}
 			],
 			"reprintedAs": [
@@ -56920,9 +56692,6 @@
 				},
 				{
 					"source": "DSotDQ"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -57740,9 +57509,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "PotA"
 				}
 			],
 			"reprintedAs": [
@@ -58637,9 +58403,6 @@
 				},
 				{
 					"source": "SatO"
-				},
-				{
-					"source": "FRAiF"
 				}
 			],
 			"reprintedAs": [
@@ -59627,9 +59390,6 @@
 				},
 				{
 					"source": "PSX"
-				},
-				{
-					"source": "TTP"
 				}
 			],
 			"reprintedAs": [
@@ -61017,9 +60777,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -61525,9 +61282,6 @@
 				},
 				{
 					"source": "SatO"
-				},
-				{
-					"source": "WDMM"
 				}
 			],
 			"reprintedAs": [
@@ -62762,9 +62516,6 @@
 				},
 				{
 					"source": "VEoR"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -64162,7 +63913,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"MLW",
 				"MW",
 				"RCH",
@@ -64224,9 +63974,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "HotDQ"
 				}
 			],
 			"reprintedAs": [
@@ -64767,9 +64514,6 @@
 				},
 				{
 					"source": "PSA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -66868,9 +66612,6 @@
 				},
 				{
 					"source": "CoA"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -70216,9 +69957,6 @@
 				},
 				{
 					"source": "DSotDQ"
-				},
-				{
-					"source": "HotDQ"
 				}
 			],
 			"reprintedAs": [
@@ -71160,9 +70898,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "PotA"
 				}
 			],
 			"reprintedAs": [
@@ -71366,9 +71101,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -72190,9 +71922,6 @@
 				},
 				{
 					"source": "QftIS"
-				},
-				{
-					"source": "HotDQ"
 				}
 			],
 			"reprintedAs": [
@@ -73772,9 +73501,6 @@
 				},
 				{
 					"source": "VEoR"
-				},
-				{
-					"source": "OotA"
 				}
 			],
 			"reprintedAs": [
@@ -75497,9 +75223,6 @@
 				},
 				{
 					"source": "BMT"
-				},
-				{
-					"source": "LMoP"
 				}
 			],
 			"reprintedAs": [

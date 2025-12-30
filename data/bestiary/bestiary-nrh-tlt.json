@@ -2,8 +2,7 @@
 	"_meta": {
 		"otherSources": {
 			"monster": {
-				"NRH-TCMC": "NRH-TLT",
-				"MM": "NRH-TLT"
+				"NRH-TCMC": "NRH-TLT"
 			}
 		}
 	},

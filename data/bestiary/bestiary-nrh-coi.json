@@ -2,8 +2,7 @@
 	"_meta": {
 		"otherSources": {
 			"monster": {
-				"NRH-TCMC": "NRH-CoI",
-				"MM": "NRH-CoI"
+				"NRH-TCMC": "NRH-CoI"
 			}
 		}
 	},
@@ -61,7 +60,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"languageTags": [
 				"C"
 			],
@@ -138,7 +136,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"traitTags": [
 				"Reckless"
 			],
@@ -224,7 +221,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"hand crossbow|phb",
 				"shortsword|phb"

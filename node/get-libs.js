@@ -40,7 +40,6 @@ async function build (input, output) {
 	await bundle.write({
 		file: output,
 		format: "es",
-		inlineDynamicImports: true, // Add this line to fix the error
 	});
 }
 

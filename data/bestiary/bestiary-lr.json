@@ -196,7 +196,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"club|phb"
 			],
@@ -317,7 +316,6 @@
 				"Common",
 				"Aquan"
 			],
-			"tokenCustom": true,
 			"actionTags": [
 				"Multiattack"
 			],
@@ -746,7 +744,6 @@
 					]
 				}
 			],
-			"tokenCustom": true,
 			"attachedItems": [
 				"dagger|phb"
 			],
@@ -853,7 +850,6 @@
 				"Common",
 				"Aquan"
 			],
-			"tokenCustom": true,
 			"languageTags": [
 				"AQ",
 				"C"

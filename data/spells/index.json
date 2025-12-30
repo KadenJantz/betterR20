@@ -3,10 +3,8 @@
 	"AI": "spells-ai.json",
 	"AitFR-AVT": "spells-aitfr-avt.json",
 	"BMT": "spells-bmt.json",
-	"EFA": "spells-efa.json",
 	"EGW": "spells-egw.json",
 	"FTD": "spells-ftd.json",
-	"FRHoF": "spells-frhof.json",
 	"GGR": "spells-ggr.json",
 	"IDRotF": "spells-idrotf.json",
 	"LLK": "spells-llk.json",
@@ -14,6 +12,7 @@
 	"SatO": "spells-sato.json",
 	"SCC": "spells-scc.json",
 	"TCE": "spells-tce.json",
+	"TDCSR": "spells-tdcsr.json",
 	"XGE": "spells-xge.json",
 	"XPHB": "spells-xphb.json"
 }

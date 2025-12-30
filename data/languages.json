@@ -51,19 +51,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "rare",
-			"origin": "Demons of the Abyss"
-		},
-		{
-			"name": "Aglarondan",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Aglarond"
-		},
-		{
-			"name": "Alzhedo",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Calimshan"
+			"entries": [
+				"Origin: Demons of the Abyss."
+			]
 		},
 		{
 			"name": "Alzhedo",
@@ -100,12 +90,6 @@
 			"typicalSpeakers": [
 				"{@creature Blink Dog||blink dogs}"
 			]
-		},
-		{
-			"name": "Bothii",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Uthgardt nomads"
 		},
 		{
 			"name": "Bothii",
@@ -175,13 +159,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "rare",
-			"origin": "Celestials"
-		},
-		{
-			"name": "Chessentan",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Chessenta"
+			"entries": [
+				"Origin: Celestials."
+			]
 		},
 		{
 			"name": "Chessentan",
@@ -202,12 +182,6 @@
 				}
 			],
 			"hasFluffImages": true
-		},
-		{
-			"name": "Chondathan",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Chondath"
 		},
 		{
 			"name": "Chondathan",
@@ -322,7 +296,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Sigil"
+			"entries": [
+				"Origin: Sigil."
+			]
 		},
 		{
 			"name": "Common Sign Language",
@@ -331,7 +307,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Sigil"
+			"entries": [
+				"Origin: Sigil."
+			]
 		},
 		{
 			"name": "Common Trade Pidgin",
@@ -361,12 +339,6 @@
 				"denizens of Khyber"
 			],
 			"script": "Daelkyr"
-		},
-		{
-			"name": "Damaran",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Damara"
 		},
 		{
 			"name": "Damaran",
@@ -439,7 +411,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "rare",
-			"origin": "Aberrations"
+			"entries": [
+				"Origin: Aberrations."
+			]
 		},
 		{
 			"name": "Demonic",
@@ -531,8 +505,10 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Dragons",
-			"script": "Draconic"
+			"script": "Draconic",
+			"entries": [
+				"Origin: Dragons."
+			]
 		},
 		{
 			"name": "Druidic",
@@ -569,7 +545,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "rare",
-			"origin": "Druidic circles"
+			"entries": [
+				"Origin: Druidic circles."
+			]
 		},
 		{
 			"name": "Dwarvish",
@@ -626,7 +604,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Dwarves"
+			"entries": [
+				"Origin: Dwarves."
+			]
 		},
 		{
 			"name": "Elvish",
@@ -693,7 +673,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Elves"
+			"entries": [
+				"Origin: Elves."
+			]
 		},
 		{
 			"name": "Ergot",
@@ -759,7 +741,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Giants"
+			"entries": [
+				"Origin: Giants."
+			]
 		},
 		{
 			"name": "Giant Eagle",
@@ -879,7 +863,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Gnomes"
+			"entries": [
+				"Origin: Gnomes."
+			]
 		},
 		{
 			"name": "Goblin",
@@ -946,7 +932,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Goblinoids"
+			"entries": [
+				"Origin: Goblinoids."
+			]
 		},
 		{
 			"name": "Grell",
@@ -1027,7 +1015,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Halflings"
+			"entries": [
+				"Origin: Halflings."
+			]
 		},
 		{
 			"name": "Halruaan",
@@ -1076,12 +1066,6 @@
 			"typicalSpeakers": [
 				"{@creature Ice Toad|RoT|ice toads}"
 			]
-		},
-		{
-			"name": "Illuskan",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "The North"
 		},
 		{
 			"name": "Illuskan",
@@ -1135,7 +1119,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "rare",
-			"origin": "Devils of the Nine Hells"
+			"entries": [
+				"Origin: Devils of the Nine Hells."
+			]
 		},
 		{
 			"name": "Istarian",
@@ -1249,12 +1235,6 @@
 			]
 		},
 		{
-			"name": "Lantanese",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Lantan"
-		},
-		{
 			"name": "Leonin",
 			"source": "MOT",
 			"page": 9,
@@ -1311,12 +1291,6 @@
 		},
 		{
 			"name": "Midani",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Bedine nomads"
-		},
-		{
-			"name": "Midani",
 			"source": "SCAG",
 			"page": 112,
 			"typicalSpeakers": [
@@ -1368,12 +1342,6 @@
 		},
 		{
 			"name": "Mulhorandi",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Mulhorand"
-		},
-		{
-			"name": "Mulhorandi",
 			"source": "SCAG",
 			"page": 112,
 			"typicalSpeakers": [
@@ -1417,12 +1385,6 @@
 				"Neraka"
 			],
 			"script": "Istarian"
-		},
-		{
-			"name": "Netherese",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Netheril"
 		},
 		{
 			"name": "Netherese",
@@ -1497,7 +1459,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "standard",
-			"origin": "Orcs"
+			"entries": [
+				"Origin: Orcs."
+			]
 		},
 		{
 			"name": "Otyugh",
@@ -1588,7 +1552,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "rare",
-			"origin": "Elementals"
+			"entries": [
+				"Origin: Elementals."
+			]
 		},
 		{
 			"name": "Qualith",
@@ -1617,12 +1583,6 @@
 		},
 		{
 			"name": "Rashemi",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Rashemen"
-		},
-		{
-			"name": "Rashemi",
 			"source": "SCAG",
 			"page": 112,
 			"typicalSpeakers": [
@@ -1640,12 +1600,6 @@
 				}
 			],
 			"hasFluffImages": true
-		},
-		{
-			"name": "Reghedjic",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Reghed nomads"
 		},
 		{
 			"name": "Riedran",
@@ -1686,12 +1640,6 @@
 				"{@creature Sahuagin Priestess||sahuagin priestesses}",
 				"{@creature Sahuagin Baron||sahuagin barons}"
 			]
-		},
-		{
-			"name": "Sespech",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Sespech"
 		},
 		{
 			"name": "Shaaran",
@@ -1863,13 +1811,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "rare",
-			"origin": "The Feywild"
-		},
-		{
-			"name": "Thayan",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Thay"
+			"entries": [
+				"Origin: The Feywild."
+			]
 		},
 		{
 			"name": "Thayan",
@@ -1927,7 +1871,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "rare",
-			"origin": "Various criminal guilds"
+			"entries": [
+				"Origin: Various criminal guilds."
+			]
 		},
 		{
 			"name": "Thri-kreen",
@@ -1972,12 +1918,6 @@
 				}
 			],
 			"hasFluffImages": true
-		},
-		{
-			"name": "Turmic",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Turmish"
 		},
 		{
 			"name": "Turmic",
@@ -2050,13 +1990,9 @@
 			"srd52": true,
 			"basicRules2024": true,
 			"type": "rare",
-			"origin": "The Underdark"
-		},
-		{
-			"name": "Untheric",
-			"source": "FRHoF",
-			"type": "standard",
-			"origin": "Unther"
+			"entries": [
+				"Origin: The Underdark."
+			]
 		},
 		{
 			"name": "Untheric",

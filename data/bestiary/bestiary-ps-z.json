@@ -228,7 +228,6 @@
 				"name": "Stone Giant",
 				"source": "MM"
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -267,7 +266,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -511,7 +509,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -590,7 +587,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -610,7 +606,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -691,7 +686,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -719,7 +713,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"damageTagsLegendary": [],
 			"hasToken": true,
 			"hasFluffImages": true
@@ -853,7 +846,6 @@
 				"I"
 			],
 			"miscTags": [
-				"AOE",
 				"MW",
 				"RCH"
 			],
@@ -885,7 +877,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -905,7 +896,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -925,7 +915,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -963,7 +952,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -976,7 +964,6 @@
 				"name": "Boulderfoot Giant",
 				"source": "PSZ"
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -996,7 +983,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -1021,7 +1007,6 @@
 				"name": "Gynosphinx",
 				"source": "MM"
 			},
-			"tokenCustom": true,
 			"damageTagsLegendary": [],
 			"hasToken": true,
 			"hasFluff": true,
@@ -1042,7 +1027,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -1100,7 +1084,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -1119,7 +1102,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -1138,7 +1120,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -1178,7 +1159,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluffImages": true
 		},
@@ -1197,7 +1177,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},
@@ -1213,7 +1192,6 @@
 				"walk": 30,
 				"climb": 50
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -1226,7 +1204,6 @@
 				"name": "Wraith",
 				"source": "MM"
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -1246,7 +1223,6 @@
 					}
 				}
 			},
-			"tokenCustom": true,
 			"hasToken": true,
 			"hasFluff": true
 		},

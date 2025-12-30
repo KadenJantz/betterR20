@@ -42,7 +42,6 @@
 				"acid",
 				"poison"
 			],
-			"tokenCustom": true,
 			"hasToken": true
 		}
 	]
