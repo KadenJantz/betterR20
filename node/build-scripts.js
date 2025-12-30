@@ -1,34 +1,18 @@
 const fs = require("fs");
 
-const SCRIPT_VERSION = "1.35.186.14i";
-const SCRIPT_REPO = "https://raw.githubusercontent.com/DeathStalker471/betterR20/refs/heads/dev-beta-death/dist/";
+const SCRIPT_VERSION = "1.35.186.14jt";
+const SCRIPT_REPO = "https://raw.githubusercontent.com/DeathStalker471/betterR20/refs/heads/Jumpgate-Importer/dist/";
 
 const SCRIPT_BETA_DESCRIPTION = `This version contains following changes
--- Beta features overview:
-⦁ Mouseover hints on Conditions
-⦁ Filter Imports by List
-⦁ Extra Layers functionality
-⦁ Token Images Editor
-⦁ Better token Actions & Automation
-⦁ Some fixes related to roll20 newUI
-⦁ ArtRepo & community modules restored
-⦁ Warn about Jumpgate on startup
-⦁ "Import source" selector rework
-⦁ New image URLs fixer
-⦁ New UVTT/DA walls data importer
-⦁ Separate userscript for 2014 rules only
+1.35.186.14jq - Map Importer?
+- Fix Map Importer. Thank you @helenclarko
+1.35.186.14jr - Fix data error?
+- Fix Import Error
+1.35.186.14js - Fix data error?
+- Fix Import Error
+1.35.186.14js - HUH?
+- Fix 2024 rolling
 
--- v.186.12 changes:
-⦁ fix 5et2014 queries
-⦁ better source selector behavior
-
--- v.186.13 changes:
-⦁ 5etools v2.5.4 update:
-- update data and libs
-- update PHB tags (thanks @DeathStalker)
-- add damage etc. to spells
-⦁ add doors & windows to Module Importer/Exporter (thanks @csagataj2)
-⦁ fix disabling BetterActions panel
 `;
 
 const AUTHORS_CORE = `TheGiddyLimit/Redweller`;
@@ -54,7 +38,7 @@ const analyticsBlocking = `
 
 function getHeader (name, info) {
 	return `// ==UserScript==
-// @name         betteR20-beta-${name}-2024Sheet
+// @name         betteR20-beta-${name}-death-jumpagate-import
 // @namespace    https://5e.tools/
 // @license      MIT (https://opensource.org/licenses/MIT)
 // @version      ${SCRIPT_VERSION}
@@ -178,6 +162,7 @@ const SCRIPTS = {
 		"templates/template-roll20-editors-misc",
 		"templates/template-base-misc",
 		"templates/template-page-weather",
+		"templates/template-roll20-page-lighting",
 		"base-engine",
 		"base-menu",
 		"base-weather",
@@ -223,6 +208,7 @@ const SCRIPTS = {
 		"templates/template-roll20-editors-misc",
 		"templates/template-base-misc",
 		"templates/template-page-weather",
+		"templates/template-roll20-page-lighting",
 		"base-engine",
 		"base-menu",
 		"base-weather",
@@ -320,7 +306,7 @@ Object.entries(BUILDS).forEach(([name, data]) => {
 						Notes on b20 beta
 						<p style="font-size: 11px;line-height: 15px;color: rgb(32, 194, 14);">
 							<span style="color: rgb(194, 32, 14)">You are using preview version of betteR20</span><br>
-							Please read this carefully and give feedback in official betteR20 Discord server, 
+							Please read this carefully and give feedback in official betteR20 Discord server,
 							in<span style="color: orange; font-family: monospace"> 5etools &gt; better20 &gt; #testing </span>thread
 						</p>
 					</h1>

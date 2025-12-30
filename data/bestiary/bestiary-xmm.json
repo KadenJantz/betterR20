@@ -4,6 +4,11 @@
 			"name": "Aarakocra Aeromancer",
 			"source": "XMM",
 			"page": 10,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -217,6 +222,14 @@
 			"name": "Aberrant Cultist",
 			"source": "XMM",
 			"page": 86,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -255,7 +268,7 @@
 				"religion": "+6"
 			},
 			"senses": [
-				"darkvision 90 ft."
+				"Darkvision 90 ft."
 			],
 			"passive": 17,
 			"languages": [
@@ -405,7 +418,7 @@
 				"perception": "+10"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 20,
 			"languages": [
@@ -583,7 +596,7 @@
 				"stealth": "+8"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 19,
 			"immune": [
@@ -684,6 +697,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -729,8 +745,8 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 21,
 			"immune": [
@@ -941,8 +957,8 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 22,
 			"immune": [
@@ -1144,8 +1160,8 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 21,
 			"immune": [
@@ -1350,8 +1366,8 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 22,
 			"immune": [
@@ -1525,6 +1541,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -1571,8 +1590,8 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 22,
 			"immune": [
@@ -1733,6 +1752,11 @@
 			"page": 145,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -1778,8 +1802,8 @@
 				"stealth": "+8"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 24,
 			"immune": [
@@ -1952,6 +1976,11 @@
 			"page": 153,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -1997,8 +2026,8 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 22,
 			"immune": [
@@ -2161,6 +2190,11 @@
 			"page": 255,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -2204,8 +2238,8 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 23,
 			"immune": [
@@ -2403,8 +2437,8 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 21,
 			"immune": [
@@ -2575,6 +2609,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -2621,8 +2658,8 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 21,
 			"immune": [
@@ -2768,6 +2805,20 @@
 			"page": 13,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				},
+				{
+					"source": "FFotR"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -2797,7 +2848,7 @@
 			"wis": 10,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -2897,6 +2948,11 @@
 			"page": 348,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -2974,6 +3030,11 @@
 			"page": 40,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "LFL"
+				}
+			],
 			"size": [
 				"G"
 			],
@@ -3017,8 +3078,8 @@
 				"stealth": "+9"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 26,
 			"immune": [
@@ -3185,6 +3246,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -3230,8 +3294,8 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 27,
 			"immune": [
@@ -3433,8 +3497,8 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 24,
 			"immune": [
@@ -3639,8 +3703,8 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 27,
 			"immune": [
@@ -3815,6 +3879,11 @@
 			"page": 80,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"G"
 			],
@@ -3859,8 +3928,8 @@
 				"stealth": "+8"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 27,
 			"immune": [
@@ -4022,6 +4091,14 @@
 			"page": 146,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "LFL"
+				}
+			],
 			"size": [
 				"G"
 			],
@@ -4067,8 +4144,8 @@
 				"stealth": "+9"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 27,
 			"immune": [
@@ -4287,8 +4364,8 @@
 				"stealth": "+8"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 27,
 			"immune": [
@@ -4453,6 +4530,11 @@
 			"page": 256,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "LFL"
+				}
+			],
 			"size": [
 				"G"
 			],
@@ -4496,8 +4578,8 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 26,
 			"immune": [
@@ -4696,8 +4778,8 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 26,
 			"immune": [
@@ -4912,8 +4994,8 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 23,
 			"immune": [
@@ -5057,6 +5139,11 @@
 			"name": "Animal Lord",
 			"source": "XMM",
 			"page": 15,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -5100,7 +5187,7 @@
 				"stealth": "+13"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 28,
 			"resist": [
@@ -5422,6 +5509,17 @@
 			"page": 16,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -5449,7 +5547,7 @@
 			"wis": 3,
 			"cha": 1,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 6,
 			"immune": [
@@ -5507,6 +5605,14 @@
 			"name": "Animated Broom",
 			"source": "XMM",
 			"page": 16,
+			"otherSources": [
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -5539,7 +5645,7 @@
 			"wis": 5,
 			"cha": 1,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 7,
 			"immune": [
@@ -5597,6 +5703,14 @@
 			"page": 17,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -5632,7 +5746,7 @@
 				"dex": "+4"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 7,
 			"immune": [
@@ -5682,6 +5796,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -5711,7 +5831,7 @@
 			"wis": 3,
 			"cha": 1,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 6,
 			"immune": [
@@ -5759,6 +5879,11 @@
 			"page": 18,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -5784,8 +5909,8 @@
 			"wis": 13,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 60 ft."
+				"Darkvision 60 ft.",
+				"Tremorsense 60 ft."
 			],
 			"passive": 11,
 			"cr": "2",
@@ -6063,7 +6188,7 @@
 				"perception": "+7"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 17,
 			"resist": [
@@ -6273,7 +6398,7 @@
 				"persuasion": "+21"
 			},
 			"senses": [
-				"truesight 60 ft."
+				"Truesight 60 ft."
 			],
 			"passive": 21,
 			"resist": [
@@ -6486,6 +6611,11 @@
 			"page": 349,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -6567,6 +6697,17 @@
 			"page": 199,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -6772,6 +6913,15 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -6941,6 +7091,18 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -7058,7 +7220,6 @@
 				"RNG"
 			],
 			"conditionInflict": [
-				"incapacitated",
 				"poisoned"
 			],
 			"hasToken": true,
@@ -7071,6 +7232,11 @@
 			"page": 23,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -7140,6 +7306,14 @@
 			"page": 23,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -7211,6 +7385,11 @@
 			"page": 24,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -7267,6 +7446,11 @@
 			"name": "Azer Pyromancer",
 			"source": "XMM",
 			"page": 25,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -7408,9 +7592,6 @@
 				"MA",
 				"RA"
 			],
-			"conditionInflict": [
-				"incapacitated"
-			],
 			"savingThrowForcedSpell": [
 				"dexterity"
 			],
@@ -7424,6 +7605,11 @@
 			"page": 25,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -7507,9 +7693,6 @@
 			"miscTags": [
 				"AOE",
 				"MA"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			],
 			"hasToken": true,
 			"hasFluff": true,
@@ -7625,7 +7808,7 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"Darkvision 30 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -7711,7 +7894,7 @@
 				"perception": "+9"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 19,
 			"resist": [
@@ -7843,6 +8026,18 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -7928,6 +8123,20 @@
 			"page": 27,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				},
+				{
+					"source": "EFA"
+				},
+				{
+					"source": "FFotR"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -8036,6 +8245,11 @@
 			"name": "Bandit Crime Lord",
 			"source": "XMM",
 			"page": 28,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -8146,9 +8360,6 @@
 				"RA",
 				"RNG"
 			],
-			"conditionInflict": [
-				"incapacitated"
-			],
 			"hasToken": true,
 			"hasFluff": true,
 			"hasFluffImages": true
@@ -8157,6 +8368,14 @@
 			"name": "Bandit Deceiver",
 			"source": "XMM",
 			"page": 28,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -8297,6 +8516,11 @@
 			"name": "Banshee",
 			"source": "XMM",
 			"page": 29,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -8330,7 +8554,7 @@
 				"wis": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -8455,6 +8679,11 @@
 			"page": 30,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -8497,7 +8726,7 @@
 				"perception": "+8"
 			},
 			"senses": [
-				"darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 18,
 			"resist": [
@@ -8608,6 +8837,11 @@
 			],
 			"source": "XMM",
 			"page": 31,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -8647,8 +8881,8 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -8782,6 +9016,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -8808,7 +9045,7 @@
 			"wis": 8,
 			"cha": 7,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"cr": "3",
@@ -8897,7 +9134,7 @@
 			"wis": 12,
 			"cha": 4,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 11,
 			"cr": "0",
@@ -8942,6 +9179,11 @@
 			"page": 33,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -8977,7 +9219,7 @@
 				"cha": "+4"
 			},
 			"senses": [
-				"darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 10,
 			"resist": [
@@ -9075,6 +9317,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -9107,7 +9352,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 90 ft."
+				"Darkvision 90 ft."
 			],
 			"passive": 16,
 			"immune": [
@@ -9204,6 +9449,14 @@
 			],
 			"source": "XMM",
 			"page": 36,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -9244,7 +9497,7 @@
 				"perception": "+12"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 22,
 			"conditionImmune": [
@@ -9452,6 +9705,11 @@
 			],
 			"source": "XMM",
 			"page": 347,
+			"otherSources": [
+				{
+					"source": "NF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -9485,7 +9743,7 @@
 				"wis": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"immune": [
@@ -9620,6 +9878,15 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -9659,7 +9926,7 @@
 				{
 					"name": "Bloodied Frenzy",
 					"entries": [
-						"While {@variantrule Bloodied|XPHB}, the berserker has {@variantrule Advantage|XPHB} on attack rolls and saving throws."
+						"While {@status Bloodied|XPHB}, the berserker has {@variantrule Advantage|XPHB} on attack rolls and saving throws."
 					]
 				}
 			],
@@ -9700,6 +9967,11 @@
 			"name": "Berserker Commander",
 			"source": "XMM",
 			"page": 37,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -9755,7 +10027,7 @@
 				{
 					"name": "Bloodied Frenzy",
 					"entries": [
-						"While {@variantrule Bloodied|XPHB}, the berserker has {@variantrule Advantage|XPHB} on attack rolls and saving throws."
+						"While {@status Bloodied|XPHB}, the berserker has {@variantrule Advantage|XPHB} on attack rolls and saving throws."
 					]
 				}
 			],
@@ -9856,7 +10128,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"cr": "1/2",
@@ -9949,8 +10221,8 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -10036,6 +10308,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -10063,7 +10341,7 @@
 			"wis": 6,
 			"cha": 1,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 8,
 			"immune": [
@@ -10115,7 +10393,7 @@
 				{
 					"name": "Split",
 					"entries": [
-						"{@actTrigger} While the pudding is Large or Medium and has 10+ {@variantrule Hit Points|XPHB}, it becomes {@variantrule Bloodied|XPHB} or is subjected to Lightning or Slashing damage. {@actResponse} The pudding splits into two new Black Puddings. Each new pudding is one size smaller than the original pudding and acts on its {@variantrule Initiative|XPHB}. The original pudding's {@variantrule Hit Points|XPHB} are divided evenly between the new puddings (round down)."
+						"{@actTrigger} While the pudding is Large or Medium and has 10+ {@variantrule Hit Points|XPHB}, it becomes {@status Bloodied|XPHB} or is subjected to Lightning or Slashing damage. {@actResponse} The pudding splits into two new Black Puddings. Each new pudding is one size smaller than the original pudding and acts on its {@variantrule Initiative|XPHB}. The original pudding's {@variantrule Hit Points|XPHB} are divided evenly between the new puddings (round down)."
 					]
 				}
 			],
@@ -10153,6 +10431,12 @@
 			"otherSources": [
 				{
 					"source": "UtHftLH"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -10184,7 +10468,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"languages": [
@@ -10243,6 +10527,14 @@
 			],
 			"source": "XMM",
 			"page": 47,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"G"
 			],
@@ -10280,7 +10572,7 @@
 				"con": "+16"
 			},
 			"senses": [
-				"blindsight 120 ft."
+				"Blindsight 120 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -10457,7 +10749,7 @@
 				{
 					"name": "Beak",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Piercing damage, or 6 ({@damage 1d8 + 2}) Piercing damage if the target is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Piercing damage, or 6 ({@damage 1d8 + 2}) Piercing damage if the target is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -10538,8 +10830,8 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -10613,6 +10905,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -10643,7 +10938,7 @@
 				"perception": "+1"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -10715,6 +11010,7 @@
 			],
 			"miscTags": [
 				"CUR",
+				"HPR",
 				"MA",
 				"RCH"
 			],
@@ -10766,7 +11062,7 @@
 				{
 					"name": "Bloodied Fury",
 					"entries": [
-						"While {@variantrule Bloodied|XPHB}, the boar has {@variantrule Advantage|XPHB} on attack rolls."
+						"While {@status Bloodied|XPHB}, the boar has {@variantrule Advantage|XPHB} on attack rolls."
 					]
 				}
 			],
@@ -10853,7 +11149,7 @@
 				"insight": "+6"
 			},
 			"senses": [
-				"darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 12,
 			"resist": [
@@ -10973,7 +11269,7 @@
 			"wis": 15,
 			"cha": 15,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -11131,8 +11427,8 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -11233,7 +11529,7 @@
 				"perception": "+10"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 20,
 			"immune": [
@@ -11367,8 +11663,8 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -11465,6 +11761,9 @@
 				{
 					"source": "XPHB",
 					"page": 347
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -11495,7 +11794,7 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "1",
@@ -11557,6 +11856,11 @@
 			"page": 62,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -11595,7 +11899,7 @@
 				"survival": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"languages": [
@@ -11702,6 +12006,12 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -11738,7 +12048,7 @@
 				"survival": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -11818,6 +12128,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -11848,8 +12161,8 @@
 				"perception": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 120 ft."
+				"Darkvision 60 ft.",
+				"Tremorsense 120 ft."
 			],
 			"passive": 16,
 			"cr": "5",
@@ -11918,6 +12231,11 @@
 			"name": "Bulette Pup",
 			"source": "XMM",
 			"page": 63,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -11946,8 +12264,8 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 30 ft.",
-				"tremorsense 60 ft."
+				"Darkvision 30 ft.",
+				"Tremorsense 60 ft."
 			],
 			"passive": 14,
 			"cr": "2",
@@ -12145,6 +12463,9 @@
 			"otherSources": [
 				{
 					"source": "UtHftLH"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -12240,6 +12561,11 @@
 			"name": "Cambion",
 			"source": "XMM",
 			"page": 65,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -12277,7 +12603,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 14,
 			"resist": [
@@ -12398,6 +12724,9 @@
 				},
 				{
 					"source": "HBTD"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -12427,7 +12756,7 @@
 				"con": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"cr": "1/8",
@@ -12464,6 +12793,14 @@
 			"source": "XMM",
 			"page": 66,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -12492,7 +12829,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"cr": "2",
@@ -12569,6 +12906,9 @@
 				{
 					"source": "XPHB",
 					"page": 347
+				},
+				{
+					"source": "FRHoF"
 				}
 			],
 			"size": [
@@ -12603,7 +12943,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "0",
@@ -12653,6 +12993,11 @@
 			"page": 67,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -12761,6 +13106,14 @@
 			"name": "Centaur Warden",
 			"source": "XMM",
 			"page": 67,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -12894,6 +13247,14 @@
 			"page": 68,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -12931,7 +13292,7 @@
 				"wis": "+4"
 			},
 			"senses": [
-				"darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 11,
 			"resist": [
@@ -13045,6 +13406,11 @@
 			],
 			"source": "XMM",
 			"page": 69,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -13086,8 +13452,8 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 120 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -13168,6 +13534,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"conditionInflict": [
@@ -13189,6 +13556,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -13220,7 +13590,7 @@
 				"perception": "+8"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 18,
 			"languages": [
@@ -13307,6 +13677,11 @@
 			"page": 71,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -13336,7 +13711,7 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -13460,7 +13835,7 @@
 			"wis": 8,
 			"cha": 1,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"resist": [
@@ -13495,7 +13870,7 @@
 				{
 					"name": "Berserk",
 					"entries": [
-						"Whenever the golem starts its turn {@variantrule Bloodied|XPHB}, roll {@dice 1d6}. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object. Once the golem goes berserk, it continues to be berserk until it is destroyed or it is no longer {@variantrule Bloodied|XPHB}."
+						"Whenever the golem starts its turn {@status Bloodied|XPHB}, roll {@dice 1d6}. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object. Once the golem goes berserk, it continues to be berserk until it is destroyed or it is no longer {@status Bloodied|XPHB}."
 					]
 				},
 				{
@@ -13563,6 +13938,7 @@
 				"B"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"hasToken": true,
@@ -13578,6 +13954,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -13612,7 +13991,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 12,
 			"conditionImmune": [
@@ -13728,6 +14107,11 @@
 			"page": 74,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -13910,7 +14294,7 @@
 			"wis": 13,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"conditionImmune": [
@@ -13984,7 +14368,7 @@
 				"wis": "+6"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 13,
 			"conditionImmune": [
@@ -14102,7 +14486,7 @@
 				"wis": "+8"
 			},
 			"senses": [
-				"truesight 300 ft."
+				"Truesight 300 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -14244,6 +14628,21 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "LFL"
 				}
 			],
 			"size": [
@@ -14365,7 +14764,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 10 ft."
+				"Blindsight 10 ft."
 			],
 			"passive": 12,
 			"cr": "1/4",
@@ -14422,6 +14821,11 @@
 			"page": 78,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -14465,8 +14869,8 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -14538,6 +14942,14 @@
 			"page": 82,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -14568,7 +14980,7 @@
 				"wis": "+7"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -14743,7 +15155,7 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 9,
 			"cr": "0",
@@ -14792,6 +15204,11 @@
 			"name": "Crawling Claw",
 			"source": "XMM",
 			"page": 83,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -14818,7 +15235,7 @@
 			"wis": 10,
 			"cha": 4,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -14963,6 +15380,15 @@
 			"otherSources": [
 				{
 					"source": "ScoEE"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -15051,6 +15477,12 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -15180,6 +15612,11 @@
 			"name": "Cultist Hierophant",
 			"source": "XMM",
 			"page": 85,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -15312,6 +15749,11 @@
 			"name": "Cyclops Oracle",
 			"source": "XMM",
 			"page": 88,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -15348,7 +15790,7 @@
 				"perception": "+12"
 			},
 			"senses": [
-				"truesight 30 ft."
+				"Truesight 30 ft."
 			],
 			"passive": 22,
 			"languages": [
@@ -15446,6 +15888,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -15548,6 +15993,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -15589,7 +16037,7 @@
 				"wis": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 11,
 			"conditionImmune": [
@@ -15733,6 +16181,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -15766,7 +16217,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 10,
 			"cr": "1/2",
@@ -15813,6 +16264,14 @@
 			"name": "Death Cultist",
 			"source": "XMM",
 			"page": 86,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -15943,6 +16402,11 @@
 			"page": 91,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -15972,7 +16436,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 15,
 			"conditionImmune": [
@@ -16015,6 +16479,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"conditionInflict": [
@@ -16034,6 +16499,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -16069,7 +16540,7 @@
 				"wis": "+9"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 13,
 			"immune": [
@@ -16221,10 +16692,8 @@
 			],
 			"miscTags": [
 				"AOE",
+				"HPR",
 				"MA"
-			],
-			"conditionInflict": [
-				"incapacitated"
 			],
 			"conditionInflictSpell": [
 				"prone"
@@ -16245,6 +16714,11 @@
 			"name": "Death Knight Aspirant",
 			"source": "XMM",
 			"page": 93,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -16278,7 +16752,7 @@
 				"wis": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 11,
 			"immune": [
@@ -16394,9 +16868,6 @@
 				"AOE",
 				"MA"
 			],
-			"conditionInflict": [
-				"incapacitated"
-			],
 			"conditionInflictSpell": [
 				"prone"
 			],
@@ -16446,8 +16917,8 @@
 				"perception": "+8"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 60 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 18,
 			"resist": [
@@ -16584,6 +17055,14 @@
 			],
 			"source": "XMM",
 			"page": 95,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -16629,7 +17108,7 @@
 				"perception": "+12"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 22,
 			"immune": [
@@ -16844,6 +17323,11 @@
 			"page": 352,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -16871,7 +17355,7 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"cr": "0",
@@ -16917,6 +17401,11 @@
 			"name": "Demilich",
 			"source": "XMM",
 			"page": 96,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -16955,7 +17444,7 @@
 				"wis": "+9"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -17067,6 +17556,7 @@
 			],
 			"miscTags": [
 				"AOE",
+				"HPR",
 				"MA",
 				"RA"
 			],
@@ -17093,6 +17583,11 @@
 			"page": 97,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -17136,7 +17631,7 @@
 				"perception": "+9"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 19,
 			"resist": [
@@ -17267,6 +17762,9 @@
 				{
 					"source": "XPHB",
 					"page": 348
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -17297,7 +17795,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"cr": "1",
@@ -17348,6 +17846,11 @@
 			"name": "Dire Worg",
 			"source": "XMM",
 			"page": 335,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -17380,7 +17883,7 @@
 				"perception": "+11"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 21,
 			"languages": [
@@ -17469,6 +17972,14 @@
 			"name": "Displacer Beast",
 			"source": "XMM",
 			"page": 98,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -17497,7 +18008,7 @@
 			"wis": 12,
 			"cha": 8,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"languages": [
@@ -17564,7 +18075,6 @@
 				"MA"
 			],
 			"conditionInflict": [
-				"incapacitated",
 				"prone"
 			],
 			"hasToken": true,
@@ -17583,6 +18093,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -17624,7 +18137,7 @@
 				"wis": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 13,
 			"immune": [
@@ -17775,6 +18288,12 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -17805,7 +18324,7 @@
 				"insight": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"conditionImmune": [
@@ -17906,6 +18425,11 @@
 			"name": "Dracolich",
 			"source": "XMM",
 			"page": 102,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H",
 				"G"
@@ -17945,8 +18469,8 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 24,
 			"immune": [
@@ -18187,6 +18711,11 @@
 			"page": 103,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"G"
 			],
@@ -18219,7 +18748,7 @@
 				"wis": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -18348,7 +18877,7 @@
 			"wis": 8,
 			"cha": 3,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"resist": [
@@ -18416,6 +18945,14 @@
 			"page": 105,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -18446,7 +18983,7 @@
 				"stealth": "+10"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 16,
 			"languages": [
@@ -18575,6 +19112,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -18718,6 +19261,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -18748,7 +19297,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -18873,6 +19422,11 @@
 			"page": 206,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -18903,7 +19457,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -19082,6 +19636,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -19109,8 +19666,8 @@
 			"wis": 10,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 60 ft."
+				"Darkvision 60 ft.",
+				"Tremorsense 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -19211,6 +19768,11 @@
 			"page": 109,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -19249,7 +19811,7 @@
 				"cha": "+8"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -19425,7 +19987,7 @@
 				"cha": "+6"
 			},
 			"senses": [
-				"truesight 150 ft."
+				"Truesight 150 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -19610,6 +20172,11 @@
 			"name": "Elemental Cultist",
 			"source": "XMM",
 			"page": 87,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -19824,6 +20391,9 @@
 				{
 					"source": "XPHB",
 					"page": 349
+				},
+				{
+					"source": "FRHoF"
 				}
 			],
 			"size": [
@@ -19853,7 +20423,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"cr": "1/4",
@@ -19897,6 +20467,11 @@
 			],
 			"source": "XMM",
 			"page": 113,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -19948,7 +20523,7 @@
 				"perception": "+13"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 23,
 			"resist": [
@@ -20099,6 +20674,11 @@
 			],
 			"source": "XMM",
 			"page": 112,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -20143,7 +20723,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"truesight 30 ft."
+				"Truesight 30 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -20255,6 +20835,14 @@
 			"page": 114,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -20298,7 +20886,7 @@
 				"persuasion": "+8"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 16,
 			"resist": [
@@ -20411,6 +20999,11 @@
 			"page": 115,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -20442,7 +21035,7 @@
 				"survival": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "2",
@@ -20539,6 +21132,14 @@
 			"page": 116,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -20567,7 +21168,7 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"conditionImmune": [
@@ -20646,6 +21247,11 @@
 			"name": "Faerie Dragon Adult",
 			"source": "XMM",
 			"page": 117,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -20668,16 +21274,16 @@
 			"str": 3,
 			"dex": 20,
 			"con": 13,
-			"int": 12,
+			"int": 14,
 			"wis": 12,
-			"cha": 14,
+			"cha": 16,
 			"skill": {
 				"arcana": "+4",
 				"perception": "+3",
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"languages": [
@@ -20795,6 +21401,11 @@
 			"name": "Faerie Dragon Youth",
 			"source": "XMM",
 			"page": 117,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -20826,7 +21437,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"languages": [
@@ -20934,6 +21545,11 @@
 			"name": "Fiend Cultist",
 			"source": "XMM",
 			"page": 87,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -20971,7 +21587,7 @@
 				"religion": "+4"
 			},
 			"senses": [
-				"darkvision 90 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 90 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 17,
 			"languages": [
@@ -21085,6 +21701,9 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -21111,7 +21730,7 @@
 			"wis": 10,
 			"cha": 7,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -21203,6 +21822,7 @@
 				"F"
 			],
 			"miscTags": [
+				"AOE",
 				"MA"
 			],
 			"hasToken": true,
@@ -21215,6 +21835,11 @@
 			"page": 119,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -21317,6 +21942,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -21353,7 +21984,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -21464,6 +22095,7 @@
 				"O"
 			],
 			"miscTags": [
+				"AOE",
 				"MA",
 				"RA"
 			],
@@ -21481,6 +22113,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -21508,7 +22143,7 @@
 			"wis": 15,
 			"cha": 8,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -21602,6 +22237,11 @@
 			"page": 121,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -21626,7 +22266,7 @@
 			"wis": 10,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -21655,8 +22295,8 @@
 				{
 					"name": "Berserk",
 					"entries": [
-						"Whenever the golem starts its turn {@variantrule Bloodied|XPHB}, roll {@dice 1d6}. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object. Once the golem goes berserk, it remains so until it is destroyed or it is no longer {@variantrule Bloodied|XPHB}.",
-						"The golem's creator, if within 60 feet of the berserk golem, can try to calm it by taking an action to make a {@dc 15} Charisma ({@skill Persuasion|XPHB}) check; the golem must be able to hear its creator. If this check succeeds, the golem ceases being berserk until the start of its next turn, at which point it resumes rolling for the Berserk trait again if it is still {@variantrule Bloodied|XPHB}."
+						"Whenever the golem starts its turn {@status Bloodied|XPHB}, roll {@dice 1d6}. On a 6, the golem goes berserk. On each of its turns while berserk, the golem attacks the nearest creature it can see. If no creature is near enough to move to and attack, the golem attacks an object. Once the golem goes berserk, it remains so until it is destroyed or it is no longer {@status Bloodied|XPHB}.",
+						"The golem's creator, if within 60 feet of the berserk golem, can try to calm it by taking an action to make a {@dc 15} Charisma ({@skill Persuasion|XPHB}) check; the golem must be able to hear its creator. If this check succeeds, the golem ceases being berserk until the start of its next turn, at which point it resumes rolling for the Berserk trait again if it is still {@status Bloodied|XPHB}."
 					]
 				},
 				{
@@ -21733,6 +22373,11 @@
 			"name": "Flumph",
 			"source": "XMM",
 			"page": 122,
+			"otherSources": [
+				{
+					"source": "NF"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -21768,7 +22413,7 @@
 				"religion": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"vulnerable": [
@@ -21856,6 +22501,14 @@
 			"page": 353,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -21882,7 +22535,7 @@
 			"wis": 12,
 			"cha": 5,
 			"senses": [
-				"blindsight 10 ft."
+				"Blindsight 10 ft."
 			],
 			"passive": 11,
 			"cr": "1/8",
@@ -21932,6 +22585,11 @@
 			"name": "Fomorian",
 			"source": "XMM",
 			"page": 123,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -21961,7 +22619,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 18,
 			"languages": [
@@ -22066,7 +22724,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"Darkvision 30 ft."
 			],
 			"passive": 11,
 			"cr": "0",
@@ -22126,6 +22784,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -22238,6 +22899,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -22267,8 +22931,8 @@
 			"wis": 12,
 			"cha": 11,
 			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 60 ft."
+				"Darkvision 60 ft.",
+				"Tremorsense 60 ft."
 			],
 			"passive": 11,
 			"immune": [
@@ -22341,6 +23005,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -22375,7 +23042,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -22450,6 +23117,11 @@
 			"name": "Gas Spore Fungus",
 			"source": "XMM",
 			"page": 125,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -22479,7 +23151,7 @@
 			"wis": 1,
 			"cha": 1,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 5,
 			"immune": [
@@ -22542,6 +23214,14 @@
 			"page": 129,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -22566,7 +23246,7 @@
 			"wis": 6,
 			"cha": 1,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 8,
 			"immune": [
@@ -22649,6 +23329,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -22679,7 +23362,7 @@
 				"wis": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -22763,6 +23446,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -22794,7 +23480,7 @@
 				"wis": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -22904,6 +23590,15 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -22935,7 +23630,7 @@
 			"wis": 12,
 			"cha": 17,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -23084,6 +23779,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -23111,7 +23809,7 @@
 			"wis": 10,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -23288,6 +23986,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -23404,7 +24105,7 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -23470,7 +24171,7 @@
 			"wis": 12,
 			"cha": 6,
 			"senses": [
-				"blindsight 120 ft."
+				"Blindsight 120 ft."
 			],
 			"passive": 11,
 			"cr": "1/4",
@@ -23510,6 +24211,14 @@
 			"page": 355,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -23542,7 +24251,7 @@
 				{
 					"name": "Bloodied Fury",
 					"entries": [
-						"The boar has {@variantrule Advantage|XPHB} on melee attack rolls while it is {@variantrule Bloodied|XPHB}."
+						"The boar has {@variantrule Advantage|XPHB} on melee attack rolls while it is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -23588,6 +24297,9 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
 				}
 			],
 			"size": [
@@ -23615,7 +24327,7 @@
 			"wis": 7,
 			"cha": 3,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 8,
 			"cr": "1/4",
@@ -23685,7 +24397,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"blindsight 10 ft."
+				"Blindsight 10 ft."
 			],
 			"passive": 12,
 			"cr": "2",
@@ -23753,6 +24465,12 @@
 				{
 					"source": "XPHB",
 					"page": 350
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -23783,7 +24501,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 9,
 			"cr": "1/8",
@@ -24023,6 +24741,11 @@
 			"page": 356,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -24058,7 +24781,7 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 90 ft."
+				"Darkvision 90 ft."
 			],
 			"passive": 14,
 			"resist": [
@@ -24119,6 +24842,11 @@
 			"page": 357,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -24144,7 +24872,7 @@
 			"wis": 7,
 			"cha": 3,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 8,
 			"resist": [
@@ -24198,6 +24926,11 @@
 			"page": 357,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -24227,7 +24960,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"Darkvision 30 ft."
 			],
 			"passive": 12,
 			"cr": "1/4",
@@ -24302,6 +25035,9 @@
 				{
 					"source": "XPHB",
 					"page": 350
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -24335,7 +25071,7 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "1/2",
@@ -24378,6 +25114,11 @@
 			"page": 357,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -24405,7 +25146,7 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "1",
@@ -24421,7 +25162,7 @@
 				{
 					"name": "Rampage (1/Day)",
 					"entries": [
-						"Immediately after dealing damage to a creature that was already {@variantrule Bloodied|XPHB}, the hyena can move up to half its {@variantrule Speed|XPHB}, and it makes one Bite attack."
+						"Immediately after dealing damage to a creature that was already {@status Bloodied|XPHB}, the hyena can move up to half its {@variantrule Speed|XPHB}, and it makes one Bite attack."
 					]
 				}
 			],
@@ -24482,7 +25223,7 @@
 				"dex": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"cr": "1/4",
@@ -24564,7 +25305,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"cr": "1",
@@ -24629,6 +25370,11 @@
 			"page": 358,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -24661,7 +25407,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 16,
 			"resist": [
@@ -24751,6 +25497,14 @@
 			"page": 358,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -24782,7 +25536,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"cr": "1/8",
@@ -24834,6 +25588,14 @@
 			"page": 359,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "NF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -24858,7 +25620,7 @@
 			"wis": 9,
 			"cha": 3,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 9,
 			"cr": "3",
@@ -24994,6 +25756,14 @@
 			"page": 359,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -25025,7 +25795,7 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 13,
 			"cr": "5",
@@ -25087,6 +25857,15 @@
 				{
 					"source": "XPHB",
 					"page": 351
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -25118,7 +25897,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"cr": "1",
@@ -25221,7 +26000,7 @@
 				"perception": "+6"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 16,
 			"cr": "6",
@@ -25295,6 +26074,11 @@
 			"page": 360,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -25320,7 +26104,7 @@
 			"wis": 10,
 			"cha": 3,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"cr": "1",
@@ -25425,7 +26209,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"blindsight 10 ft."
+				"Blindsight 10 ft."
 			],
 			"passive": 12,
 			"cr": "1/4",
@@ -25495,7 +26279,7 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -25666,7 +26450,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "1/8",
@@ -25706,6 +26490,11 @@
 			"page": 362,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -25735,8 +26524,8 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "1/4",
@@ -25791,6 +26580,11 @@
 			"page": 133,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -25817,7 +26611,7 @@
 			"wis": 10,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"conditionImmune": [
@@ -25955,7 +26749,7 @@
 				"perception": "+8"
 			},
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 18,
 			"languages": [
@@ -26070,6 +26864,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -26842,7 +27639,7 @@
 				"perception": "+7"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 17,
 			"resist": [
@@ -26974,6 +27771,14 @@
 			"page": 139,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -27131,7 +27936,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"languages": [
@@ -27164,7 +27969,7 @@
 				{
 					"name": "Rampage (2/Day)",
 					"entries": [
-						"Immediately after dealing damage to a creature that is already {@variantrule Bloodied|XPHB}, the gnoll moves up to half its {@variantrule Speed|XPHB}, and it makes one Abyssal Strike attack."
+						"Immediately after dealing damage to a creature that is already {@status Bloodied|XPHB}, the gnoll moves up to half its {@variantrule Speed|XPHB}, and it makes one Abyssal Strike attack."
 					]
 				}
 			],
@@ -27208,6 +28013,11 @@
 			"name": "Gnoll Fang of Yeenoghu",
 			"source": "XMM",
 			"page": 141,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -27241,7 +28051,7 @@
 				"cha": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -27273,7 +28083,7 @@
 				{
 					"name": "Rampage (2/Day)",
 					"entries": [
-						"Immediately after dealing damage to a creature that is already {@variantrule Bloodied|XPHB}, the gnoll moves up to half its {@variantrule Speed|XPHB}, and it makes one Bite attack."
+						"Immediately after dealing damage to a creature that is already {@status Bloodied|XPHB}, the gnoll moves up to half its {@variantrule Speed|XPHB}, and it makes one Bite attack."
 					]
 				}
 			],
@@ -27321,6 +28131,11 @@
 			"name": "Gnoll Pack Lord",
 			"source": "XMM",
 			"page": 140,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -27349,7 +28164,7 @@
 			"wis": 11,
 			"cha": 9,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -27386,7 +28201,7 @@
 				{
 					"name": "Rampage (2/Day)",
 					"entries": [
-						"Immediately after dealing damage to a creature that is already {@variantrule Bloodied|XPHB}, the gnoll moves up to half its {@variantrule Speed|XPHB}, and it makes one Bone Whip attack."
+						"Immediately after dealing damage to a creature that is already {@status Bloodied|XPHB}, the gnoll moves up to half its {@variantrule Speed|XPHB}, and it makes one Bone Whip attack."
 					]
 				}
 			],
@@ -27434,6 +28249,14 @@
 			"page": 140,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -27459,7 +28282,7 @@
 			"wis": 10,
 			"cha": 7,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -27484,7 +28307,7 @@
 				{
 					"name": "Rampage (1/Day)",
 					"entries": [
-						"Immediately after dealing damage to a creature that is already {@variantrule Bloodied|XPHB}, the gnoll moves up to half its {@variantrule Speed|XPHB}, and it makes one Rend attack."
+						"Immediately after dealing damage to a creature that is already {@status Bloodied|XPHB}, the gnoll moves up to half its {@variantrule Speed|XPHB}, and it makes one Rend attack."
 					]
 				}
 			],
@@ -27561,7 +28384,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"cr": "0",
@@ -27606,6 +28429,14 @@
 			"page": 143,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -27639,7 +28470,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"languages": [
@@ -27736,6 +28567,11 @@
 			],
 			"source": "XMM",
 			"page": 143,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -27770,7 +28606,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -27911,7 +28747,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"languages": [
@@ -27988,6 +28824,12 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -28023,7 +28865,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"languages": [
@@ -28149,8 +28991,8 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -28241,6 +29083,11 @@
 			"page": 148,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -28268,7 +29115,7 @@
 				"perception": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 17,
 			"conditionImmune": [
@@ -28343,6 +29190,11 @@
 			],
 			"source": "XMM",
 			"page": 150,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -28386,7 +29238,7 @@
 				"survival": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 17,
 			"resist": [
@@ -28524,7 +29376,7 @@
 				"cha": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -28622,6 +29474,9 @@
 			"otherSources": [
 				{
 					"source": "ScoEE"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -28652,7 +29507,7 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 8,
 			"resist": [
@@ -28721,6 +29576,11 @@
 			"name": "Gray Slaad",
 			"source": "XMM",
 			"page": 286,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -28753,8 +29613,8 @@
 				"perception": "+7"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 60 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 17,
 			"resist": [
@@ -28939,8 +29799,8 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -29029,6 +29889,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -29063,7 +29926,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -29194,6 +30057,11 @@
 			"name": "Green Slaad",
 			"source": "XMM",
 			"page": 286,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -29226,8 +30094,8 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 60 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"resist": [
@@ -29355,6 +30223,11 @@
 			"name": "Grell",
 			"source": "XMM",
 			"page": 157,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -29392,7 +30265,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -29475,6 +30348,11 @@
 			"page": 158,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -29503,7 +30381,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"cr": "2",
@@ -29566,6 +30444,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -29596,7 +30477,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"cr": "7",
@@ -29663,6 +30544,14 @@
 			"page": 159,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "NF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -29691,7 +30580,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"cr": "2",
@@ -29745,6 +30634,11 @@
 			"page": 160,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -29776,7 +30670,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 13,
 			"cr": "1/4",
@@ -29818,6 +30712,21 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -29898,6 +30807,23 @@
 			"page": 162,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "FFotR"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -29996,6 +30922,11 @@
 			"page": 161,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -30035,7 +30966,7 @@
 				"religion": "+11"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -30162,6 +31093,11 @@
 			"name": "Gulthias Blight",
 			"source": "XMM",
 			"page": 45,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"G"
 			],
@@ -30193,7 +31129,7 @@
 				"perception": "+9"
 			},
 			"senses": [
-				"blindsight 120 ft."
+				"Blindsight 120 ft."
 			],
 			"passive": 19,
 			"resist": [
@@ -30261,6 +31197,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MA",
 				"RA",
 				"RCH"
@@ -30282,6 +31219,11 @@
 			"page": 163,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -30318,8 +31260,8 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -30406,6 +31348,14 @@
 			"page": 164,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -30487,6 +31437,11 @@
 			"name": "Haunting Revenant",
 			"source": "XMM",
 			"page": 260,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"G"
 			],
@@ -30518,7 +31473,7 @@
 				"wis": "+8"
 			},
 			"senses": [
-				"truesight 60 ft."
+				"Truesight 60 ft."
 			],
 			"passive": 14,
 			"resist": [
@@ -30624,6 +31579,9 @@
 				{
 					"source": "XPHB",
 					"page": 352
+				},
+				{
+					"source": "FRHoF"
 				}
 			],
 			"size": [
@@ -30692,6 +31650,14 @@
 			"page": 165,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -30720,7 +31686,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"immune": [
@@ -30799,6 +31765,26 @@
 			"name": "Helmed Horror",
 			"source": "XMM",
 			"page": 166,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "EFA"
+				},
+				{
+					"source": "FFotR"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -30834,7 +31820,7 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -30932,6 +31918,11 @@
 			"page": 167,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -30970,7 +31961,7 @@
 				"wis": "+4"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -31079,6 +32070,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -31341,6 +32335,14 @@
 			"page": 171,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -31374,7 +32376,7 @@
 			"wis": 10,
 			"cha": 13,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -31464,6 +32466,11 @@
 			],
 			"source": "XMM",
 			"page": 171,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -31503,7 +32510,7 @@
 				"cha": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -31607,6 +32614,14 @@
 			"page": 170,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -31640,7 +32655,7 @@
 			"wis": 10,
 			"cha": 9,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -31749,7 +32764,7 @@
 				"cha": "+0"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -31815,6 +32830,14 @@
 			"name": "Hook Horror",
 			"source": "XMM",
 			"page": 173,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -31846,8 +32869,8 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 120 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 15,
 			"languages": [
@@ -31905,6 +32928,11 @@
 			"page": 174,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -31945,7 +32973,7 @@
 				"cha": "+8"
 			},
 			"senses": [
-				"darkvision 150 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 150 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 13,
 			"immune": [
@@ -32046,6 +33074,11 @@
 			"page": 363,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -32074,7 +33107,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 12,
 			"cr": "2",
@@ -32126,6 +33159,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -32159,7 +33195,7 @@
 				"perception": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 16,
 			"conditionImmune": [
@@ -32269,7 +33305,7 @@
 				"perception": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "0",
@@ -32325,6 +33361,11 @@
 			"page": 176,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -32369,7 +33410,7 @@
 				"persuasion": "+9"
 			},
 			"senses": [
-				"blindsight 120 ft."
+				"Blindsight 120 ft."
 			],
 			"passive": 17,
 			"immune": [
@@ -32495,6 +33536,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -32527,7 +33574,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -32637,6 +33684,12 @@
 				{
 					"source": "XPHB",
 					"page": 352
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -32675,7 +33728,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 11,
 			"resist": [
@@ -32776,6 +33829,12 @@
 			"otherSources": [
 				{
 					"source": "ScoEE"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -32811,7 +33870,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -32935,6 +33994,11 @@
 			"name": "Intellect Devourer",
 			"source": "XMM",
 			"page": 179,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -32964,7 +34028,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 12,
 			"resist": [
@@ -33054,6 +34118,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "LFL"
 				}
 			],
 			"size": [
@@ -33092,7 +34162,7 @@
 				"stealth": "+10"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 18,
 			"resist": [
@@ -33194,6 +34264,11 @@
 			"page": 181,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -33221,7 +34296,7 @@
 			"wis": 11,
 			"cha": 1,
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -33365,7 +34440,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 90 ft."
+				"Darkvision 90 ft."
 			],
 			"passive": 15,
 			"cr": "0",
@@ -33403,6 +34478,11 @@
 			"name": "Jackalwere",
 			"source": "XMM",
 			"page": 182,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -33433,7 +34513,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 90 ft."
+				"Darkvision 90 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -33563,8 +34643,8 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"resist": [
@@ -33663,6 +34743,14 @@
 			"name": "Kenku",
 			"source": "XMM",
 			"page": 183,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -33692,7 +34780,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"languages": [
@@ -33782,6 +34870,11 @@
 			"page": 364,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -33811,7 +34904,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 120 ft."
+				"Blindsight 120 ft."
 			],
 			"passive": 13,
 			"cr": "3",
@@ -33869,6 +34962,15 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -33980,6 +35082,14 @@
 			"page": 185,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -34004,7 +35114,7 @@
 			"wis": 7,
 			"cha": 8,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 8,
 			"languages": [
@@ -34087,6 +35197,17 @@
 			"page": 187,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"G"
 			],
@@ -34131,7 +35252,7 @@
 				"perception": "+11"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 21,
 			"immune": [
@@ -34284,6 +35405,14 @@
 			"name": "Kuo-toa",
 			"source": "XMM",
 			"page": 189,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -34313,8 +35442,8 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 120 ft.",
-				"truesight 30 ft."
+				"Darkvision 120 ft.",
+				"Truesight 30 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -34408,6 +35537,11 @@
 			"name": "Kuo-toa Archpriest",
 			"source": "XMM",
 			"page": 191,
+			"otherSources": [
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -34438,8 +35572,8 @@
 				"religion": "+4"
 			},
 			"senses": [
-				"darkvision 120 ft.",
-				"truesight 30 ft."
+				"Darkvision 120 ft.",
+				"Truesight 30 ft."
 			],
 			"passive": 19,
 			"languages": [
@@ -34571,6 +35705,14 @@
 			"name": "Kuo-toa Monitor",
 			"source": "XMM",
 			"page": 190,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -34601,8 +35743,8 @@
 				"religion": "+3"
 			},
 			"senses": [
-				"darkvision 120 ft.",
-				"truesight 30 ft."
+				"Darkvision 120 ft.",
+				"Truesight 30 ft."
 			],
 			"passive": 16,
 			"languages": [
@@ -34679,6 +35821,11 @@
 			"name": "Kuo-toa Whip",
 			"source": "XMM",
 			"page": 190,
+			"otherSources": [
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -34709,8 +35856,8 @@
 				"religion": "+3"
 			},
 			"senses": [
-				"darkvision 120 ft.",
-				"truesight 30 ft."
+				"Darkvision 120 ft.",
+				"Truesight 30 ft."
 			],
 			"passive": 16,
 			"languages": [
@@ -34809,6 +35956,11 @@
 			"name": "Lacedon Ghoul",
 			"source": "XMM",
 			"page": 132,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -34835,7 +35987,7 @@
 			"wis": 10,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -34921,6 +36073,11 @@
 			"page": 192,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -34951,7 +36108,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"languages": [
@@ -35084,7 +36241,7 @@
 			"wis": 10,
 			"cha": 2,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -35159,7 +36316,7 @@
 			"wis": 11,
 			"cha": 3,
 			"senses": [
-				"darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 10,
 			"resist": [
@@ -35230,6 +36387,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -35277,7 +36440,7 @@
 				"perception": "+9"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 19,
 			"resist": [
@@ -35496,6 +36659,12 @@
 				{
 					"source": "XPHB",
 					"page": 352
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -35526,7 +36695,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "1",
@@ -35636,7 +36805,7 @@
 			"wis": 8,
 			"cha": 3,
 			"senses": [
-				"darkvision 30 ft."
+				"Darkvision 30 ft."
 			],
 			"passive": 9,
 			"cr": "0",
@@ -35688,6 +36857,11 @@
 			"name": "Lizardfolk Geomancer",
 			"source": "XMM",
 			"page": 197,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -35812,6 +36986,11 @@
 			"name": "Lizardfolk Sovereign",
 			"source": "XMM",
 			"page": 197,
+			"otherSources": [
+				{
+					"source": "NF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -35846,7 +37025,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"conditionImmune": [
@@ -35930,6 +37109,21 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -36102,6 +37296,20 @@
 			"name": "Mage Apprentice",
 			"source": "XMM",
 			"page": 198,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -36247,7 +37455,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -36353,7 +37561,7 @@
 			"wis": 11,
 			"cha": 10,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -36427,6 +37635,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -36548,7 +37762,7 @@
 			"wis": 8,
 			"cha": 4,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"resist": [
@@ -36607,6 +37821,11 @@
 			],
 			"source": "XMM",
 			"page": 201,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -36637,7 +37856,7 @@
 			"wis": 8,
 			"cha": 3,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"resist": [
@@ -36726,6 +37945,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -36754,7 +37976,7 @@
 			"wis": 12,
 			"cha": 8,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"languages": [
@@ -36826,6 +38048,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -36867,8 +38092,8 @@
 				"cha": "+8"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -37071,7 +38296,7 @@
 				"perception": "+8"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 18,
 			"resist": [
@@ -37202,6 +38427,12 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -37231,7 +38462,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"cr": "1/8",
@@ -37274,6 +38505,11 @@
 			"page": 205,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -37310,7 +38546,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 150 ft."
+				"Darkvision 150 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -37397,6 +38633,11 @@
 			"page": 209,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -37476,6 +38717,14 @@
 			"name": "Merfolk Wavebender",
 			"source": "XMM",
 			"page": 209,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -37619,6 +38868,14 @@
 			"page": 210,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "LFL"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -37645,7 +38902,7 @@
 			"wis": 10,
 			"cha": 9,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -37734,6 +38991,14 @@
 			],
 			"source": "XMM",
 			"page": 211,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -37770,8 +39035,8 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"blindsight 60 ft.",
-				"darkvision 60 ft."
+				"Blindsight 60 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -37914,6 +39179,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -37946,7 +39217,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"immune": [
@@ -38022,6 +39293,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -38069,7 +39343,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 16,
 			"resist": [
@@ -38232,7 +39506,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 17,
 			"immune": [
@@ -38381,6 +39655,11 @@
 			"page": 215,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -38410,7 +39689,7 @@
 				"survival": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 17,
 			"languages": [
@@ -38491,7 +39770,7 @@
 			"wis": 8,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"immune": [
@@ -38559,6 +39838,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -38586,7 +39868,7 @@
 			"wis": 10,
 			"cha": 7,
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 10,
 			"conditionImmune": [
@@ -38671,7 +39953,7 @@
 			"wis": 10,
 			"cha": 5,
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 10,
 			"conditionImmune": [
@@ -38755,7 +40037,7 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 14,
 			"conditionImmune": [
@@ -38864,7 +40146,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 12,
 			"conditionImmune": [
@@ -38959,7 +40241,7 @@
 			"wis": 10,
 			"cha": 9,
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 10,
 			"conditionImmune": [
@@ -39055,7 +40337,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -39218,6 +40500,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -39249,7 +40534,7 @@
 				"wis": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"immune": [
@@ -39317,6 +40602,7 @@
 			],
 			"miscTags": [
 				"CUR",
+				"HPR",
 				"MA"
 			],
 			"conditionInflict": [
@@ -39383,7 +40669,7 @@
 				"religion": "+5"
 			},
 			"senses": [
-				"truesight 60 ft."
+				"Truesight 60 ft."
 			],
 			"passive": 19,
 			"immune": [
@@ -39557,6 +40843,7 @@
 			],
 			"miscTags": [
 				"CUR",
+				"HPR",
 				"MA",
 				"RA"
 			],
@@ -39585,6 +40872,14 @@
 			"name": "Myconid Adult",
 			"source": "XMM",
 			"page": 223,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -39610,7 +40905,7 @@
 			"wis": 13,
 			"cha": 7,
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 11,
 			"languages": [
@@ -39688,6 +40983,11 @@
 			"name": "Myconid Sovereign",
 			"source": "XMM",
 			"page": 223,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -39713,7 +41013,7 @@
 			"wis": 15,
 			"cha": 10,
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 12,
 			"languages": [
@@ -39800,6 +41100,11 @@
 			"name": "Myconid Spore Servant",
 			"source": "XMM",
 			"page": 223,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -39825,7 +41130,7 @@
 			"wis": 6,
 			"cha": 1,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 8,
 			"immune": [
@@ -39877,6 +41182,14 @@
 			"name": "Myconid Sprout",
 			"source": "XMM",
 			"page": 222,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -39902,7 +41215,7 @@
 			"wis": 11,
 			"cha": 5,
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -40007,7 +41320,7 @@
 				"cha": "+7"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -40123,6 +41436,11 @@
 			"name": "Needle Blight",
 			"source": "XMM",
 			"page": 43,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -40148,7 +41466,7 @@
 			"wis": 8,
 			"cha": 3,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 9,
 			"conditionImmune": [
@@ -40204,6 +41522,11 @@
 			"page": 225,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -40238,7 +41561,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -40391,6 +41714,7 @@
 				"O"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"savingThrowForcedSpell": [
@@ -40407,6 +41731,14 @@
 			"page": 226,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -40511,6 +41843,21 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -40602,6 +41949,15 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -40746,6 +42102,14 @@
 			"source": "XMM",
 			"page": 228,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -40777,7 +42141,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -40853,6 +42217,11 @@
 			],
 			"source": "XMM",
 			"page": 229,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -40891,7 +42260,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 14,
 			"resist": [
@@ -41018,7 +42387,7 @@
 			"wis": 6,
 			"cha": 1,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 8,
 			"resist": [
@@ -41064,7 +42433,7 @@
 				{
 					"name": "Split",
 					"entries": [
-						"{@actTrigger} While the jelly is Large or Medium and has 10+ {@variantrule Hit Points|XPHB}, it becomes {@variantrule Bloodied|XPHB} or is subjected to Lightning or Slashing damage. {@actResponse} The jelly splits into two new Ochre Jellies. Each new jelly is one size smaller than the original jelly and acts on its {@variantrule Initiative|XPHB}. The original jelly's {@variantrule Hit Points|XPHB} are divided evenly between the new jellies (round down)."
+						"{@actTrigger} While the jelly is Large or Medium and has 10+ {@variantrule Hit Points|XPHB}, it becomes {@status Bloodied|XPHB} or is subjected to Lightning or Slashing damage. {@actResponse} The jelly splits into two new Ochre Jellies. Each new jelly is one size smaller than the original jelly and acts on its {@variantrule Initiative|XPHB}. The original jelly's {@variantrule Hit Points|XPHB} are divided evenly between the new jellies (round down)."
 					]
 				}
 			],
@@ -41133,7 +42502,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"Darkvision 30 ft."
 			],
 			"passive": 12,
 			"cr": "0",
@@ -41206,6 +42575,15 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -41233,7 +42611,7 @@
 			"wis": 7,
 			"cha": 7,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 8,
 			"languages": [
@@ -41312,6 +42690,9 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
 				}
 			],
 			"size": [
@@ -41342,7 +42723,7 @@
 				"wis": "+0"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 8,
 			"immune": [
@@ -41406,6 +42787,14 @@
 			"name": "Ogrillon Ogre",
 			"source": "XMM",
 			"page": 231,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -41431,7 +42820,7 @@
 			"wis": 9,
 			"cha": 10,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"languages": [
@@ -41503,6 +42892,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -41546,7 +42938,7 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"resist": [
@@ -41684,6 +43076,14 @@
 			"page": 233,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -41711,7 +43111,7 @@
 				"con": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 11,
 			"languages": [
@@ -41770,6 +43170,7 @@
 				"P"
 			],
 			"miscTags": [
+				"HPR",
 				"MA",
 				"RCH"
 			],
@@ -41795,6 +43196,9 @@
 				{
 					"source": "XPHB",
 					"page": 354
+				},
+				{
+					"source": "FRHoF"
 				}
 			],
 			"size": [
@@ -41826,7 +43230,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 15,
 			"cr": "0",
@@ -41881,6 +43285,15 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -41911,7 +43324,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"cr": "3",
@@ -41962,6 +43375,9 @@
 				{
 					"source": "XPHB",
 					"page": 354
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -41993,7 +43409,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"cr": "1/4",
@@ -42041,6 +43457,14 @@
 			"page": 235,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -42126,6 +43550,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -42348,6 +43775,15 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -42483,6 +43919,17 @@
 			"name": "Peryton",
 			"source": "XMM",
 			"page": 238,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -42586,6 +44033,14 @@
 			"page": 239,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -42614,7 +44069,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"cr": "3",
@@ -42708,6 +44163,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -42741,8 +44199,8 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 60 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 8,
 			"cr": "1/2",
@@ -42829,7 +44287,7 @@
 			"wis": 7,
 			"cha": 2,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 8,
 			"cr": "0",
@@ -42881,6 +44339,15 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -43131,6 +44598,12 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -43299,7 +44772,7 @@
 				"persuasion": "+19"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 20,
 			"resist": [
@@ -43454,6 +44927,14 @@
 			"name": "Pixie",
 			"source": "XMM",
 			"page": 244,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "LFL"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -43570,6 +45051,11 @@
 			"name": "Pixie Wonderbringer",
 			"source": "XMM",
 			"page": 244,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -43722,6 +45208,11 @@
 			"page": 245,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -43769,7 +45260,7 @@
 				"perception": "+11"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 21,
 			"resist": [
@@ -43923,6 +45414,11 @@
 			"page": 366,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -44002,6 +45498,14 @@
 			"page": 367,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -44031,7 +45535,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -44079,6 +45583,11 @@
 			"name": "Poltergeist",
 			"source": "XMM",
 			"page": 246,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -44110,7 +45619,7 @@
 			"wis": 10,
 			"cha": 14,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -44292,6 +45801,18 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -44448,6 +45969,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -44574,6 +46098,11 @@
 			"name": "Primeval Owlbear",
 			"source": "XMM",
 			"page": 234,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -44610,7 +46139,7 @@
 				"perception": "+8"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 18,
 			"cr": "7",
@@ -44714,8 +46243,8 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"languages": [
@@ -44831,7 +46360,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 8,
 			"resist": [
@@ -45028,8 +46557,8 @@
 				"wis": "+4"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"tremorsense 60 ft."
+				"Blindsight 30 ft.",
+				"Tremorsense 60 ft."
 			],
 			"passive": 9,
 			"cr": "15",
@@ -45144,7 +46673,7 @@
 				"athletics": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 11,
 			"immune": [
@@ -45161,7 +46690,7 @@
 				{
 					"name": "Bloodied Fury",
 					"entries": [
-						"While {@variantrule Bloodied|XPHB}, the quaggoth has {@variantrule Advantage|XPHB} on attack rolls."
+						"While {@status Bloodied|XPHB}, the quaggoth has {@variantrule Advantage|XPHB} on attack rolls."
 					]
 				}
 			],
@@ -45175,7 +46704,7 @@
 				{
 					"name": "Claw",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage, or 13 ({@damage 3d6 + 3}) Slashing damage if the quaggoth is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage, or 13 ({@damage 3d6 + 3}) Slashing damage if the quaggoth is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -45238,7 +46767,7 @@
 				"athletics": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -45293,7 +46822,7 @@
 				{
 					"name": "Bloodied Fury",
 					"entries": [
-						"While {@variantrule Bloodied|XPHB}, the quaggoth has {@variantrule Advantage|XPHB} on attack rolls."
+						"While {@status Bloodied|XPHB}, the quaggoth has {@variantrule Advantage|XPHB} on attack rolls."
 					]
 				}
 			],
@@ -45360,6 +46889,12 @@
 				{
 					"source": "XPHB",
 					"page": 355
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -45395,7 +46930,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -45503,6 +47038,11 @@
 			"name": "Questing Knight",
 			"source": "XMM",
 			"page": 184,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -45643,6 +47183,11 @@
 			"page": 253,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "ABH"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -45676,7 +47221,7 @@
 				"perception": "+8"
 			},
 			"senses": [
-				"truesight 60 ft."
+				"Truesight 60 ft."
 			],
 			"passive": 18,
 			"vulnerable": [
@@ -45813,6 +47358,9 @@
 				{
 					"source": "XPHB",
 					"page": 355
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -45843,7 +47391,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"Darkvision 30 ft."
 			],
 			"passive": 12,
 			"cr": "0",
@@ -45979,6 +47527,11 @@
 			"page": 254,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -46022,8 +47575,8 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -46094,6 +47647,11 @@
 			"name": "Red Slaad",
 			"source": "XMM",
 			"page": 285,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -46122,7 +47680,7 @@
 				"perception": "+1"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -46214,6 +47772,9 @@
 				{
 					"source": "XPHB",
 					"page": 356
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -46244,7 +47805,7 @@
 				"perception": "+2"
 			},
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 12,
 			"cr": "1/2",
@@ -46300,6 +47861,11 @@
 			"page": 258,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -46328,8 +47894,8 @@
 			"wis": 10,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 60 ft."
+				"Darkvision 60 ft.",
+				"Tremorsense 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -46402,6 +47968,11 @@
 			"name": "Revenant",
 			"source": "XMM",
 			"page": 259,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -46432,7 +48003,7 @@
 				"cha": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -46547,6 +48118,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -46612,6 +48186,9 @@
 				{
 					"source": "XPHB",
 					"page": 356
+				},
+				{
+					"source": "FRHoF"
 				}
 			],
 			"size": [
@@ -46674,6 +48251,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -46782,6 +48362,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -46817,7 +48400,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 16,
 			"cr": "5",
@@ -46897,6 +48480,11 @@
 			"page": 263,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -46921,7 +48509,7 @@
 			"wis": 13,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"cr": "1/2",
@@ -46999,6 +48587,11 @@
 			"page": 369,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "NF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -47031,7 +48624,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"cr": "2",
@@ -47094,6 +48687,11 @@
 			"name": "Sahuagin Baron",
 			"source": "XMM",
 			"page": 265,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -47131,7 +48729,7 @@
 				"perception": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 17,
 			"resist": [
@@ -47230,6 +48828,14 @@
 			"name": "Sahuagin Priest",
 			"source": "XMM",
 			"page": 265,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -47260,7 +48866,7 @@
 				"religion": "+3"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 16,
 			"resist": [
@@ -47385,6 +48991,14 @@
 			"page": 264,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -47414,7 +49028,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -47499,6 +49113,11 @@
 			"page": 267,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -47525,7 +49144,7 @@
 			"wis": 10,
 			"cha": 12,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -47639,7 +49258,7 @@
 			"wis": 10,
 			"cha": 8,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -47697,6 +49316,11 @@
 			"name": "Salamander Inferno Master",
 			"source": "XMM",
 			"page": 267,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -47730,7 +49354,7 @@
 				"wis": "+5"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -47829,6 +49453,14 @@
 			"page": 268,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -47924,6 +49556,11 @@
 			"name": "Satyr Revelmaster",
 			"source": "XMM",
 			"page": 268,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -48056,6 +49693,14 @@
 			"name": "Scarecrow",
 			"source": "XMM",
 			"page": 269,
+			"otherSources": [
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -48084,7 +49729,7 @@
 			"wis": 10,
 			"cha": 13,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -48187,7 +49832,7 @@
 			"wis": 8,
 			"cha": 2,
 			"senses": [
-				"blindsight 10 ft."
+				"Blindsight 10 ft."
 			],
 			"passive": 9,
 			"cr": "0",
@@ -48233,6 +49878,12 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -48330,6 +49981,17 @@
 			"name": "Scout Captain",
 			"source": "XMM",
 			"page": 270,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -48446,6 +50108,11 @@
 			"page": 271,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -48472,7 +50139,7 @@
 			"wis": 12,
 			"cha": 13,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"languages": [
@@ -48668,6 +50335,12 @@
 			"otherSources": [
 				{
 					"source": "HBTD"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -48698,7 +50371,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -48789,6 +50462,14 @@
 			],
 			"source": "XMM",
 			"page": 273,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -48831,7 +50512,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -48933,6 +50614,11 @@
 			"name": "Shadow Dragon",
 			"source": "XMM",
 			"page": 275,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -48971,8 +50657,8 @@
 				"stealth": "+14"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 21,
 			"resist": [
@@ -49105,6 +50791,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -49135,7 +50824,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -49222,6 +50911,15 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -49248,8 +50946,8 @@
 			"wis": 10,
 			"cha": 3,
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -49372,7 +51070,7 @@
 			"wis": 3,
 			"cha": 1,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 6,
 			"conditionImmune": [
@@ -49459,8 +51157,8 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -49553,6 +51251,15 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -49580,7 +51287,7 @@
 			"wis": 8,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"immune": [
@@ -49685,7 +51392,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 7,
 			"resist": [
@@ -49752,6 +51459,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -49784,7 +51494,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -49910,7 +51620,7 @@
 				"perception": "+14"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 24,
 			"immune": [
@@ -50129,7 +51839,7 @@
 				"perception": "+6"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 16,
 			"conditionImmune": [
@@ -50258,6 +51968,9 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -50290,7 +52003,7 @@
 			"wis": 10,
 			"cha": 11,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -50369,6 +52082,7 @@
 				"O"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"hasToken": true,
@@ -50384,6 +52098,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -50421,7 +52141,7 @@
 				"religion": "+12"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 18,
 			"resist": [
@@ -50569,6 +52289,14 @@
 			"name": "Sphinx of Secrets",
 			"source": "XMM",
 			"page": 292,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -50603,7 +52331,7 @@
 				"religion": "+7"
 			},
 			"senses": [
-				"truesight 60 ft."
+				"Truesight 60 ft."
 			],
 			"passive": 17,
 			"resist": [
@@ -50763,7 +52491,7 @@
 				"religion": "+15"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 22,
 			"resist": [
@@ -50945,6 +52673,9 @@
 				{
 					"source": "XPHB",
 					"page": 357
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -50978,7 +52709,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -51053,6 +52784,9 @@
 				{
 					"source": "XPHB",
 					"page": 357
+				},
+				{
+					"source": "FRHoF"
 				}
 			],
 			"size": [
@@ -51083,7 +52817,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 30 ft."
+				"Darkvision 30 ft."
 			],
 			"passive": 10,
 			"cr": "0",
@@ -51177,7 +52911,7 @@
 			"wis": 14,
 			"cha": 8,
 			"senses": [
-				"darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 12,
 			"resist": [
@@ -51304,7 +53038,7 @@
 				"cha": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -51431,6 +53165,15 @@
 				{
 					"source": "XPHB",
 					"page": 358
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "LFL"
 				}
 			],
 			"size": [
@@ -51551,6 +53294,23 @@
 			"page": 295,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -51652,6 +53412,17 @@
 			"name": "Spy Master",
 			"source": "XMM",
 			"page": 295,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "LFL"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -51779,6 +53550,11 @@
 			"page": 208,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				}
+			],
 			"size": [
 				"S"
 			],
@@ -51808,7 +53584,7 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -51879,9 +53655,6 @@
 			"miscTags": [
 				"MA"
 			],
-			"conditionInflict": [
-				"incapacitated"
-			],
 			"savingThrowForced": [
 				"constitution",
 				"dexterity"
@@ -51896,6 +53669,14 @@
 			"page": 299,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -51921,7 +53702,7 @@
 			"wis": 8,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"cr": "1/8",
@@ -51968,6 +53749,11 @@
 			"page": 300,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -52005,7 +53791,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -52089,6 +53875,12 @@
 			"otherSources": [
 				{
 					"source": "ScoEE"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -52118,7 +53910,7 @@
 			"wis": 11,
 			"cha": 1,
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -52236,6 +54028,11 @@
 			"page": 302,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -52282,8 +54079,8 @@
 				"perception": "+10"
 			},
 			"senses": [
-				"darkvision 120 ft.",
-				"truesight 30 ft."
+				"Darkvision 120 ft.",
+				"Truesight 30 ft."
 			],
 			"passive": 20,
 			"resist": [
@@ -52406,6 +54203,12 @@
 			"otherSources": [
 				{
 					"source": "ScoEE"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -52441,7 +54244,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"resist": [
@@ -52525,6 +54328,7 @@
 				"Y"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"savingThrowForced": [
@@ -52573,7 +54377,7 @@
 			"wis": 12,
 			"cha": 4,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -52604,7 +54408,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 2d4}) Piercing damage, or 2 ({@damage 1d4}) Piercing damage if the swarm is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 2d4}) Piercing damage, or 2 ({@damage 1d4}) Piercing damage if the swarm is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -52643,6 +54447,9 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -52674,7 +54481,7 @@
 			"wis": 10,
 			"cha": 4,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -52715,7 +54522,7 @@
 				{
 					"name": "Swarm of Grasping Hands",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}20 ({@damage 4d8 + 2}) Necrotic damage, or 11 ({@damage 2d8 + 2}) Necrotic damage if the swarm is {@variantrule Bloodied|XPHB}. If the target is a Medium or smaller creature, it has the {@condition Prone|XPHB} condition."
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}20 ({@damage 4d8 + 2}) Necrotic damage, or 11 ({@damage 2d8 + 2}) Necrotic damage if the swarm is {@status Bloodied|XPHB}. If the target is a Medium or smaller creature, it has the {@condition Prone|XPHB} condition."
 					]
 				}
 			],
@@ -52749,6 +54556,11 @@
 			],
 			"source": "XMM",
 			"page": 104,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -52780,7 +54592,7 @@
 			"wis": 8,
 			"cha": 3,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"resist": [
@@ -52833,7 +54645,7 @@
 				{
 					"name": "Rend",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}12 ({@damage 3d6 + 2}) Slashing damage, or 9 ({@damage 3d4 + 2}) Slashing damage if the swarm is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}12 ({@damage 3d6 + 2}) Slashing damage, or 9 ({@damage 3d4 + 2}) Slashing damage if the swarm is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -52875,6 +54687,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -52912,7 +54727,7 @@
 			"wis": 7,
 			"cha": 1,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 8,
 			"resist": [
@@ -52949,7 +54764,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atkr m} {@hit 3}, reach 5 ft. {@h}6 ({@damage 2d4 + 1}) Poison damage, or 3 ({@damage 1d4 + 1}) Poison damage if the swarm is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 3}, reach 5 ft. {@h}6 ({@damage 2d4 + 1}) Poison damage, or 3 ({@damage 1d4 + 1}) Poison damage if the swarm is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -52986,6 +54801,11 @@
 			"name": "Swarm of Larvae",
 			"source": "XMM",
 			"page": 193,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -53014,7 +54834,7 @@
 			"wis": 12,
 			"cha": 2,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -53048,7 +54868,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}9 ({@damage 2d6 + 2}) Necrotic damage, or 7 ({@damage 2d4 + 2}) Necrotic damage if the swarm is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}9 ({@damage 2d6 + 2}) Necrotic damage, or 7 ({@damage 2d4 + 2}) Necrotic damage if the swarm is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -53079,6 +54899,11 @@
 			],
 			"source": "XMM",
 			"page": 194,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -53110,7 +54935,7 @@
 			"wis": 12,
 			"cha": 3,
 			"senses": [
-				"darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+				"Darkvision 120 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
 			],
 			"passive": 11,
 			"resist": [
@@ -53162,7 +54987,7 @@
 				{
 					"name": "Vile Slime",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}11 ({@damage 2d8 + 2}) Poison damage, or 9 ({@damage 2d6 + 2}) Poison damage if the swarm is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}11 ({@damage 2d8 + 2}) Poison damage, or 9 ({@damage 2d6 + 2}) Poison damage if the swarm is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -53226,7 +55051,7 @@
 			"wis": 7,
 			"cha": 2,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 8,
 			"resist": [
@@ -53263,7 +55088,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atkr m} {@hit 5} (with {@variantrule Advantage|XPHB} if the target doesn't have all its {@variantrule Hit Points|XPHB}), reach 5 ft. {@h}8 ({@damage 2d4 + 3}) Piercing damage, or 5 ({@damage 1d4 + 3}) Piercing damage if the swarm is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 5} (with {@variantrule Advantage|XPHB} if the target doesn't have all its {@variantrule Hit Points|XPHB}), reach 5 ft. {@h}8 ({@damage 2d4 + 3}) Piercing damage, or 5 ({@damage 1d4 + 3}) Piercing damage if the swarm is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -53292,6 +55117,11 @@
 			"page": 370,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -53320,7 +55150,7 @@
 			"wis": 10,
 			"cha": 3,
 			"senses": [
-				"darkvision 30 ft."
+				"Darkvision 30 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -53351,7 +55181,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atkr m} {@hit 2}, reach 5 ft. {@h}5 ({@damage 2d4}) Piercing damage, or 2 ({@damage 1d4}) Piercing damage if the swarm is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 2}, reach 5 ft. {@h}5 ({@damage 2d4}) Piercing damage, or 2 ({@damage 1d4}) Piercing damage if the swarm is {@status Bloodied|XPHB}."
 					]
 				}
 			],
@@ -53384,6 +55214,11 @@
 			"page": 371,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -53443,7 +55278,7 @@
 				{
 					"name": "Beaks",
 					"entries": [
-						"{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage, or 2 ({@damage 1d4}) Piercing damage if the swarm is {@variantrule Bloodied|XPHB}."
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage, or 2 ({@damage 1d4}) Piercing damage if the swarm is {@status Bloodied|XPHB}."
 					]
 				},
 				{
@@ -53482,6 +55317,11 @@
 			"name": "Swarm of Stirges",
 			"source": "XMM",
 			"page": 299,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -53510,7 +55350,7 @@
 			"wis": 8,
 			"cha": 6,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"resist": [
@@ -53541,7 +55381,7 @@
 				{
 					"name": "Swarm of Proboscises",
 					"entries": [
-						"{@atkr m} {@hit 5}, reach 5 ft. {@h}14 ({@damage 2d10 + 3}) Piercing damage, or 8 ({@damage 1d10 + 3}) Piercing damage if the swarm is {@variantrule Bloodied|XPHB}. If the target is a Medium or smaller creature in the swarm's space, the target has the {@condition Grappled|XPHB} condition (escape {@dc 13}). Until the grapple ends, the target takes 7 ({@damage 2d6}) Necrotic damage at the end of each of its turns."
+						"{@atkr m} {@hit 5}, reach 5 ft. {@h}14 ({@damage 2d10 + 3}) Piercing damage, or 8 ({@damage 1d10 + 3}) Piercing damage if the swarm is {@status Bloodied|XPHB}. If the target is a Medium or smaller creature in the swarm's space, the target has the {@condition Grappled|XPHB} condition (escape {@dc 13}). Until the grapple ends, the target takes 7 ({@damage 2d6}) Necrotic damage at the end of each of its turns."
 					]
 				}
 			],
@@ -53578,6 +55418,11 @@
 			"page": 371,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -53606,7 +55451,7 @@
 			"wis": 10,
 			"cha": 3,
 			"senses": [
-				"blindsight 10 ft."
+				"Blindsight 10 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -53637,7 +55482,7 @@
 				{
 					"name": "Bites",
 					"entries": [
-						"{@atkr m} {@hit 6}, reach 5 ft. {@h}8 ({@damage 1d8 + 4}) Piercing damage\u2014or 6 ({@damage 1d4 + 4}) Piercing damage if the swarm is {@variantrule Bloodied|XPHB}\u2014plus 10 ({@damage 3d6}) Poison damage."
+						"{@atkr m} {@hit 6}, reach 5 ft. {@h}8 ({@damage 1d8 + 4}) Piercing damage\u2014or 6 ({@damage 1d4 + 4}) Piercing damage if the swarm is {@status Bloodied|XPHB}\u2014plus 10 ({@damage 3d6}) Poison damage."
 					]
 				}
 			],
@@ -53715,7 +55560,7 @@
 				"perception": "+9"
 			},
 			"senses": [
-				"blindsight 120 ft."
+				"Blindsight 120 ft."
 			],
 			"passive": 19,
 			"resist": [
@@ -53863,6 +55708,11 @@
 			"name": "Thri-kreen Marauder",
 			"source": "XMM",
 			"page": 306,
+			"otherSources": [
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -53892,7 +55742,7 @@
 				"survival": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"languages": [
@@ -54002,7 +55852,7 @@
 				"stealth": "+8"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"resist": [
@@ -54128,7 +55978,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "1",
@@ -54181,6 +56031,15 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -54277,6 +56136,18 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				},
+				{
+					"source": "NF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -54385,6 +56256,15 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "LFL"
 				}
 			],
 			"size": [
@@ -54498,6 +56378,11 @@
 			"name": "Tree Blight",
 			"source": "XMM",
 			"page": 44,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -54526,7 +56411,7 @@
 			"wis": 10,
 			"cha": 3,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 10,
 			"conditionImmune": [
@@ -54677,6 +56562,11 @@
 			"name": "Troglodyte",
 			"source": "XMM",
 			"page": 309,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -54706,7 +56596,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -54779,6 +56669,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -54809,7 +56705,7 @@
 				"perception": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"languages": [
@@ -54820,7 +56716,7 @@
 				{
 					"name": "Loathsome Limbs (4/Day)",
 					"entries": [
-						"If the troll ends any turn {@variantrule Bloodied|XPHB} and took 15+ Slashing damage during that turn, one of the troll's limbs is severed, falls into the troll's space, and becomes a {@creature Troll Limb|XMM}. The limb acts immediately after the troll's turn. The troll has 1 {@condition Exhaustion|XPHB} level for each missing limb, and it grows replacement limbs the next time it regains {@variantrule Hit Points|XPHB}."
+						"If the troll ends any turn {@status Bloodied|XPHB} and took 15+ Slashing damage during that turn, one of the troll's limbs is severed, falls into the troll's space, and becomes a {@creature Troll Limb|XMM}. The limb acts immediately after the troll's turn. The troll has 1 {@condition Exhaustion|XPHB} level for each missing limb, and it grows replacement limbs the next time it regains {@variantrule Hit Points|XPHB}."
 					]
 				},
 				{
@@ -54918,7 +56814,7 @@
 			"wis": 9,
 			"cha": 1,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"cr": "1/2",
@@ -54975,6 +56871,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -55005,7 +56907,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 9,
 			"vulnerable": [
@@ -55070,6 +56972,11 @@
 			"page": 372,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"H"
 			],
@@ -55207,7 +57114,7 @@
 				"stealth": "+8"
 			},
 			"senses": [
-				"truesight 120 ft."
+				"Truesight 120 ft."
 			],
 			"passive": 17,
 			"resist": [
@@ -55371,6 +57278,11 @@
 			"name": "Umber Hulk",
 			"source": "XMM",
 			"page": 312,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -55400,8 +57312,8 @@
 			"wis": 10,
 			"cha": 10,
 			"senses": [
-				"darkvision 120 ft.",
-				"tremorsense 60 ft."
+				"Darkvision 120 ft.",
+				"Tremorsense 60 ft."
 			],
 			"passive": 10,
 			"languages": [
@@ -55496,8 +57408,17 @@
 		{
 			"name": "Unicorn",
 			"source": "XMM",
+			"page": 313,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -55526,7 +57447,7 @@
 			"wis": 17,
 			"cha": 16,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"immune": [
@@ -55694,6 +57615,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -55736,7 +57660,7 @@
 				"stealth": "+9"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 17,
 			"resist": [
@@ -55925,13 +57849,12 @@
 				"O"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"conditionInflict": [
 				"charmed",
-				"grappled",
-				"incapacitated",
-				"paralyzed"
+				"grappled"
 			],
 			"conditionInflictSpell": [
 				"charmed",
@@ -55956,6 +57879,11 @@
 			"page": 314,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -55995,7 +57923,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"resist": [
@@ -56089,6 +58017,14 @@
 			"name": "Vampire Nightbringer",
 			"source": "XMM",
 			"page": 316,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -56128,7 +58064,7 @@
 				"stealth": "+7"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 15,
 			"immune": [
@@ -56208,6 +58144,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"hasToken": true,
@@ -56220,6 +58157,14 @@
 			"page": 315,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "ABH"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -56254,7 +58199,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -56372,11 +58317,11 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"conditionInflict": [
-				"grappled",
-				"incapacitated"
+				"grappled"
 			],
 			"savingThrowForced": [
 				"constitution"
@@ -56435,7 +58380,7 @@
 				"stealth": "+9"
 			},
 			"senses": [
-				"blindsight 120 ft."
+				"Blindsight 120 ft."
 			],
 			"passive": 23,
 			"immune": [
@@ -56617,12 +58562,11 @@
 				"O"
 			],
 			"miscTags": [
+				"HPR",
 				"MA",
 				"RA"
 			],
 			"conditionInflict": [
-				"incapacitated",
-				"paralyzed",
 				"poisoned"
 			],
 			"conditionInflictSpell": [
@@ -56683,7 +58627,7 @@
 			"wis": 10,
 			"cha": 3,
 			"senses": [
-				"blindsight 10 ft."
+				"Blindsight 10 ft."
 			],
 			"passive": 10,
 			"cr": "1/8",
@@ -56724,6 +58668,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -56754,7 +58701,7 @@
 				"stealth": "+1"
 			},
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 10,
 			"conditionImmune": [
@@ -56833,6 +58780,11 @@
 			"page": 126,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -56857,7 +58809,7 @@
 			"wis": 3,
 			"cha": 1,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 6,
 			"conditionImmune": [
@@ -56912,6 +58864,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -56942,7 +58897,7 @@
 			"wis": 14,
 			"cha": 10,
 			"senses": [
-				"blindsight 60 ft."
+				"Blindsight 60 ft."
 			],
 			"passive": 12,
 			"immune": [
@@ -57026,6 +58981,11 @@
 			"page": 319,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -57062,7 +59022,7 @@
 				"cha": "+2"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 11,
 			"resist": [
@@ -57168,6 +59128,14 @@
 			"page": 372,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -57246,6 +59214,9 @@
 				{
 					"source": "XPHB",
 					"page": 359
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -57334,7 +59305,7 @@
 			"wis": 8,
 			"cha": 5,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 9,
 			"immune": [
@@ -57385,6 +59356,14 @@
 			"name": "Warrior Commander",
 			"source": "XMM",
 			"page": 321,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -57522,6 +59501,14 @@
 			"page": 320,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -57605,6 +59592,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "FFotR"
 				}
 			],
 			"size": [
@@ -57713,6 +59706,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -57740,7 +59739,7 @@
 			"wis": 10,
 			"cha": 8,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -57840,6 +59839,11 @@
 			"name": "Water Weird",
 			"source": "XMM",
 			"page": 323,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -57865,7 +59869,7 @@
 			"wis": 10,
 			"cha": 10,
 			"senses": [
-				"blindsight 30 ft."
+				"Blindsight 30 ft."
 			],
 			"passive": 10,
 			"resist": [
@@ -57954,6 +59958,9 @@
 				{
 					"source": "XPHB",
 					"page": 359
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -57986,7 +59993,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"cr": "0",
@@ -58030,6 +60037,14 @@
 			"page": 324,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -58079,7 +60094,7 @@
 				"perception": "+7"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 17,
 			"languages": [
@@ -58175,6 +60190,11 @@
 			"page": 325,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -58312,6 +60332,11 @@
 			"page": 325,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -58348,7 +60373,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -58439,6 +60464,11 @@
 			"page": 326,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -58481,7 +60511,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"languages": [
@@ -58579,6 +60609,11 @@
 			"page": 327,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"S",
 				"M"
@@ -58625,7 +60660,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -58771,8 +60806,8 @@
 				"stealth": "+2"
 			},
 			"senses": [
-				"blindsight 10 ft.",
-				"darkvision 60 ft."
+				"Blindsight 10 ft.",
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -58852,6 +60887,11 @@
 			"page": 332,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -58884,7 +60924,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"resist": [
@@ -58972,6 +61012,7 @@
 				"S"
 			],
 			"miscTags": [
+				"HPR",
 				"MA",
 				"RA"
 			],
@@ -58988,6 +61029,14 @@
 			"page": 333,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"T"
 			],
@@ -59018,7 +61067,7 @@
 			"wis": 14,
 			"cha": 11,
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 12,
 			"resist": [
@@ -59159,7 +61208,7 @@
 			"wis": 7,
 			"cha": 8,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 8,
 			"languages": [
@@ -59244,6 +61293,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -59349,6 +61404,12 @@
 				{
 					"source": "XPHB",
 					"page": 359
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -59379,7 +61440,7 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"cr": "1/4",
@@ -59436,6 +61497,9 @@
 			"otherSources": [
 				{
 					"source": "UtHftLH"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -59466,7 +61530,7 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"languages": [
@@ -59521,6 +61585,12 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -59554,7 +61624,7 @@
 			"wis": 14,
 			"cha": 15,
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 12,
 			"resist": [
@@ -59636,6 +61706,7 @@
 				"O"
 			],
 			"miscTags": [
+				"HPR",
 				"MA"
 			],
 			"hasToken": true,
@@ -59651,6 +61722,12 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -59681,7 +61758,7 @@
 				"perception": "+4"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 14,
 			"cr": "6",
@@ -59772,8 +61849,8 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 60 ft."
+				"Darkvision 60 ft.",
+				"Tremorsense 60 ft."
 			],
 			"passive": 16,
 			"immune": [
@@ -59867,6 +61944,17 @@
 			"name": "Yeti",
 			"source": "XMM",
 			"page": 339,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "NF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -59897,7 +61985,7 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 15,
 			"immune": [
@@ -59986,6 +62074,14 @@
 			],
 			"source": "XMM",
 			"page": 341,
+			"otherSources": [
+				{
+					"source": "FRHoF"
+				},
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"M"
 			],
@@ -60030,7 +62126,7 @@
 				"insight": "+6"
 			},
 			"senses": [
-				"darkvision 120 ft."
+				"Darkvision 120 ft."
 			],
 			"passive": 12,
 			"resist": [
@@ -60193,6 +62289,11 @@
 			"page": 38,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -60236,8 +62337,8 @@
 				"stealth": "+5"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 16,
 			"immune": [
@@ -60326,6 +62427,14 @@
 			"page": 48,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "FFotR"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -60369,8 +62478,8 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 19,
 			"immune": [
@@ -60498,8 +62607,8 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 16,
 			"immune": [
@@ -60637,8 +62746,8 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 17,
 			"immune": [
@@ -60737,6 +62846,11 @@
 			"page": 78,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -60781,8 +62895,8 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 17,
 			"immune": [
@@ -60912,8 +63026,8 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 19,
 			"immune": [
@@ -61010,6 +63124,11 @@
 			"page": 152,
 			"srd52": true,
 			"basicRules2024": true,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -61054,8 +63173,8 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 17,
 			"immune": [
@@ -61150,6 +63269,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -61195,8 +63317,8 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 18,
 			"immune": [
@@ -61273,6 +63395,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "NF"
 				}
 			],
 			"size": [
@@ -61300,8 +63425,8 @@
 			"wis": 10,
 			"cha": 4,
 			"senses": [
-				"darkvision 60 ft.",
-				"tremorsense 60 ft."
+				"Darkvision 60 ft.",
+				"Tremorsense 60 ft."
 			],
 			"passive": 10,
 			"immune": [
@@ -61399,8 +63524,8 @@
 				"stealth": "+4"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 18,
 			"immune": [
@@ -61533,8 +63658,8 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"blindsight 30 ft.",
-				"darkvision 120 ft."
+				"Blindsight 30 ft.",
+				"Darkvision 120 ft."
 			],
 			"passive": 16,
 			"immune": [
@@ -61615,6 +63740,11 @@
 			"name": "Yuan-ti Abomination",
 			"source": "XMM",
 			"page": 345,
+			"otherSources": [
+				{
+					"source": "FRAiF"
+				}
+			],
 			"size": [
 				"L"
 			],
@@ -61648,7 +63778,7 @@
 				"stealth": "+6"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 17,
 			"immune": [
@@ -61816,7 +63946,7 @@
 				"stealth": "+3"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 14,
 			"immune": [
@@ -61933,6 +64063,9 @@
 			"otherSources": [
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "FRAiF"
 				}
 			],
 			"size": [
@@ -61967,7 +64100,7 @@
 				"stealth": "+4 (+6 while in snake form)"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"immune": [
@@ -62121,7 +64254,7 @@
 				"stealth": "+4 (+6 while in snake form)"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"immune": [
@@ -62271,7 +64404,7 @@
 				"stealth": "+4 (+6 while in snake form)"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 13,
 			"immune": [
@@ -62412,6 +64545,15 @@
 				},
 				{
 					"source": "DrDe"
+				},
+				{
+					"source": "HotB"
+				},
+				{
+					"source": "FRAiF"
+				},
+				{
+					"source": "EFA"
 				}
 			],
 			"size": [
@@ -62442,7 +64584,7 @@
 				"wis": "+0"
 			},
 			"senses": [
-				"darkvision 60 ft."
+				"Darkvision 60 ft."
 			],
 			"passive": 8,
 			"immune": [

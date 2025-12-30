@@ -103,7 +103,6 @@ function d20plusEngine () {
 			</ul>
 			<div class='tab-content'>
 				${d20plus.html.pageSettings}
-				${d20plus.html.pageSettingsWeather}
 			</div>
 		</script>`;
 	};
@@ -851,7 +850,7 @@ function d20plusEngine () {
 	};
 
 	d20plus.engine.enhanceTransmogrifier = () => {
-		JqueryUtil.addSelectors();
+		// JqueryUtil.addSelectors();
 
 		$("#transmogrifier").on("click", () => {
 			setTimeout(() => {

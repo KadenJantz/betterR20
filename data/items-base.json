@@ -264,6 +264,17 @@
 			]
 		},
 		{
+			"name": "Bandore",
+			"source": "FRHoF",
+			"page": 132,
+			"type": "INS|XPHB",
+			"rarity": "none",
+			"weight": 3,
+			"value": 6500,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
 			"name": "Battleaxe",
 			"source": "PHB",
 			"page": 149,
@@ -556,6 +567,17 @@
 			"value": 5000,
 			"ac": 13,
 			"armor": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Cittern",
+			"source": "FRHoF",
+			"page": 132,
+			"type": "INS|XPHB",
+			"rarity": "none",
+			"weight": 2,
+			"value": 6500,
+			"hasFluff": true,
 			"hasFluffImages": true
 		},
 		{
@@ -4230,8 +4252,22 @@
 		},
 		{
 			"name": "Yarting",
+			"source": "FRHoF",
+			"page": 132,
+			"type": "INS|XPHB",
+			"rarity": "none",
+			"weight": 2,
+			"value": 4000,
+			"hasFluff": true,
+			"hasFluffImages": true
+		},
+		{
+			"name": "Yarting",
 			"source": "SCAG",
 			"page": 124,
+			"reprintedAs": [
+				"Yarting|FRHoF"
+			],
 			"type": "INS",
 			"rarity": "none",
 			"entries": [
@@ -4402,22 +4438,6 @@
 					"name": "Burst Fire",
 					"entries": [
 						"As an action, you can expend 10 pieces of a Burst Fire weapon's ammunition to spray shots in a 10-foot {@variantrule Cube [Area of Effect]|XPHB|Cube} within the weapon's normal range. Each creature in that area must succeed on a {@dc 15} Dexterity saving throw or take damage. Roll the weapon's damage once, and apply it to each creature that failed the save."
-					]
-				}
-			]
-		},
-		{
-			"abbreviation": "ER",
-			"source": "TDCSR",
-			"page": 195,
-			"template": "{{prop_name_lower}} ({{item.reach}}\u00A0ft.)",
-			"entriesTemplate": [
-				{
-					"type": "entries",
-					"name": "Extended Reach",
-					"page": 195,
-					"entries": [
-						"This weapon adds {{item.reach}} feet to your reach when you attack with it. This property also determines your reach for {@action opportunity attack|PHB|opportunity attacks} with an Extended Reach weapon."
 					]
 				}
 			]
@@ -4702,8 +4722,8 @@
 		},
 		{
 			"abbreviation": "Vst",
-			"source": "TDCSR",
-			"page": 200,
+			"source": "EGW",
+			"page": 270,
 			"template": "Vestige",
 			"entries": [
 				{
@@ -4711,7 +4731,7 @@
 					"name": "Vestige of Divergence",
 					"page": 200,
 					"entries": [
-						"{@note This item is a Vestige of Divergence, see {@book Tal'Dorei Treasures|TDCSR|5|Vestiges of Divergence} for more information.}"
+						"{@note This item is a Vestige of Divergence, see {@book Vestiges of Divergence|EGW|7|Vestiges of Divergence} for more information.}"
 					]
 				}
 			]
@@ -4948,15 +4968,6 @@
 			"source": "XPHB",
 			"page": 219,
 			"basicRules2024": true
-		},
-		{
-			"name": "Illegal Drug",
-			"abbreviation": "IDG",
-			"source": "TDCSR",
-			"page": 85,
-			"entriesTemplate": [
-				"{@note This item is an illegal drug; see {@variantrule Illegal Drugs|TDCSR} for more information.}"
-			]
 		},
 		{
 			"name": "Instrument",

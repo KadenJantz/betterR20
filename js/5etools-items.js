@@ -8,17 +8,18 @@ function d20plusItems () {
 
 		return `
 		<span class="name col-3" title="name">${it.name}</span>
-		<span class="type col-5" title="type">${it._typeListText.map(t => `TYP[${t.trim()}]`).join(", ")}</span>
+		<span class="type col-5" title="type">${(it._typeListText || []).map(t => `TYP[${t.trim()}]`).join(", ")}</span>
 		<span class="rarity col-2" title="rarity">RAR[${it.rarity}]</span>
 		<span title="source [Full source name is ${Parser.sourceJsonToFull(it.source)}]" class="source col-2">SRC[${Parser.sourceJsonToAbv(it.source)}]</span>`;
 	};
 	d20plus.items._listIndexConverter = (it) => {
 		if (!it._isEnhanced) Renderer.item.enhanceItem(it);
 		return {
-			name: it.name.toLowerCase(),
-			type: it._typeListText.map(t => t.toLowerCase()),
-			rarity: it.rarity.toLowerCase(),
-			source: Parser.sourceJsonToAbv(it.source).toLowerCase(),
+			name: (it.name || "").toLowerCase(),
+			// Check if _typeListText exists, otherwise return an empty array
+			type: it._typeListText ? it._typeListText.map(t => t.toLowerCase()) : [],
+			rarity: (it.rarity || "").toLowerCase(),
+			source: it.source ? Parser.sourceJsonToAbv(it.source).toLowerCase() : "",
 		};
 	};
 	// Import Items button was clicked
@@ -139,7 +140,7 @@ function d20plusItems () {
 			name: name,
 			tags: d20plus.importer.getTagString([
 				`rarity ${data.rarity}`,
-				...data._typeListText,
+				...(data._typeListText || []), // <--- If undefined, it spreads an empty array instead of crashing
 				Parser.sourceJsonToFull(data.source),
 			], "item"),
 		}, {
@@ -179,8 +180,14 @@ function d20plusItems () {
 			},
 		};
 
-		const [damage, damageType, propertiesTxt] = Renderer.item.getRenderedDamageAndProperties(data);
-		const typeRarityAttunement = Renderer.item.getTypeRarityAndAttunementText(data);
+		// 1. SAFE CALL: Try the "Rendered" name first, then the short name.
+		// Use the new {item: data} object signature.
+		const rendererFn = Renderer.item.getRenderedDamageAndProperties || Renderer.item.getDamageAndProperties;
+		const [damage, damageType, propertiesTxt] = rendererFn ? rendererFn({item: data}) : ["", "", ""];
+
+		// 2. META CALL: Handled as an object
+		const itMeta = Renderer.item.getTransformedTypeEntriesMeta({item: data});
+		const typeRarityAttunementText = [itMeta.entryTypeRarity, itMeta.entrySubtype].filter(Boolean).join(", ");
 
 		let type = data.type;
 		if (data.type) {
@@ -197,6 +204,7 @@ function d20plusItems () {
 		if (type === "LA" || type === "LA|XPHB") armorclass = `${data.ac} + Dex`;
 		if (type === "MA" || type === "MA|XPHB") armorclass = `${data.ac} + Dex (max 2)`;
 		if (type === "HA" || type === "HA|XPHB") armorclass = data.ac;
+
 		let properties = "";
 		if (data.property) {
 			let propertieslist = data.property;
@@ -214,8 +222,9 @@ function d20plusItems () {
 				properties += a;
 			}
 		}
+
 		notecontents += `<p><h3>${data.name}</h3></p>
-		<p><em>${typeRarityAttunement.join(", ")}</em></p>
+		<p><em>${typeRarityAttunementText}</em></p>
 		<p><strong>Value/Weight:</strong> ${[Parser.itemValueToFull(data), Parser.itemWeightToFull(data)].filter(Boolean).join(", ")}</p>
 		<p><strong>Details: </strong>${[damage, damageType, propertiesTxt].filter(Boolean).join(" ")}</p>
 		`;
@@ -228,32 +237,20 @@ function d20plusItems () {
 		if (textString) {
 			notecontents += `<hr>`;
 			notecontents += textString;
-
 			roll20Data.content = d20plus.importer.getCleanText(textString);
 			roll20Data.htmlcontent = roll20Data.content;
 		}
 
-		if (data.range) {
-			roll20Data.data.Range = data.range;
-		}
+		if (data.range) roll20Data.data.Range = data.range;
 		if (data.dmg1 && data.dmgType) {
 			roll20Data.data.Damage = cleanDmg1;
 			roll20Data.data["Damage Type"] = Parser.dmgTypeToFull(data.dmgType);
 		}
-		if (data.stealth) {
-			roll20Data.data.Stealth = "Disadvantage";
-		}
-		// roll20Data.data.Duration = "1 Minute"; // used by e.g. poison; not show in sheet
-		// roll20Data.data.Save = "Constitution"; // used by e.g. poison, ball bearings; not shown in sheet
-		// roll20Data.data.Target = "Each creature in a 10-foot square centered on a point within range"; // used by e.g. ball bearings; not shown in sheet
-		// roll20Data.data["Item Rarity"] = "Wondrous"; // used by Iron Bands of Binding... and nothing else?; not shown in sheet
-		if (data.reqAttune === true) {
-			roll20Data.data["Requires Attunement"] = "Yes";
-		} else {
-			roll20Data.data["Requires Attunement"] = "No";
-		}
+		if (data.stealth) roll20Data.data.Stealth = "Disadvantage";
 
-		// load modifiers (e.g. "+1 Armor"); this is a comma-separated string
+		if (data.reqAttune === true) roll20Data.data["Requires Attunement"] = "Yes";
+		else roll20Data.data["Requires Attunement"] = "No";
+
 		const r20metaname = data.name.includes("+") ? `${data.name.slice(3)} ${data.name.slice(0, 2)}` : data.name;
 		const itemMeta = (itemMetadata.item || []).find(it => it.name === r20metaname && it.source === data.source);
 		if (itemMeta) roll20Data.data.Modifiers = itemMeta.Modifiers;
@@ -270,7 +267,6 @@ function d20plusItems () {
 		}
 
 		const gmnotes = JSON.stringify(roll20Data);
-
 		return [notecontents, gmnotes];
 	};
 
