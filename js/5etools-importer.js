@@ -24,25 +24,6 @@ function d20plusImporter () {
 		await BrewUtil2.pAddBrewFromUrl(url);
 	};
 
-	/*
-	// Inject module into roll20 webpack
-	window.addEventListener('load', function() {
-		// Pushing our module
-		window["webpackChunkvtt"].push([
-		["_userscriptModule"],
-		{
-			hackermans: (module, exports, webpackRequire) => {
-				window.__wpRequire = webpackRequire;
-			}
-		},
-		(webpackRequire) => {
-			console.log('Injected Module!');
-			webpackRequire('hackermans');
-		}
-		]);
-	}, false);
-	*/
-
 	d20plus.importer.getCleanText = function (str) {
 		if (!str || !str.trim()) return "";
 
@@ -1410,12 +1391,15 @@ function d20plusImporter () {
 
 		// Used for 2024 sheet
 		getFirstIntegrantIdWith(key, value) {
-			Object.keys(this.character.model.attribs.at(0).attributes.current.integrants.integrants).forEach(integrant => {
-				if (this.getIntegrant(integrant)[key] == value)
-					return integrant;
+            let first = null;
+			Object.keys(this.character.model.attribs.at(0).attributes.current.integrants.integrants).some(integrant => {
+				if (this.getIntegrant(integrant)[key] == value) {
+                    first = integrant;
+					return true;
+                }
 			})
 
-			return null;
+			return first;
 		}
 
 		add (name, current, max) {

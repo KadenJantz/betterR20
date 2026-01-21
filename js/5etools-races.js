@@ -170,22 +170,11 @@ function d20plusRaces () {
 				attrs.add(`repeating_proficiencies_${lRowId}_options-flag`, "0");
 			}
 		} else if (d20plus.sheet === "2024") {
-			// References for reuse
-			const current = attrs.character.model.attribs.at(1).attributes.current;
-			const raceSize = (race.size || [Parser.SZ_VARIES]).map(sz => Parser.sizeAbvToFull(sz)).join("/").toUpperCase();
 
 			// CREATE CUSTOM SPECIES
 			const sourceId = d20plus.ut.generateRowId();
 			const childIds = [];
-
-			// TODO: Apply size (Currently gets reverted when changed here for some reason)
-			/*if (!current["about"])
-				current["about"] = {};
-			if (!current.about["characteristics"])
-				current.about["characteristics"] = {};
-			current.about.characteristics["size"] = raceSize
-			console.log(current.about.characteristics.size);*/
-
+			
 			// Add all features (vision descriptions should be added here, so no need to add that)
 			race.entries.filter(it => it.text).forEach(e => {
 				childIds.push(d20plus.ut.generateRowId());

@@ -208,8 +208,152 @@ function d20plusSpells () {
 	};
 
 	d20plus.spells.importSpells = async function (character, data, event) {
+		const attrs = new d20plus.importer.CharacterAttributesProxy(character);
+
 		if (d20plus.sheet === "2024") {
-			
+			const spell = data.data;
+			const spellId = d20plus.ut.generateRowId();
+			const children = [];
+
+			// Function used to add both damage and healing to spell
+			function addDamage(id, parent, dice, damageType, type, useMod) {
+				var mod = "none";
+				if (useMod) mod = "auto";
+
+				attrs.addIntegrant(id, {
+					_enabled: true,
+					_label: "",
+					arrayPosition: attrs.getIntegrantCount(),
+					shortID: id.substring(0,9),
+					name: data.name + " " + type,
+					builderDisplayName: "",
+					createdTime: Date.now(),
+					type: type,
+					source: "",
+					childIDs: [],
+					parentID: parent,
+					parentDisabled: false,
+					overwriteDisabled: false,
+					ability: mod,
+					diceCount: 1,
+					diceSize: "d6",
+					overrideCrit: false,
+					critDiceSize: "",
+					damageType: damageType,
+				})
+			}
+
+			// Try to add healing
+			if ("Healing" in spell) {
+				const healId = d20plus.ut.generateRowId();
+				children.push(healId);
+				const addMod = "Add Casting Modifier" in spell && spell["Add Casting Modifier"] == "Yes";
+				addDamage(healId, spellId, spell.Healing, "", "Healing", addMod);
+			}
+
+			// Add attack/damage if applicable
+			if ("Spell Attack" in spell || "Damage" in spell || "Secondary Damage" in spell) {
+				children.unshift(d20plus.ut.generateRowId())
+
+				const damages = [];
+
+				// Try to add primary damage
+				if ("Damage" in spell) {
+					const damageId = d20plus.ut.generateRowId();
+					damages.push(damageId);
+					const addMod = "Add Casting Modifier" in spell && spell["Add Casting Modifier"] == "Yes";
+					addDamage(damageId, children[0], spell.Damage, spell["Damage Type"], "Damage", addMod); 
+				}
+
+				// Try to add secondary damage
+				if ("Secondary Damage" in spell) {
+					const damageId = d20plus.ut.generateRowId();
+					damages.push(damageId);
+					// Assume modifier does not apply to secondary damage
+					addDamage(damageId, children[0], spell["Secondary Damage"], spell["Secondary Damage Type"], "Damage", false); 
+				}
+
+				attrs.addIntegrant(children[0], {
+					_enabled: true,
+					_label: "",
+					_reach: false,
+					arrayPosition: attrs.getIntegrantCount(),
+					name: data.name,
+					builderDisplayName: "",
+					createdTime: Date.now(),
+					type: "Attack",
+					childIDs: damages,
+					parentID: spellId,
+					parentDisabled: false,
+					overwriteDisabled: false,
+					range: spell.Range,
+					actionType: spell["Casting Time"],
+					attack: {
+						type: "Spell Attack"
+					},
+					shortID: children[0].substring(0,9),
+					source: "",
+					autoHit: !("Spell Attack" in spell)
+				})
+			}
+
+			// Add the spell itself
+			const spellIntegrant = {
+				_enabled: true,
+				_label: "",
+				_prepared: true,
+				alwaysPrepared: false,
+				arrayPosition: attrs.getIntegrantCount(),
+				castingTime: spell["Casting Time"],
+				childIDs: children,
+				components: {
+					material: spell.Components.includes('M'),
+					somatic: spell.Components.includes('S'),
+					verbal: spell.Components.includes('V')
+				},
+				concentration: spell.Concentration,
+				createdTime: Date.now(),
+				description: spell["data-description"],
+				duration: spell.Duration,
+				level: parseInt(spell.Level),
+				name: data.name,
+				overwriteDisabled: false,
+				parentDisabled: false,
+				range: spell.Range,
+				recordName: data.name,
+				ritual: "Ritual" in spell && spell.Ritual == "Yes",
+				school: spell.School,
+				shortID: spellId.substring(0,9),
+				source: "",
+				type: "Spell",
+				upcastText: spell["Higher Spell Slot Desc"]
+			};
+
+			// Add cantrip scaling if applicable
+			if ("data-Cantrip Scaling" in spell)
+				spellIntegrant.cantripScale = spell["data-Cantrip Scaling"].toTitleCase()
+
+			// Add material component if applicable
+			if ("Material" in spell)
+				spellIntegrant.materialDescription = spell.Material
+
+			// Set spellcasting modifier using spellcasting class if assigned
+			try {
+				const spellcastingInfo = JSON.parse(attrs.character.model.attribs.at(0).attributes.current.spells.generalSpellSettings.spellcastings.substring(4))
+				spellIntegrant.sourceID = attrs.getIntegrant(spellcastingInfo[0].id).parentID;
+			} catch {
+				// If none assigned, check if any class exists
+				const firstId = attrs.getFirstIntegrantIdWith("type", "Class")
+
+				if (firstId != null)
+					spellIntegrant.sourceID = firstId;
+			}
+
+			attrs.addIntegrant(spellId, spellIntegrant);
+
+			// Add to appropriate spell list
+			attrs.character.model.attribs.at(0).attributes.current.spells.displayOrder[spell.Level] = JSON.stringify(
+				JSON.parse(attrs.character.model.attribs.at(0).attributes.current.spells.displayOrder[spell.Level]).push(spellId))
 		}
 		else {
 			const importCriticalData = function () {

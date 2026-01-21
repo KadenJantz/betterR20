@@ -877,7 +877,7 @@ function baseChat () {
 		}
 		const macroJS = d20plus.cfg.getOrDefault("chat", "executeJSMacro");
 
-		if (macroJS !== "none") {
+		if (macroJS !== "none" && typeof params[0] === "string") {
 			const template = /#(?<macroid>[^ ^#]+)/g;
 			params[0] = params[0].replace(template, (...match) => {
 				const macroId = match.last().macroid;
