@@ -220,6 +220,9 @@ function d20plusSpells () {
 				var mod = "none";
 				if (useMod) mod = "auto";
 
+				const count = dice.substring(0, dice.indexOf('d'));
+				const size = dice.substring(dice.indexOf('d'), dice.length)
+
 				attrs.addIntegrant(id, {
 					_enabled: true,
 					_label: "",
@@ -235,8 +238,8 @@ function d20plusSpells () {
 					parentDisabled: false,
 					overwriteDisabled: false,
 					ability: mod,
-					diceCount: 1,
-					diceSize: "d6",
+					diceCount: count,
+					diceSize: size,
 					overrideCrit: false,
 					critDiceSize: "",
 					damageType: damageType,
@@ -252,7 +255,7 @@ function d20plusSpells () {
 			}
 
 			// Add attack/damage if applicable
-			if ("Spell Attack" in spell || "Damage" in spell || "Secondary Damage" in spell) {
+			if ("Spell Attack" in spell || (("Damage" in spell || "Secondary Damage" in spell) && !("Save" in spell))) {
 				children.unshift(d20plus.ut.generateRowId())
 
 				const damages = [];
@@ -265,8 +268,8 @@ function d20plusSpells () {
 					addDamage(damageId, children[0], spell.Damage, spell["Damage Type"], "Damage", addMod); 
 				}
 
-				// Try to add secondary damage
-				if ("Secondary Damage" in spell) {
+				// Try to add secondary damage if it was not already used by saving throw
+				if ("Secondary Damage" in spell && !("Save" in spell)) {
 					const damageId = d20plus.ut.generateRowId();
 					damages.push(damageId);
 					// Assume modifier does not apply to secondary damage
@@ -294,6 +297,59 @@ function d20plusSpells () {
 					shortID: children[0].substring(0,9),
 					source: "",
 					autoHit: !("Spell Attack" in spell)
+				})
+			}
+
+			// Add save if applicable
+			if ("Save" in spell) {
+				children.unshift(d20plus.ut.generateRowId())
+
+				const damages = [];
+
+				// Try to add primary damage if it is not reserved for a spell attack
+				if ("Damage" in spell && !("Spell Attack" in spell)) {
+					const damageId = d20plus.ut.generateRowId();
+					damages.push(damageId);
+					const addMod = "Add Casting Modifier" in spell && spell["Add Casting Modifier"] == "Yes";
+					addDamage(damageId, children[0], spell.Damage, spell["Damage Type"], "Damage", addMod); 
+				}
+
+				// Try to add secondary damage
+				if ("Secondary Damage" in spell) {
+					const damageId = d20plus.ut.generateRowId();
+					damages.push(damageId);
+					// Assume modifier does not apply to secondary damage
+					addDamage(damageId, children[0], spell["Secondary Damage"], spell["Secondary Damage Type"], "Damage", false); 
+				}
+
+				const saveData = {
+					saveAbility: spell.Save
+				}
+
+				if ("Save Success" in spell)
+					saveData.onSucceed = spell["Save Success"];
+
+				attrs.addIntegrant(children[0], {
+					_enabled: true,
+					_label: "",
+					_reach: false,
+					arrayPosition: attrs.getIntegrantCount(),
+					name: data.name,
+					builderDisplayName: "",
+					createdTime: Date.now(),
+					type: "Attack",
+					childIDs: damages,
+					parentID: spellId,
+					parentDisabled: false,
+					overwriteDisabled: false,
+					range: spell.Range,
+					actionType: spell["Casting Time"],
+					attack: {
+						type: "Spell Save"
+					},
+					save: saveData,
+					shortID: children[0].substring(0,9),
+					source: "",
 				})
 			}
 
