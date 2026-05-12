@@ -2141,15 +2141,6 @@
 		}
 	},
 	{
-		"name": "Freedom of the Waves",
-		"source": "TDCSR",
-		"data": {
-			"Save": "Strength",
-			"Damage": "2d8",
-			"Damage Type": "Bludgeoning"
-		}
-	},
-	{
 		"name": "Abi-Dalzim's Horrid Wilting",
 		"source": "XGE",
 		"data": {

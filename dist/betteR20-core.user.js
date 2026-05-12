@@ -4198,7 +4198,7 @@ function baseToolModule () {
 						$win.dialog("open");
 						$wrpDataLoadingMessage.html("<i>Loading...</i>");
 						// Load the chosen module
-						DataUtil.loadJSON(`${urlbase}${sel.filename}`)
+						DataUtil.loadJSON(`${urlbase}${encodeURIComponent(sel.filename)}`)
 							.then(moduleFile => {
 								$wrpDataLoadingMessage.html("");
 								preprocessModuleData(moduleFile);
@@ -29336,7 +29336,7 @@ const betteR20Core = function () {
 			if (d20plus.characterIo && d20plus.characterIo.initCharacterJsonButtons) d20plus.characterIo.initCharacterJsonButtons();
 			if (window.is_gm) {
 				d20plus.journal.addJournalCommands();
-				d20plus.menu.addSelectedTokenCommands();
+				// d20plus.menu.addSelectedTokenCommands();
 				d20plus.art.addCustomArtSearch();
 				// d20plus.engine.addTokenHover();
 				d20plus.engine.enhanceTransmogrifier();
@@ -29394,7 +29394,6 @@ if (unsafeWindow.d20plus) {
 }
 
 unsafeWindow.d20plus = {};
-
 const betteR20Base = function () {
 	/* eslint-disable */
 	CONSOLE_LOG = console.log;

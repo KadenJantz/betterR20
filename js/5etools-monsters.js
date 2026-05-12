@@ -335,7 +335,7 @@ function d20plusMonsters () {
 					character.senses = data.senses ? data.senses instanceof Array ? data.senses.join(", ") : data.senses : null;
 					character.hp = data.hp.average || data.hp.special || 0;
 
-					// --- Define Constants and Fallback Base URL ---					
+					// --- Define Constants and Fallback Base URL ---
 					const BLANK_WEBP_URL = `${IMG_URL_REPO}blank.webp`;// Fallback for blank image, currently set to mirror repo
 
 					// --- Calculate Primary Avatar URL --- //main site ie if 5e.tools starts to work again
@@ -390,10 +390,10 @@ function d20plusMonsters () {
 									});
 								},
 								success: function() {
-									//Fluff image URL check succeeded
+									// Fluff image URL check succeeded
 									console.log(`Internal fluff image URL "${fluffUrlToCheck}" validated.`);
 									d20plus.importer.getSetAvatarImage(character, finalAvatar, fluffUrlToCheck);
-								}
+								},
 							});
 						} else {
 							// Fluff image URL check not needed or not internal
@@ -422,16 +422,15 @@ function d20plusMonsters () {
 									console.log(`Secondary avatar URL "${secondaryAvatarUrl}" succeeded.`);
 									// Secondary succeeded, use it
 									setFinalImages(`${secondaryAvatarUrl}${d20plus.ut.getAntiCacheSuffix()}`, initialFluffUrlToCheck, isFirstFluffImageInternal, internalFluffPath);
-								}
+								},
 							});
 						},
 						success: function () {
 							console.log(`Primary avatar URL "${primaryAvatarUrl}" succeeded.`);
 							// Primary succeeded, use it
 							setFinalImages(`${primaryAvatarUrl}${d20plus.ut.getAntiCacheSuffix()}`, initialFluffUrlToCheck, isFirstFluffImageInternal, internalFluffPath);
-						}
+						},
 					});
-
 					const parsedAc = typeof data.ac === "string" ? data.ac : $(`<div>${Parser.acToFull(data.ac)}</div>`).text();
 					let ac = parsedAc.match(/^\d+/);
 					let actype = /\(([^)]+)\)/.exec(parsedAc);

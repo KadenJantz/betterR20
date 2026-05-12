@@ -22,20 +22,29 @@
 			}
 		},
 		{
-			"name": "+2 Ring of Protection",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Ring of Protection",
-				"source": "DMG"
-			}
-		},
-		{
 			"name": "+3 Fate Dealer's Deck",
 			"source": "BMT",
 			"_copy": {
 				"name": "Fate Dealer's Deck",
 				"source": "BMT"
 			}
+		},
+		{
+			"name": "Adventurer's Ring",
+			"source": "FRHoF",
+			"entries": [
+				"Lamps are a liability on adventures. Delicate and prone to oil spillage, lamps fill a hand that should otherwise be wielding a weapon or casting a spell. Once you try one of our elegant and practical rings, you'll never go back to cumbersome flint and fire."
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Adventurer's Ring.webp"
+					},
+					"credit": "Polar Engine"
+				}
+			]
 		},
 		{
 			"name": "Adze of Annam",
@@ -50,45 +59,6 @@
 					"credit": "Isabel Gibney"
 				}
 			]
-		},
-		{
-			"name": "Agony",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/Agony.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A spiked three-headed flail with four meat hooks attached by chains."
-				}
-			]
-		},
-		{
-			"name": "Agony (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Agony",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Agony (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Agony",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Agony (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Agony",
-				"source": "TDCSR"
-			}
 		},
 		{
 			"name": "Akmon, Hammer of Purphoros",
@@ -402,45 +372,6 @@
 			]
 		},
 		{
-			"name": "Armor of the Valiant Soul",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/ArmoroftheValiantSoul.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "Black dragon-scale armor with a red sash, gold shoulder plates, and an emerald breastplate and collar with draconic markings."
-				}
-			]
-		},
-		{
-			"name": "Armor of the Valiant Soul (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Armor of the Valiant Soul",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Armor of the Valiant Soul (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Armor of the Valiant Soul",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Armor of the Valiant Soul (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Armor of the Valiant Soul",
-				"source": "TDCSR"
-			}
-		},
-		{
 			"name": "Arrow of Slaying (*)",
 			"source": "DMG",
 			"images": [
@@ -464,6 +395,23 @@
 						"path": "items/TCE/Atlas of Endless Horizons.webp"
 					},
 					"credit": "Andrew Mar"
+				}
+			]
+		},
+		{
+			"name": "Axe Beak",
+			"source": "FRHoF",
+			"entries": [
+				"{@i Don't let the grouchy reputation of these hardworking creatures deter you. A team of axe beaks can pull your sled with remarkable speed and efficiency.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Axe Beak.webp"
+					},
+					"credit": "Polar Engine"
 				}
 			]
 		},
@@ -716,6 +664,14 @@
 					"credit": "Francesca Resta"
 				}
 			]
+		},
+		{
+			"name": "Bandore",
+			"source": "FRHoF",
+			"_copy": {
+				"name": "Musical Instrument",
+				"source": "FRHoF"
+			}
 		},
 		{
 			"name": "Battle Standard of Infernal Power",
@@ -1291,6 +1247,23 @@
 			]
 		},
 		{
+			"name": "Bright Fungal Cloak",
+			"source": "FRHoF",
+			"entries": [
+				"{@i Never spelunk in the dark again! This cloak of bioluminescent fungus fibers is sure to brighten your day.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Bright Fungal Cloak.webp"
+					},
+					"credit": "Polar Engine"
+				}
+			]
+		},
+		{
 			"name": "Bronze Dragon Scale Mail",
 			"source": "XDMG",
 			"_copy": {
@@ -1365,43 +1338,17 @@
 			]
 		},
 		{
-			"name": "Cabal's Ruin",
-			"source": "TDCSR",
+			"name": "Calimemnon Crystal",
+			"source": "FRAiF",
 			"images": [
 				{
 					"type": "image",
 					"href": {
 						"type": "internal",
-						"path": "items/TDCSR/CabalsRuin.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A mystical dark blue cloak with metallic, flowing embroidered designs."
+						"path": "items/FRAiF/Calimemnon Crystal.webp"
+					}
 				}
 			]
-		},
-		{
-			"name": "Cabal's Ruin (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Cabal's Ruin",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Cabal's Ruin (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Cabal's Ruin",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Cabal's Ruin (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Cabal's Ruin",
-				"source": "TDCSR"
-			}
 		},
 		{
 			"name": "Candle of Invocation",
@@ -1425,6 +1372,19 @@
 					"href": {
 						"type": "internal",
 						"path": "items/XDMG/Candle of Invocation.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Cap of Vanishing",
+			"source": "WttHC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/WttHC/Cap of Vanishing.webp"
 					}
 				}
 			]
@@ -1617,45 +1577,6 @@
 			]
 		},
 		{
-			"name": "Circlet of Barbed Vision",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/CircletofBarbedVision.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A mystical dark blue cloak with metallic, flowing embroidered designs."
-				}
-			]
-		},
-		{
-			"name": "Circlet of Barbed Vision (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Circlet of Barbed Vision",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Circlet of Barbed Vision (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Circlet of Barbed Vision",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Circlet of Barbed Vision (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Circlet of Barbed Vision",
-				"source": "TDCSR"
-			}
-		},
-		{
 			"name": "Circlet of Blasting",
 			"source": "DMG",
 			"images": [
@@ -1677,6 +1598,27 @@
 					"href": {
 						"type": "internal",
 						"path": "items/XDMG/Circlet of Blasting.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Cittern",
+			"source": "FRHoF",
+			"_copy": {
+				"name": "Musical Instrument",
+				"source": "FRHoF"
+			}
+		},
+		{
+			"name": "Cloak of Billowing",
+			"source": "WttHC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/WttHC/Cloak of Billowing (Stranger Things).webp"
 					}
 				}
 			]
@@ -1902,45 +1844,6 @@
 			}
 		},
 		{
-			"name": "Condemner",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/Condemner.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A black, shadowed crossbow with intricate markings and an illuminated green drawstring and patterns."
-				}
-			]
-		},
-		{
-			"name": "Condemner (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Condemner",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Condemner (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Condemner",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Condemner (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Condemner",
-				"source": "TDCSR"
-			}
-		},
-		{
 			"name": "Constantori's Portrait",
 			"source": "KftGV",
 			"images": [
@@ -1976,6 +1879,23 @@
 			}
 		},
 		{
+			"name": "Covered Wagon",
+			"source": "FRHoF",
+			"entries": [
+				"{@i Is it any wonder adventurers flock to the Dalelands? It's not just the majestic forests and flavorful ale; here, everyone minds their own business. These wagons, popularized by adventurers current and retired, can be found from Thunder Pass to Dragon's Reach.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Covered Wagon.webp"
+					},
+					"credit": "Polar Engine"
+				}
+			]
+		},
+		{
 			"name": "Crook of Rao",
 			"source": "TCE",
 			"images": [
@@ -1986,6 +1906,19 @@
 						"path": "items/TCE/Crook of Rao.webp"
 					},
 					"credit": "Robson Michel"
+				}
+			]
+		},
+		{
+			"name": "Crown of Horns",
+			"source": "FRAiF",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRAiF/Crown of Horns.webp"
+					}
 				}
 			]
 		},
@@ -2136,21 +2069,6 @@
 			]
 		},
 		{
-			"name": "Dagger of Denial",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/DaggerofDenial.webp"
-					},
-					"credit": "{@link Stanislav Dikolenko|https://artstation.com/stsdklnk}",
-					"altText": "The Dagger of Denial: a long, thin pointed silver dagger with an ivory coloured hilt crossing in front of an ivory sheath with a silver ends."
-				}
-			]
-		},
-		{
 			"name": "Dagger of Venom",
 			"source": "DMG",
 			"images": [
@@ -2292,45 +2210,6 @@
 					}
 				}
 			]
-		},
-		{
-			"name": "Deathwalker's Ward",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/DeathwalkersWard.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "Black leather armor with intricate embroidery, the shoulders consisting of black raven feathers."
-				}
-			]
-		},
-		{
-			"name": "Deathwalker's Ward (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Deathwalker's Ward",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Deathwalker's Ward (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Deathwalker's Ward",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Deathwalker's Ward (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Deathwalker's Ward",
-				"source": "TDCSR"
-			}
 		},
 		{
 			"name": "Decanter of Endless Water",
@@ -2513,6 +2392,40 @@
 						"path": "items/TCE/Demonomicon of Iggwilv.webp"
 					},
 					"credit": "David Sladek"
+				}
+			]
+		},
+		{
+			"name": "Desert Clothing",
+			"source": "FRHoF",
+			"entries": [
+				"{@i Stylish but practical, our desert clothing protects you whether you're taking a caravan of camels through the Calim Desert or exploring an ancient Mulhorandi tomb.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Desert Clothing.webp"
+					},
+					"credit": "Polar Engine"
+				}
+			]
+		},
+		{
+			"name": "Devil Mask",
+			"source": "FRHoF",
+			"entries": [
+				"{@i Grant your sins plausible deniability by wearing one of these diabolical masks inspired by fiends from the Nine Hells. Also suitable for patriar galas in the city of Baldur's Gate.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Devil Mask.webp"
+					},
+					"credit": "Polar Engine"
 				}
 			]
 		},
@@ -2731,6 +2644,19 @@
 					"href": {
 						"type": "internal",
 						"path": "items/RoT/Dragontooth Dagger.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Dread Helm",
+			"source": "WttHC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/WttHC/Dread Helm (Stranger Things).webp"
 					}
 				}
 			]
@@ -3319,45 +3245,6 @@
 			]
 		},
 		{
-			"name": "Fenthras",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/Fenthras.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A longbow made of wood and dark green vines wrapping around it, with intricate elvish designs."
-				}
-			]
-		},
-		{
-			"name": "Fenthras (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Fenthras",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Fenthras (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Fenthras",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Fenthras (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Fenthras",
-				"source": "TDCSR"
-			}
-		},
-		{
 			"name": "Feywild Shard",
 			"source": "TCE",
 			"images": [
@@ -3532,21 +3419,6 @@
 			]
 		},
 		{
-			"name": "Flamefriend Lantern",
-			"source": "TDCSR",
-			"entries": [
-				{
-					"type": "quote",
-					"entries": [
-						"He was given to me by your father, little one. He kept us warm while your father and I trekked through the Dreemoth Ravine and the ruins of Draconia twenty years ago. Such vicious blizzards, the likes of which are only topped by the Neverfields\u2014or Eiselcross, so I've heard. You should have seen us, marching through the snow, dozens of Ashari cloaked in flame, melting trenches in the rime as they advanced, and me, my furs pulled around my nose, blinking through the snow, holding tight to this little one.",
-						"When your father returned to Pyrah, I feared I'd never see our little flamefriend again, but.... Here, hold him, hear his little elemental heart fluttering. Think of your father when you feel that warmth, protecting you, watching over you. No matter where in the world you are, whether you're near Pyrah or far, he'll be a bit of family, and a bit of home."
-					],
-					"by": "Talus Naj",
-					"from": "to his goddaughter, Ev of Pyrah"
-				}
-			]
-		},
-		{
 			"name": "Flames Card",
 			"source": "BMT",
 			"images": [
@@ -3571,6 +3443,23 @@
 						"path": "items/MOT/Flying Chariot.webp"
 					},
 					"credit": "Ryan Alexander Lee"
+				}
+			]
+		},
+		{
+			"name": "Flying Snake",
+			"source": "FRHoF",
+			"entries": [
+				"{@i Our partners in the Zhentarim provide these remarkable pets, fully domesticated and trained to deliver messages. Always wear gloves when handling venomous creatures.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Flying Snake.webp"
+					},
+					"credit": "Polar Engine"
 				}
 			]
 		},
@@ -3651,6 +3540,23 @@
 						"path": "items/TCE/Fulminating Treatise.webp"
 					},
 					"credit": "Kieran Yanner"
+				}
+			]
+		},
+		{
+			"name": "Garb of Light and Shadow",
+			"source": "FRHoF",
+			"entries": [
+				"{@i These outfits are fashionable among fey courtiers in the Moonshae Isles. After winning a riddle game and parting with a lock of hair, I secured enough samples to re-create them in my workshop.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Garb of Light and Shadow.webp"
+					},
+					"credit": "Polar Engine"
 				}
 			]
 		},
@@ -3744,6 +3650,23 @@
 						"type": "internal",
 						"path": "items/XDMG/Gem of Seeing.webp"
 					}
+				}
+			]
+		},
+		{
+			"name": "Genie Robe",
+			"source": "FRHoF",
+			"entries": [
+				"{@i Channel the authority of genies with these elegant Calishite fashions.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Genie Robe.webp"
+					},
+					"credit": "Polar Engine"
 				}
 			]
 		},
@@ -3911,21 +3834,6 @@
 						"path": "items/GGR/Golgari Keyrune.webp"
 					},
 					"credit": "Daniel Ljunggren"
-				}
-			]
-		},
-		{
-			"name": "Graz'tchar, the Decadent End",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/Graz'tchar.webp"
-					},
-					"credit": "{@link Clara Daly|https://tinyraptors.com/}",
-					"altText": "Graz'tchar, The Decadent End: A silver greatsword outlined in gold and embedded with rubies. It has a cross-shaped golden hilt with a silver and ruby pommel."
 				}
 			]
 		},
@@ -4248,6 +4156,19 @@
 			]
 		},
 		{
+			"name": "Harper Pin",
+			"source": "FRAiF",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRAiF/Harper Pin.webp"
+					}
+				}
+			]
+		},
+		{
 			"name": "Hat of Disguise",
 			"source": "XDMG",
 			"images": [
@@ -4550,6 +4471,19 @@
 			]
 		},
 		{
+			"name": "Holly's Handy Haversack",
+			"source": "WttHC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/WttHC/Hollys Handy Haversack.webp"
+					}
+				}
+			]
+		},
+		{
 			"name": "Holy Avenger",
 			"source": "DMG",
 			"images": [
@@ -4587,69 +4521,6 @@
 					}
 				}
 			]
-		},
-		{
-			"name": "Honor's Last Stand",
-			"source": "TDCSR",
-			"entries": [
-				{
-					"type": "inset",
-					"name": "Rules Tip: Pushing and Shoving",
-					"page": 206,
-					"entries": [
-						"Certain character options, such as the Path of the Juggernaut barbarian in {@book chapter 4|TDCSR|3}, grant the ability to push other creatures around the battlefield with your attacks. But this is just one way to push a creature. If you want to move a creature without hurting it, there's a {@action shove|PHB|special shove attack} available to all characters. The {@book Vestige of Divergence|TDCSR|5|Vestiges of Divergence} Honor's Last Stand encourages you to shove your foes away while you valiantly stand your ground.",
-						{
-							"type": "entries",
-							"name": "Shoving a Creature",
-							"page": 206,
-							"entries": [
-								{
-									"type": "statblock",
-									"name": "Shove",
-									"source": "PHB",
-									"page": 206,
-									"tag": "action"
-								}
-							]
-						}
-					]
-				}
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/HonorsLastStand.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A massive silver shield with the platinum dragon engraved on the front."
-				}
-			]
-		},
-		{
-			"name": "Honor's Last Stand (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Honor's Last Stand",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Honor's Last Stand (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Honor's Last Stand",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Honor's Last Stand (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Honor's Last Stand",
-				"source": "TDCSR"
-			}
 		},
 		{
 			"name": "Hoopak",
@@ -5502,45 +5373,6 @@
 			]
 		},
 		{
-			"name": "Kiss of the Changebringer",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/KissoftheChangebringer.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "An intricate silver necklace with emerald gems."
-				}
-			]
-		},
-		{
-			"name": "Kiss of the Changebringer (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Kiss of the Changebringer",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Kiss of the Changebringer (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Kiss of the Changebringer",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Kiss of the Changebringer (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Kiss of the Changebringer",
-				"source": "TDCSR"
-			}
-		},
-		{
 			"name": "Knight Card",
 			"source": "BMT",
 			"images": [
@@ -5707,6 +5539,23 @@
 						"path": "items/AI/living-loot-satchel.webp"
 					},
 					"credit": "Chris Walton"
+				}
+			]
+		},
+		{
+			"name": "Locking Spellbook",
+			"source": "FRHoF",
+			"entries": [
+				"{@i The wise wizard keeps a copy of all their spells safely tucked away in case of disaster. We supplement our spellbook with a trusty lock secure enough to dissuade curious goblins.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Locking Spellbook.webp"
+					},
+					"credit": "Polar Engine"
 				}
 			]
 		},
@@ -6237,6 +6086,56 @@
 			]
 		},
 		{
+			"name": "Mechanical Wonder",
+			"source": "FRAiF",
+			"entries": [
+				"{@i Mechanical Wonders have revolutionized life in Calimport. Imagine a wound-up machine that does your laundry, washes your dishes, and cleans your house\u2014then fulfill this dream in any emporium shop.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRAiF/Mechanical Wonder.webp"
+					},
+					"title": "Domestic Wonder",
+					"credit": "Polar Engine"
+				}
+			]
+		},
+		{
+			"name": "Mechanical Wonder (Domestic)",
+			"source": "FRAiF",
+			"_copy": {
+				"name": "Mechanical Wonder",
+				"source": "FRAiF"
+			}
+		},
+		{
+			"name": "Mechanical Wonder (Flying)",
+			"source": "FRAiF",
+			"_copy": {
+				"name": "Mechanical Wonder",
+				"source": "FRAiF"
+			}
+		},
+		{
+			"name": "Mechanical Wonder (Gyrocopter)",
+			"source": "FRAiF",
+			"_copy": {
+				"name": "Mechanical Wonder",
+				"source": "FRAiF"
+			}
+		},
+		{
+			"name": "Mechanical Wonder (Mobility)",
+			"source": "FRAiF",
+			"_copy": {
+				"name": "Mechanical Wonder",
+				"source": "FRAiF"
+			}
+		},
+		{
 			"name": "Medal of the Maze",
 			"source": "CRCotN",
 			"images": [
@@ -6387,21 +6286,6 @@
 			]
 		},
 		{
-			"name": "Mirror of Infinite Transpondence",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/MirrorTranspondence.webp"
-					},
-					"credit": "{@link Clara Daly|https://tinyraptors.com/}",
-					"altText": "Mirror of Infinite Transpondence: a silver, handheld mirror with intricate designs all around. A face is carved at the top of the handle, and an eye at the top of the mirror. Inside the mirror is a picture of a stone tower with a wind-torn cloth peak."
-				}
-			]
-		},
-		{
 			"name": "Mirror of Life Trapping",
 			"source": "DMG",
 			"images": [
@@ -6438,6 +6322,23 @@
 						"path": "items/GGR/Mizzium Apparatus.webp"
 					},
 					"credit": "Terese Nielsen"
+				}
+			]
+		},
+		{
+			"name": "Monster Camouflage",
+			"source": "FRHoF",
+			"entries": [
+				"{@i The people of Icewind Dale have developed many strategies for safely traveling in dangerous wilderness. This outfit, adapted from hunting garb, deters strangers and animals alike.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Monster Camouflage.webp"
+					},
+					"credit": "Polar Engine"
 				}
 			]
 		},
@@ -6536,6 +6437,24 @@
 			]
 		},
 		{
+			"name": "Musical Instrument",
+			"source": "FRHoF",
+			"entries": [
+				"{@i The yarting is the staple stringed instrument of minstrels across Faerûn. A cittern, distinguished by its pear-shaped bowl, produces a pleasing, richer sound. The bandore is a complex bass instrument with additional sets of strings, perfect for accompanying tenor and alto instruments in an ensemble.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Musical Instrument.webp"
+					},
+					"title": "Left to Right: Yarting, Bandore, Cittern",
+					"credit": "Polar Engine"
+				}
+			]
+		},
+		{
 			"name": "Musket",
 			"source": "XPHB",
 			"images": [
@@ -6548,61 +6467,6 @@
 					"credit": "Polar Engine"
 				}
 			]
-		},
-		{
-			"name": "Mythcarver",
-			"source": "TDCSR",
-			"entries": [
-				{
-					"type": "insetReadaloud",
-					"page": 207,
-					"entries": [
-						{
-							"type": "quote",
-							"entries": [
-								"Though the name of the champion who wielded Mythcarver has been lost, legend says that the songs she sung in her beautiful contralto made her friends rejoice and her enemies weep with fear. Mythcarver was forged in the flying city of Zemniaz by a master arcanist and blacksmith along with the wielder herself, who wove song and spell into the blade with each fold of the metal."
-							],
-							"by": "High Curator Jorum Irrelios",
-							"from": "circa 547 P.D."
-						}
-					]
-				}
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/Mythcarver.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "An elegant rapier with a swept hilt."
-				}
-			]
-		},
-		{
-			"name": "Mythcarver (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Mythcarver",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Mythcarver (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Mythcarver",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Mythcarver (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Mythcarver",
-				"source": "TDCSR"
-			}
 		},
 		{
 			"name": "Narycrash",
@@ -7156,6 +7020,19 @@
 			]
 		},
 		{
+			"name": "Pipes of Pestilence",
+			"source": "WttHC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/WttHC/Pipes of Pestilence.webp"
+					}
+				}
+			]
+		},
+		{
 			"name": "Pipes of the Sewers",
 			"source": "DMG",
 			"images": [
@@ -7223,45 +7100,6 @@
 			]
 		},
 		{
-			"name": "Plate of the Dawnmartyr",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/PlateoftheDawnmartyr.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "Golden plate mail with black fabric wrapped around the waist. Throughout the armor are intricate designs. In center and upon the left shoulder pauldron is the symbol of the Dawnfather - a solitary sun with eight rays."
-				}
-			]
-		},
-		{
-			"name": "Plate of the Dawnmartyr (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Plate of the Dawnmartyr",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Plate of the Dawnmartyr (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Plate of the Dawnmartyr",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Plate of the Dawnmartyr (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Plate of the Dawnmartyr",
-				"source": "TDCSR"
-			}
-		},
-		{
 			"name": "Platinum (pp)",
 			"source": "PHB",
 			"images": [
@@ -7270,6 +7108,19 @@
 					"href": {
 						"type": "internal",
 						"path": "items/PHB/Platinum (pp).webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Poison Soaked Kukri",
+			"source": "WttHC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/WttHC/Poison Soaked Kukri.webp"
 					}
 				}
 			]
@@ -7316,6 +7167,34 @@
 			]
 		},
 		{
+			"name": "Potion of Climbing",
+			"source": "XDMG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/XDMG/Potion of Climbing.webp"
+					},
+					"credit": "Conceptopolis"
+				}
+			]
+		},
+		{
+			"name": "Potion of Fire Breath",
+			"source": "XDMG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/XDMG/Potion of Fire Breath.webp"
+					},
+					"credit": "Conceptopolis"
+				}
+			]
+		},
+		{
 			"name": "Potion of Greater Invisibility",
 			"source": "XDMG",
 			"images": [
@@ -7325,6 +7204,20 @@
 						"type": "internal",
 						"path": "items/XDMG/Potion of Greater Invisibility.webp"
 					}
+				}
+			]
+		},
+		{
+			"name": "Potion of Healing",
+			"source": "XDMG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/XDMG/Potion of Healing.webp"
+					},
+					"credit": "Conceptopolis"
 				}
 			]
 		},
@@ -7364,6 +7257,34 @@
 						"type": "internal",
 						"path": "items/XDMG/Potion of Pugilism.webp"
 					}
+				}
+			]
+		},
+		{
+			"name": "Potion of Storm Giant Strength",
+			"source": "XDMG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/XDMG/Potion of Storm Giant Strength.webp"
+					},
+					"credit": "Conceptopolis"
+				}
+			]
+		},
+		{
+			"name": "Potion of Vitality",
+			"source": "XDMG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/XDMG/Potion of Vitality.webp"
+					},
+					"credit": "Conceptopolis"
 				}
 			]
 		},
@@ -7442,6 +7363,17 @@
 		},
 		{
 			"name": "Prosthetic Limb",
+			"source": "FRHoF",
+			"_copy": {
+				"name": "Prosthetic Limb",
+				"source": "XDMG"
+			},
+			"entries": [
+				"{@i A perfect illustration of the notion that magic should make our lives easier. Thanks to the generosity of Sultana Songal, anyone who requires a Prosthetic Limb can have the device for free. Speak to one of our vendors in the Aurora's Emporium nearest you.}"
+			]
+		},
+		{
+			"name": "Prosthetic Limb",
 			"source": "TCE",
 			"images": [
 				{
@@ -7451,6 +7383,20 @@
 						"path": "items/TCE/Prosthetic Limb.webp"
 					},
 					"credit": "Ben Wootten"
+				}
+			]
+		},
+		{
+			"name": "Prosthetic Limb",
+			"source": "XDMG",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/XDMG/Prosthetic Limb.webp"
+					},
+					"credit": "Polar Engine"
 				}
 			]
 		},
@@ -7480,45 +7426,6 @@
 					"credit": "Tinnel Lovitt"
 				}
 			]
-		},
-		{
-			"name": "Pyremaul",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/Pyremaul.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A maul embedded with an orange gemstone emitting flames from the head of the weapon."
-				}
-			]
-		},
-		{
-			"name": "Pyremaul (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Pyremaul",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Pyremaul (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Pyremaul",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Pyremaul (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Pyremaul",
-				"source": "TDCSR"
-			}
 		},
 		{
 			"name": "Pyroconverger",
@@ -9382,43 +9289,10 @@
 			]
 		},
 		{
-			"name": "Skysail",
-			"source": "TDCSR",
+			"name": "Sled Dog",
+			"source": "FRHoF",
 			"entries": [
-				{
-					"type": "quote",
-					"entries": [
-						"Oh! Oh gods, are you seriously asking me to explain it? Geez, sure, I'll try, but you really gotta feel it, you know? The sensation of the wind whipping past you as you shoot up into the sky, then\u2014whoa!\u2014your stomach just drops out from you, and it's like you left your heart behind as you start to fall. It's like nothing's holding onto you, then\u2014whoosh!\u2014the wind catches you, and swings you back into the sky."
-					],
-					"by": "Air Ashari druid initiate Kelthai",
-					"from": "on skysailing"
-				}
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/Skysail.webp"
-					},
-					"credit": "{@link Claudia Ianniciello|https://artstation.com/claudiasg}",
-					"altText": "An Ashari woman with long orange hair flies on her white-winged skysail through a rocky canyon. She wears green clothing."
-				}
-			]
-		},
-		{
-			"name": "Skyship",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "book/TDCSR/Chapter3-Skyship.webp"
-					},
-					"credit": "{@link Svetoslav Petrov|https://artstation.com/svetoslavpetrov}",
-					"altText": "A skyship, its white sails entirely unfurled, flies through a dusky, red sky. The ship emanates a glowing, blue arcane magic below it, keeping it aloft."
-				}
+				"{@i We recommend a team of these sled dogs to ease the burden on individual animals. Rotate your dogs through the lead positions to give weary animals a rest.}"
 			]
 		},
 		{
@@ -9518,6 +9392,19 @@
 					"href": {
 						"type": "internal",
 						"path": "items/XDMG/Sovereign Glue.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Speaking Stones",
+			"source": "WttHC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/WttHC/Speaking Stones.webp"
 					}
 				}
 			]
@@ -9705,6 +9592,19 @@
 			]
 		},
 		{
+			"name": "Spiked Shield",
+			"source": "WttHC",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/WttHC/Spiked Shield.webp"
+					}
+				}
+			]
+		},
+		{
 			"name": "Spindle of Fate",
 			"source": "BMT",
 			"images": [
@@ -9716,61 +9616,6 @@
 					}
 				}
 			]
-		},
-		{
-			"name": "Spire of Conflux",
-			"source": "TDCSR",
-			"entries": [
-				{
-					"type": "insetReadaloud",
-					"page": 209,
-					"entries": [
-						{
-							"type": "quote",
-							"entries": [
-								"Records kept by the Birthheart temple in Vasselheim say that the Spire of Conflux was created when the Wildmother breathed on a young beech tree. The sapling transformed into a curving staff and the Wildmother's breath crystallized into the glowing jewel that hovers in its center. The bearer of this mythic staff can command the elements as if they were one with the enduring, yet ever-changing, landscape of Exandria itself..."
-							],
-							"by": "High Curator Jorum Irrelios",
-							"from": "circa 547 P.D."
-						}
-					]
-				}
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/SpireofConflux.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A twisted staff made of wood and vines shaped like a shepherd's crook with a glowing blue crystal in the center of the crook."
-				}
-			]
-		},
-		{
-			"name": "Spire of Conflux (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Spire of Conflux",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Spire of Conflux (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Spire of Conflux",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Spire of Conflux (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Spire of Conflux",
-				"source": "TDCSR"
-			}
 		},
 		{
 			"name": "Spirit Board",
@@ -10137,61 +9982,6 @@
 					"credit": "Vallez Gax"
 				}
 			]
-		},
-		{
-			"name": "Star Razor",
-			"source": "TDCSR",
-			"entries": [
-				{
-					"type": "insetReadaloud",
-					"page": 210,
-					"entries": [
-						{
-							"type": "quote",
-							"entries": [
-								"Many weapons created by mortals during the Age of Arcanum were designed with hopes to surpass or even destroy the gods, but not so with Dwueth'var. That shining sword, bright with the light of the bold full moon and the enigmatic starlit night, was forged by acolytes of the Wildmother and the Moonweaver, united in their love of this fragile world and their determination to protect it."
-							],
-							"by": "High Curator Jorum Irrelios",
-							"from": "circa 547 P.D."
-						}
-					]
-				}
-			],
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/StarRazor.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A silver greatsword with a red hilt. Inset in the hilt is a green gemstone. Runes run down the center of the blade, where also runs silver-white lines of magic."
-				}
-			]
-		},
-		{
-			"name": "Star Razor (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Star Razor",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Star Razor (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Star Razor",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Star Razor (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Star Razor",
-				"source": "TDCSR"
-			}
 		},
 		{
 			"name": "Steel",
@@ -10778,45 +10568,6 @@
 			]
 		},
 		{
-			"name": "Titanstone Knuckles",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/TitanstoneKnuckles.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A pair of solid black stone gauntlets with brass fixings, encircled with three stone rings per gauntlet, and they are engraved with orange glowing runes."
-				}
-			]
-		},
-		{
-			"name": "Titanstone Knuckles (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Titanstone Knuckles",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Titanstone Knuckles (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Titanstone Knuckles",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Titanstone Knuckles (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Titanstone Knuckles",
-				"source": "TDCSR"
-			}
-		},
-		{
 			"name": "Tome of Clear Thought",
 			"source": "DMG",
 			"images": [
@@ -10877,6 +10628,19 @@
 					"href": {
 						"type": "internal",
 						"path": "items/CoS/Tome of Strahd.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Tome of the Dragon",
+			"source": "FRAiF",
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRAiF/Tome of the Dragon.webp"
 					}
 				}
 			]
@@ -11512,6 +11276,23 @@
 			]
 		},
 		{
+			"name": "Warm Fungal Clothing",
+			"source": "FRHoF",
+			"entries": [
+				"{@i Intrepid explorers from Highplume Station in Icewind Dale have descended steam vents to bring useful fungi up from the Underdark. Our expert crafters took it from there.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Warm Fungal Clothing.webp"
+					},
+					"credit": "Polar Engine"
+				}
+			]
+		},
+		{
 			"name": "Warrior's Passkey",
 			"source": "BMT",
 			"images": [
@@ -11604,45 +11385,6 @@
 			]
 		},
 		{
-			"name": "Whisper",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/Whisper.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "A sleek, silver dagger with a black, slender hilt and two raven feathers tied onto the pummel."
-				}
-			]
-		},
-		{
-			"name": "Whisper (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Whisper",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Whisper (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Whisper",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Whisper (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Whisper",
-				"source": "TDCSR"
-			}
-		},
-		{
 			"name": "Whisper Jar",
 			"source": "AI",
 			"images": [
@@ -11686,6 +11428,22 @@
 					"href": {
 						"type": "internal",
 						"path": "items/XDMG/Wind Fan.webp"
+					}
+				}
+			]
+		},
+		{
+			"name": "Windskiff",
+			"source": "FRAiF",
+			"entries": [
+				"{@i If you want to travel between the Moonshaes, you won't be able to on foot, by horse, or by cart. You'll need to sail. And while you could simply hire a boat, where's the fun in that?}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRAiF/Windskiff.webp"
 					}
 				}
 			]
@@ -11757,6 +11515,23 @@
 			]
 		},
 		{
+			"name": "Winter Camouflage",
+			"source": "FRHoF",
+			"entries": [
+				"{@i Whether you're hiding from horrifying tundra monsters or you just want a little privacy, this handsome garb can help you keep a low profile in the North.}"
+			],
+			"images": [
+				{
+					"type": "image",
+					"href": {
+						"type": "internal",
+						"path": "items/FRHoF/Winter Camouflage.webp"
+					},
+					"credit": "Polar Engine"
+				}
+			]
+		},
+		{
 			"name": "Witchlight Vane",
 			"source": "WBtW",
 			"images": [
@@ -11769,45 +11544,6 @@
 					"credit": "Nikki Dawes"
 				}
 			]
-		},
-		{
-			"name": "Wraps of Dyamak",
-			"source": "TDCSR",
-			"images": [
-				{
-					"type": "image",
-					"href": {
-						"type": "internal",
-						"path": "items/TDCSR/WrapsofDyamak.webp"
-					},
-					"credit": "{@link Jessica Nguyen|https://jessketchin.com/}",
-					"altText": "Thick blood-stained cloth bandages affixed to two forearms. The wraps emit a red glow."
-				}
-			]
-		},
-		{
-			"name": "Wraps of Dyamak (Awakened)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Wraps of Dyamak",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Wraps of Dyamak (Dormant)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Wraps of Dyamak",
-				"source": "TDCSR"
-			}
-		},
-		{
-			"name": "Wraps of Dyamak (Exalted)",
-			"source": "TDCSR",
-			"_copy": {
-				"name": "Wraps of Dyamak",
-				"source": "TDCSR"
-			}
 		},
 		{
 			"name": "Wreath of the Prism",
@@ -11873,6 +11609,14 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Yarting",
+			"source": "FRHoF",
+			"_copy": {
+				"name": "Musical Instrument",
+				"source": "FRHoF"
+			}
 		}
 	]
 }

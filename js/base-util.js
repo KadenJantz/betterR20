@@ -7,6 +7,23 @@ function baseUtil () {
 	// d20plus.ut.WIKI_URL = "https://wiki.5e.tools"; // I'll be back ...
 	d20plus.ut.WIKI_URL = "https://wiki.tercept.net/en/betteR20";
 
+	d20plus.ut.fixS3Url = (url) => {
+		if (!url || typeof url !== "string") return url;
+		// Fix old S3 AWS URLs to new files.d20.io format
+		let fixed = url;
+		// Pattern 1: Full S3 AWS URL -> files.d20.io
+		fixed = fixed.replace(/^https?:\/\/s3\.amazonaws\.com\/(files\.d20\.io\/(images|marketplace)\/\d+\/[^/]+\/.*?\.(jpg|jpeg|png|gif|webp))(\?.*)?$/i, "https://$1");
+		// Pattern 2: Relative path starting with /files.d20.io -> absolute URL
+		fixed = fixed.replace(/^\/(files\.d20\.io\/(images|marketplace)\/\d+\/[^/]+\/.*?\.(jpg|jpeg|png|gif|webp))(\?.*)?$/i, "https://$1");
+		// Pattern 3: Already correct files.d20.io URL but strip query params
+		fixed = fixed.replace(/^(https?:\/\/files\.d20\.io\/(images|marketplace)\/\d+\/[^/]+\/.*?\.(jpg|jpeg|png|gif|webp))(\?.*)?$/i, "$1");
+		// Pattern 4: Bare domain path (files.d20.io/...) -> full URL
+		if (fixed.startsWith("files.d20.io/")) {
+			fixed = "https://" + fixed.replace(/\?.*$/, "");
+		}
+		return fixed;
+	};
+
 	d20plus.ut.log = (...args) => {
 		// eslint-disable-next-line no-console
 		console.log("%cD20Plus > ", "color: #3076b9; font-size: large", ...args);

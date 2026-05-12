@@ -2,7 +2,7 @@ function initHTMLroll20EditorsMisc () {
 	d20plus.html = d20plus.html || {};
 
 	d20plus.html.characterEditor = `
-	<script id="tmpl_charactereditor" type="text/html">
+<script id="tmpl_charactereditor" type="text/html">
 		<div class='dialog largedialog charactereditor' style='display: block;'>
 			<div class='tab-content'>
 				<div class='bioinfo tab-pane'>
@@ -75,16 +75,21 @@ function initHTMLroll20EditorsMisc () {
 								<$ if(window.is_gm) { $>
 								<button class='btn apply-token-defaults'>Apply Token Defaults</button>
 								<a class='showtip pictos' title='Update tokens where Represents Character is set to this character. All tokens representing this character across all pages will be overwritten.'>?</a>
+								<$ } $>
 								<!-- BEGIN MOD -->
+								<$  { $>
 								<button class="btn token-image-by-url">Set Token Image from URL</button>
 								<a class='showtip pictos' title='Update will only be visible upon re-opening the sheet.'>?</a>
-								<!-- END MOD -->
 								<$ } $>
+								<!-- END MOD -->
 							</div>
 						</div>
 						<div class='span7'>
 							<label>
 								<strong>Name</strong>
+								<$ if(this.get('nexus_character_id')) { $>
+								<a class='showtip pictos' title='Update your name and avatar from within the Demiplane character sheet'>?</a>
+								<$ } $>
 							</label>
 							<input class='name' data-test='character-edit-name' type='text'>
 							<div class='clear'></div>
@@ -124,9 +129,15 @@ function initHTMLroll20EditorsMisc () {
 							</div>
 							<div class='clear'></div>
 							<hr>
+							<$ if(this.get("ownedBy")) { $>
+							<button class='removefromgame btn btn-danger' data-test='character-remove-from-game' style='float: right;'>
+							Remove From Game
+							</button>
+							<$ } else { $>
 							<button class='delete btn btn-danger' data-test='character-delete' style='float: right;'>
 								Delete
 							</button>
+							<$ } $>
 							<button class='duplicate btn' data-test='character-duplicate' style='margin-right: 10px;'>
 								Duplicate
 							</button>
@@ -136,6 +147,9 @@ function initHTMLroll20EditorsMisc () {
 							<div class='clear'></div>
 							<$ } $>
 							<div class='clear'></div>
+							<input class='character-party-toggle' data-test='character-party-toggle' style='float: right;' type='checkbox'>
+								Party Member:
+							</input>
 						</div>
 					</div>
 					<$ if(!window.ADVANCED_SHEET) { $>

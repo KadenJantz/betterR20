@@ -172,15 +172,15 @@ const d20plusTemplate = function () {
 			$wrpSettings.append(d20plus.template5e.settingsHtmlPtImportFooter);
 
 			$("#bind-drop-locations").on(window.mousedowntype, d20plus.bindDropLocations);
-			$("#initiativewindow .characterlist").before(d20plus.template5e.initiativeHeaders);
+			//$("#initiativewindow .characterlist").before(d20plus.template5e.initiativeHeaders);
 
-			d20plus.setTurnOrderTemplate();
-			d20.Campaign.initiativewindow.rebuildInitiativeList();
-			d20plus.hpAllowEdit();
-			d20.Campaign.initiativewindow.model.on("change:turnorder", function () {
-				d20plus.updateDifficulty();
-			});
-			d20plus.updateDifficulty();
+			//d20plus.setTurnOrderTemplate();
+			//d20.Campaign.initiativewindow.rebuildInitiativeList();
+		//	d20plus.hpAllowEdit();
+			//d20.Campaign.initiativewindow.model.on("change:turnorder", function () {
+			//	d20plus.updateDifficulty();
+			//});
+			//d20plus.updateDifficulty();
 
 			d20plus.template5e._populateAdventuresDropdown();
 

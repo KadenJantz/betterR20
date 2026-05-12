@@ -305,7 +305,7 @@ function tools5eConfig () {
 
 		IMG_URL = `${BASE_SITE_URL}img/`;
 		IMG_URL_REPO = `${DATA_URL_IMG_REPO}`;
-
+		
 		SPELL_DATA_DIR = `${DATA_URL}spells/`;
 		SPELL_META_URL = `https://5e.tools/data/spells/roll20.json`;
 		MONSTER_DATA_DIR = `${DATA_URL}bestiary/`;

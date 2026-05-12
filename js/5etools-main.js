@@ -958,6 +958,7 @@ const betteR205etoolsMain = function () {
 		if (d20.journal.characterSheetsManager.sheets.ogl5e) d20plus.sheet = "ogl";
 		if (d20.journal.characterSheetsManager.sheets.shaped_d20) d20plus.sheet = "shaped";
 		if (d20.journal.characterSheetsManager.sheets.DnD5e_Character_Sheet) d20plus.sheet = "community";
+		if (d20.journal.characterSheetsManager.sheets.dnd2024byroll20) d20plus.sheet = "2024";
 		// Note: dnd2024byroll20 uses a different architecture (relay system) - not yet supported
 		d20plus.ut.log(`Switched Character Sheet Template to ${d20plus.sheet}`);
 	};

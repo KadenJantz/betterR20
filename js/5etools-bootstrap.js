@@ -49,7 +49,7 @@ const betteR205etools = function () {
 			if (d20plus.characterIo && d20plus.characterIo.initCharacterJsonButtons) d20plus.characterIo.initCharacterJsonButtons();
 			if (window.is_gm) {
 				d20plus.journal.addJournalCommands();
-				d20plus.menu.addSelectedTokenCommands();
+				// d20plus.menu.addSelectedTokenCommands();
 				d20plus.art.addCustomArtSearch();
 				// d20plus.engine.addTokenHover();
 				d20plus.engine.enhanceTransmogrifier();
