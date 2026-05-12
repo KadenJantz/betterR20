@@ -319,6 +319,8 @@ function tools5eConfig () {
 		BACKGROUND_DATA_URL = `${DATA_URL}backgrounds.json`;
 		OPT_FEATURE_DATA_URL = `${DATA_URL}optionalfeatures.json`;
 		RACE_DATA_URL = `${DATA_URL}races.json`;
+		DEITY_DATA_URL = `${DATA_URL}deities.json`;
+		VEHICLE_DATA_URL = `${DATA_URL}vehicles.json`;
 	};
 
 	d20plus.cfg5e.handleConfigChange = function (isSyncingPlayer) {

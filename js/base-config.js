@@ -94,6 +94,26 @@ function baseConfig () {
 			"_type": "integer",
 		},
 	});
+	addConfigOptions("autoBackup", {
+		"_name": "Auto Backup",
+		"schedule": {
+			"name": "Backup Schedule",
+			"default": "off",
+			"_type": "_enum",
+			"__values": ["off", "weekly", "biweekly", "monthly"],
+			"__texts": ["Off", "Weekly", "Bi-Weekly", "Monthly"],
+		},
+		"lastBackupTimestamp": {
+			"name": "Last Backup Time",
+			"default": 0,
+			"_type": "integer",
+		},
+		"enabled": {
+			"name": "Enable Auto Backup",
+			"default": true,
+			"_type": "boolean",
+		},
+	});
 	addConfigOptions("interface", {
 		"_name": "Interface",
 		"_player": true,

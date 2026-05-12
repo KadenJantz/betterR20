@@ -67,7 +67,7 @@ function d20plusRaces () {
 
 	d20plus.races._getHandoutData = function (data) {
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 
 		const renderStack = [];
 		const ability = Renderer.getAbilityData(data.ability);
@@ -133,7 +133,7 @@ function d20plusRaces () {
 
 	d20plus.races.importRace = function (character, data) {
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 
 		const race = data.Vetoolscontent;
 

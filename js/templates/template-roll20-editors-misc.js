@@ -46,19 +46,20 @@ function initHTMLroll20EditorsMisc () {
 								<strong>Default Token (Optional)</strong>
 								<a class='showtip pictos' title='The default token will be used when this character is dragged from the Journal Tab to the Virtual Tabletop. For regular 1x1 tokens representing this character, you may use images from your Art Library or computer. For larger tokens, create a token on the Virtual Tabletop and use &quot;Use Selected Token.&quot;'>?</a>
 							</label>
-							<div class="defaultToken dropbox <$! this.defaultTokenImage != "" ? "filled" : "" $>">
+							<$ var defaultTokenImage = this.defaultTokenImage || ""; $>
+							<div class="defaultToken dropbox <$! defaultTokenImage != "" ? "filled" : "" $>">
 								<div class="status"></div>
 								<div class="inner">
-									<$ if(this.defaultTokenImage == "") { $>
+									<$ if(defaultTokenImage == "") { $>
 									<h4 style="padding-bottom: 0px; marigin-bottom: 0px; color: #777;">Drop a file from your <br>Art Library or computer<small>(JPG, GIF, PNG, WEBM, WP4)</small></h4>
 									<br /> or
 									<button class="btn">Click to Upload</button>
 									<input class="manual" type="file" />
 									<$ } else { $>
-									<$ if(/.+\\.webm(\\?.*)?$/i.test(this.defaultTokenImage)) { $>
-									<video src="<$!this.defaultTokenImage$>" draggable="false" muted autoplay loop />
+									<$ if(/.+\\.webm(\\?.*)?$/i.test(defaultTokenImage)) { $>
+									<video src="<$!defaultTokenImage$>" draggable="false" muted autoplay loop />
 									<$ } else { $>
-									<img src="<$!this.defaultTokenImage$>" draggable="false" />
+									<img src="<$!defaultTokenImage$>" draggable="false" />
 									<$ } $>
 									<div class='remove'><a href='#'>Remove</a></div>
 									<$ } $>
@@ -112,6 +113,15 @@ function initHTMLroll20EditorsMisc () {
 								<strong>Tags</strong>
 							</label>
 							<input class='tags'>
+							<div class='clear'></div>
+							<label>
+								<strong>JSON Import/Export</strong>
+							</label>
+							<div>
+								<button class='btn character-json-export'>Export JSON</button>
+								<button class='btn character-json-import'>Overwrite JSON</button>
+								<a class='showtip pictos' title='Export or overwrite this character as JSON. Overwriting will replace this sheet&#39;s data.'>?</a>
+							</div>
 							<div class='clear'></div>
 							<hr>
 							<button class='delete btn btn-danger' data-test='character-delete' style='float: right;'>

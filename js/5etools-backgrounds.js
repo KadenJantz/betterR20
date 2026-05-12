@@ -58,7 +58,7 @@ function d20plusBackgrounds () {
 
 	d20plus.backgrounds._getHandoutData = function (data) {
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 
 		const renderStack = [];
 
@@ -114,7 +114,7 @@ function d20plusBackgrounds () {
 		const bg = data.Vetoolscontent;
 
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 		const renderStack = [];
 		let feature = {};
 		bg.entries.forEach(e => {

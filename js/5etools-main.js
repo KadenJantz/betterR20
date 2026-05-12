@@ -1,6 +1,7 @@
 const betteR205etoolsMain = function () {
 	IMG_URL = `${BASE_SITE_URL}img/`;
 	IMG_URL_REPO = `${DATA_URL_IMG_REPO}`;
+
 	SPELL_DATA_DIR = `${DATA_URL}spells/`;
 	SPELL_META_URL = `https://5e.tools/data/spells/roll20.json`;
 	MONSTER_DATA_DIR = `${DATA_URL}bestiary/`;
@@ -135,55 +136,57 @@ const betteR205etoolsMain = function () {
 	 * defaultSource: if there are multiple sources, the one to be shown by default
 	 * finalText: any text to be shown after the buttons
 	 */
+	// Use getters for baseUrl so values are evaluated at access time, not definition time
+	// This allows updateBaseSiteUrl() to change the URLs and have IMPORT_CATEGORIES reflect those changes
 	const IMPORT_CATEGORIES = [
 		{
 			name: "adventure",
 			plural: "adventures",
-			baseUrl: ADVENTURE_DATA_DIR,
+			get baseUrl() { return ADVENTURE_DATA_DIR; },
 			uniqueImport: true,
 		},
 		{
 			name: "background",
 			plural: "backgrounds",
 			playerImport: true,
-			baseUrl: BACKGROUND_DATA_URL,
+			get baseUrl() { return BACKGROUND_DATA_URL; },
 		},
 		{
 			name: "class",
 			plural: "classes",
 			playerImport: true,
-			baseUrl: CLASS_DATA_DIR,
+			get baseUrl() { return CLASS_DATA_DIR; },
 		},
 		{
 			name: "deity",
 			plural: "deities",
-			baseUrl: DEITY_DATA_URL,
+			get baseUrl() { return DEITY_DATA_URL; },
 		},
 		{
 			name: "feat",
 			plural: "feats",
 			playerImport: true,
-			baseUrl: FEAT_DATA_URL,
+			get baseUrl() { return FEAT_DATA_URL; },
 		},
 		{
 			name: "item",
 			plural: "items",
 			playerImport: true,
-			baseUrl: ITEM_DATA_URL,
+			get baseUrl() { return ITEM_DATA_URL; },
 		},
 		{
 			name: "monster",
 			plural: "monsters",
 			allImport: true,
 			fileImport: true,
-			baseUrl: MONSTER_DATA_DIR,
+			get baseUrl() { return MONSTER_DATA_DIR; },
 			defaultSource: "MM",
 			finalText: ` WARNING: Importing huge numbers of character sheets slows the game down. We recommend you import them as needed.<br>The "Import Monsters From All Sources" button presents a list containing monsters from official sources only.<br>To import from third-party sources, either individually select one available in the list, enter a custom URL, or upload a custom file, and "Import Monsters."`,
 		},
 		{
 			name: "object",
 			plural: "objects",
-			baseUrl: OBJECT_DATA_URL,
+			get baseUrl() { return OBJECT_DATA_URL; },
 		},
 		{
 			name: "optionalfeature",
@@ -191,36 +194,36 @@ const betteR205etoolsMain = function () {
 			titleSing: "Optional Feature (Invocations, etc.)",
 			titlePl: "Optional Features (Invocations, etc.)",
 			playerImport: true,
-			baseUrl: OPT_FEATURE_DATA_URL,
+			get baseUrl() { return OPT_FEATURE_DATA_URL; },
 		},
 		{
 			name: "psionic",
 			plural: "psionics",
 			playerImport: true,
-			baseUrl: PSIONIC_DATA_URL,
+			get baseUrl() { return PSIONIC_DATA_URL; },
 		},
 		{
 			name: "race",
 			plural: "races",
 			playerImport: true,
-			baseUrl: RACE_DATA_URL,
+			get baseUrl() { return RACE_DATA_URL; },
 		},
 		{
 			name: "spell",
 			plural: "spells",
 			playerImport: true,
-			baseUrl: SPELL_DATA_DIR,
+			get baseUrl() { return SPELL_DATA_DIR; },
 		},
 		{
 			name: "subclass",
 			plural: "subclasses",
 			playerImport: true,
-			baseUrl: "",
+			get baseUrl() { return ""; },
 		},
 		{
 			name: "vehicle",
 			plural: "vehicles",
-			baseUrl: VEHICLE_DATA_URL,
+			get baseUrl() { return VEHICLE_DATA_URL; },
 		},
 	]
 
@@ -281,15 +284,6 @@ const betteR205etoolsMain = function () {
 			"macro": "",
 			"spellDc": "@{spell_save_dc}",
 		},
-		"2024": {
-			"cr": "@{npc_challenge}",
-			"ac": "@{ac}",
-			"npcac": "@{npc_ac}",
-			"hp": "@{hp}",
-			"pp": "@{passive_wisdom}",
-			"macro": "",
-			"spellDc": "@{spell_save_dc}",
-		},
 		"community": {
 			"cr": "@{npc_challenge}",
 			"ac": "@{AC}",
@@ -315,20 +309,24 @@ const betteR205etoolsMain = function () {
 		// d20plus.js.scripts.push({name: "5etoolsScalecreature", url: `${SITE_JS_URL}scalecreature.js`});
 	}
 
-	d20plus.json = [
-		{name: "class index", url: `${CLASS_DATA_DIR}index.json`},
-		{name: "spell index", url: `${SPELL_DATA_DIR}index.json`},
-		{name: "spell metadata", url: SPELL_META_URL},
-		{name: "bestiary index", url: `${MONSTER_DATA_DIR}index.json`},
-		{name: "bestiary fluff index", url: `${MONSTER_DATA_DIR}fluff-index.json`},
-		{name: "bestiary metadata", url: `${MONSTER_DATA_DIR}legendarygroups.json`},
-		{name: "adventures index", url: `${DATA_URL}adventures.json`},
-		{name: "base items", url: `${DATA_URL}items-base.json`},
-		{name: "item modifiers", url: `https://5e.tools/data/roll20-items.json`},
-	];
+	// Build JSON URLs dynamically (called after config is loaded so custom base URL is used)
+	d20plus.initJsonUrls = function () {
+		d20plus.json = [
+			{name: "class index", url: `${CLASS_DATA_DIR}index.json`},
+			{name: "spell index", url: `${SPELL_DATA_DIR}index.json`},
+			{name: "spell metadata", url: SPELL_META_URL},
+			{name: "bestiary index", url: `${MONSTER_DATA_DIR}index.json`},
+			{name: "bestiary fluff index", url: `${MONSTER_DATA_DIR}fluff-index.json`},
+			{name: "bestiary metadata", url: `${MONSTER_DATA_DIR}legendarygroups.json`},
+			{name: "adventures index", url: `${DATA_URL}adventures.json`},
+			{name: "base items", url: `${DATA_URL}items-base.json`},
+			{name: "item modifiers", url: `https://5e.tools/data/roll20-items.json`},
+		];
+	};
 
 	// add JSON index/metadata
 	d20plus.pAddJson = async function () {
+		d20plus.initJsonUrls(); // Build URLs using current config
 		d20plus.ut.log("Load JSON");
 
 		try {
@@ -678,7 +676,7 @@ const betteR205etoolsMain = function () {
 			d20plus.importer.bindFakeCompendiumDraggable($(e));
 		});
 
-		d20plus.importer.importData = function importData (character, data, event) {
+		function importData (character, data, event) {
 			// TODO remove feature import workarounds below when roll20 and sheets supports their drag-n-drop properly
 			if (data.data.Category === "Feats") {
 				d20plus.feats.importFeat(character, data);
@@ -705,32 +703,11 @@ const betteR205etoolsMain = function () {
 
 		d20.Campaign.characters.models.each(function (v, i) {
 			/* eslint-disable */
-			
+
 			// region BEGIN ROLL20 CODE
 			v.view.compendiumDragOver = function (e, t) {
 				if (this.popoutWindow) return
-				if (d20plus.sheet != "2024") this.$currentDropTarget = this.childWindow.d20.compendiumDragOver(e, t);
-				else {
-					/*
-					if (!e || !t) return;
-					const {
-						pageName: P,
-						categoryName: B,
-						expansionId: R
-					} = this.compendiumDropData;
-					this.relay.dragOver({
-						coordinates: {
-							left: e,
-							top: t
-						},
-						dragData: {
-							pageName: P,
-							categoryName: B,
-							expansionId: R
-						}
-					})
-					*/
-				}
+				this.$currentDropTarget = this.childWindow.d20.compendiumDragOver(e, t)
 
 				// Cache the last drop target, since it has a habit of disappearing every other loop.
 				// This probably breaks other things, but, who cares!
@@ -741,70 +718,40 @@ const betteR205etoolsMain = function () {
 
 			v.view.bindCompendiumDropTarget = function () {
 				if (this.popoutWindow) return;
+				if (!this.$compendiumDropTarget) return;
 				const e = this;
 
 				this.$compendiumDropTarget.droppable({
-					accept: ".compendium-item, .compendium-page__upper",
+					accept: ".compendium-item",
 					tolerance: "pointer",
-					activate(M, P) {
-						/*
-						e.compendiumDropData = {};
-						const t = window.__wpRequire(20417).J;
-						$(t).attr("data-pagename", "roll20");
-						const B = $(P.helper[0]),
-							R = (0, t)(B);
-						e.compendiumDropData = R
-						*/
-					},
 					over() {
 						e.dragOver = !0
 					},
 					out() {
-						if (d20plus.sheet = "2024") {
-							/*
-							e.dragOver = !1, e.relay.dragOver({
-								coordinates: {
-									left: null,
-									top: null
-								},
-								dragData: null
-								})
-							*/
-						}
-						else {
-							e.dragOver = !1,
-							e.childWindow.d20.deactivateDrop()
-						}
+						e.dragOver = !1,
+						e.childWindow.d20.deactivateDrop()
 					},
 					drop(t, i) {
 						const characterid = $(".characterdialog").has(t.target).attr("data-characterid");
 						const character = d20.Campaign.characters.get(characterid).view;
 						const $hlpr = $(i.helper[0]);
 
-						if ($hlpr.hasClass("handout")) {
-							console.log("Handout item dropped onto target!");
+						if ($hlpr.hasClass("handout") || $hlpr.hasClass("Vetools-draggable")) {
 							t.originalEvent.dropHandled = !0;
+							t.stopPropagation();
+							t.preventDefault();
 							if (e.activeDrop) {
-								if (d20plus.sheet = "2024") {
-									/*
-									e.dragOver = !1, e.relay.dragOver({
-										coordinates: {
-											left: null,
-											top: null
-										},
-										dragData: null
-									})
-									*/
-								}
-								else {
-									e.dragOver = !1,
-									e.childWindow.d20.deactivateDrop()
-								}
+								e.dragOver = !1;
+                            	e.childWindow.d20.deactivateDrop();
 							}
 
 							if ($hlpr.hasClass(`player-imported`)) {
 								const data = d20plus.importer.retrievePlayerImport($hlpr.attr("data-playerimportid"));
-								importData(character, data, t);
+								if (data) {
+									importData(character, data, t);
+								} else {
+									console.warn("Player import data not found (session expired?). Please re-import the item.");
+								}
 							} else {
 								var id = $hlpr.attr("data-itemid");
 								var handout = d20.Campaign.handouts.get(id);
@@ -823,12 +770,30 @@ const betteR205etoolsMain = function () {
 									handout._getLatestBlob("gmnotes", function (gmnotes) {
 										data = decodeIfURI(gmnotes);
 										handout.updateBlobs({gmnotes: gmnotes});
-										importData(character, JSON.parse(data), t);
+										if (data && data.trim()) {
+											try {
+												const parsedData = JSON.parse(data);
+												importData(character, parsedData, t);
+											} catch (e) {
+												console.error("Failed to parse handout JSON:", e);
+											}
+										} else {
+											console.warn("Handout gmnotes are empty or invalid, skipping import");
+										}
 									});
 								} else {
 									handout._getLatestBlob("notes", function (notes) {
 										data = $(decodeIfURI(notes)).filter("del").html();
-										importData(character, JSON.parse(data), t);
+										if (data && data.trim()) {
+											try {
+												const parsedData = JSON.parse(data);
+												importData(character, parsedData, t);
+											} catch (e) {
+												console.error("Failed to parse handout JSON:", e);
+											}
+										} else {
+											console.warn("Handout notes are empty or invalid, skipping import");
+										}
 									});
 								}
 							}
@@ -837,92 +802,47 @@ const betteR205etoolsMain = function () {
 
 						console.log("Compendium item dropped onto target!");
 						// region BEGIN ROLL20 CODE
-						if (d20plus.sheet == "2024") {
-							/*
-							t.originalEvent.dropHandled = !0,
-							e.activeDrop && (e.dragOver = !1,
-							window.wantsToReceiveDrop(this, t, () => {
-								const {
-									pageName: P,
-									categoryName: B,
-									expansionId: R
-								} = e.compendiumDropData, I = e.$el.offset(), V = t.pageX - I.left, X = t.pageY - I.top;
-								e.relay.dropOver({
-									coordinates: {
-										left: V,
-										top: X
+						t.originalEvent.dropHandled = !0,
+						e.activeDrop && (e.dragOver = !1,
+						e.childWindow.d20.deactivateDrop(),
+						e.$currentDropTarget && window.wantsToReceiveDrop(this, t, ()=>{
+								const t = $(i.helper[0]).attr("data-pagename"),
+								n = $(i.helper[0]).attr("data-subhead"),
+								v = $(i.helper[0]).attr('data-expansionid');
+								$.ajax({
+									url: "/compendium/compendium/getPages",
+									data: {
+										bookName: d20.compendium.shortName,
+										pages: [t],
+										sharedCompendium: campaign_id,
+										expansionId: v,
+										dragDropRequest: !0
 									},
-									dropData: {
-										pageName: P,
-										categoryName: B,
-										expansionId: R
+									cache: !1,
+									dataType: "JSON"
+								}).done(i=>{
+										const o = JSON.parse(i[0]),
+										r = _.clone(o.data);
+										r.Name = o.name,
+										r.data = o.data,
+										r.data = JSON.stringify(r.data),
+										r.uniqueName = t,
+										r.Content = o.content,
+										r.dropSubhead = n,
+										e.$currentDropTarget.find("*[accept]").each(function() {
+											const t = $(this),
+											i = t.attr("accept");
+											r[i] && ("input" === t[0].tagName.toLowerCase() && "checkbox" === t.attr("type") || "input" === t[0].tagName.toLowerCase() && "radio" === t.attr("type") ? t.val() === r[i] ? t.prop("checked", !0) : t.prop("checked", !1) : "select" === t[0].tagName.toLowerCase() ? t.find("option").each(function() {
+												const e = $(this);
+												e.val() !== r[i] && e.text() !== r[i] || e.prop("selected", !0)
+											}) : $(this).val(r[i]),
+												e.saveSheetValues(this, "compendium"))
+										})
 									}
-								})
-							}))
-							*/
-						}
-						else {
-							t.originalEvent.dropHandled = !0,
-							e.activeDrop && (e.dragOver = !1,
-							e.childWindow.d20.deactivateDrop(),
-							e.$currentDropTarget && window.wantsToReceiveDrop(this, t, ()=>{
-									const t = $(i.helper[0]).attr("data-pagename"),
-									n = $(i.helper[0]).attr("data-subhead"),
-									v = $(i.helper[0]).attr('data-expansionid');
-									$.ajax({
-										url: "/compendium/compendium/getPages",
-										data: {
-											bookName: d20.compendium.shortName,
-											pages: [t],
-											sharedCompendium: campaign_id,
-											expansionId: v,
-											dragDropRequest: !0
-										},
-										cache: !1,
-										dataType: "JSON"
-									}).done(i=>{
-											const o = JSON.parse(i[0]),
-											r = _.clone(o.data);
-											r.Name = o.name,
-											r.data = o.data,
-											r.data = JSON.stringify(r.data),
-											r.uniqueName = t,
-											r.Content = o.content,
-											r.dropSubhead = n,
-											e.$currentDropTarget.find("*[accept]").each(function() {
-												const t = $(this),
-												i = t.attr("accept");
-												r[i] && ("input" === t[0].tagName.toLowerCase() && "checkbox" === t.attr("type") || "input" === t[0].tagName.toLowerCase() && "radio" === t.attr("type") ? t.val() === r[i] ? t.prop("checked", !0) : t.prop("checked", !1) : "select" === t[0].tagName.toLowerCase() ? t.find("option").each(function() {
-													const e = $(this);
-													e.val() !== r[i] && e.text() !== r[i] || e.prop("selected", !0)
-												}) : $(this).val(r[i]),
-													e.saveSheetValues(this, "compendium"))
-											})
-										}
-									)
-								}))
-						}
+								)
+							}
+						))
 						// endregion END ROLL20 CODE
-					},
-					drop(M) {
-						M.originalEvent.dropHandled = !0, e.activeDrop && (e.dragOver = !1, window.wantsToReceiveDrop(this, M, () => {
-							const {
-								pageName: P,
-								categoryName: B,
-								expansionId: R
-							} = e.compendiumDropData, I = e.$el.offset(), V = M.pageX - I.left, X = M.pageY - I.top;
-							e.relay.dropOver({
-								coordinates: {
-									left: V,
-									top: X
-								},
-								dropData: {
-									pageName: P,
-									categoryName: B,
-									expansionId: R
-								}
-							})
-						}))
 					}
 				})
 			}
@@ -1023,7 +943,9 @@ const betteR205etoolsMain = function () {
 	d20plus.setSheet = function () {
 		d20plus.ut.log("Switched Character Sheet Template");
 		d20plus.sheet = "ogl";
-		if (window.is_gm && (!d20.journal.customSheets || !d20.journal.customSheets)) {
+		const sheets = d20.journal.characterSheetsManager.getAllSheets();
+		const noSheetsFound = !Array.isArray(sheets) && sheets.length < 1;
+		if (window.is_gm && noSheetsFound) {
 			d20plus.ut.showFullScreenWarning({
 				title: "NO CHARACTER SHEET",
 				message: "Your game does not have a character sheet template selected",
@@ -1031,12 +953,14 @@ const betteR205etoolsMain = function () {
 			});
 			throw new Error("No character sheet selected!");
 		}
-		if (d20.journal.customSheets.layouthtml.indexOf("shaped_d20") > 0) d20plus.sheet = "shaped";
-		if (d20.journal.customSheets.layouthtml.indexOf("DnD5e_Character_Sheet") > 0) d20plus.sheet = "community";
-		if (CHARSHEET_NAME === "dnd2024byroll20") d20plus.sheet = "2024";
+		const firstSheet = d20.journal.customSheets ?? sheets.first();
+		// Modern Roll20 uses 'ogl5e' for the OGL sheet (works in both 2014 and 2024 games)
+		if (d20.journal.characterSheetsManager.sheets.ogl5e) d20plus.sheet = "ogl";
+		if (d20.journal.characterSheetsManager.sheets.shaped_d20) d20plus.sheet = "shaped";
+		if (d20.journal.characterSheetsManager.sheets.DnD5e_Character_Sheet) d20plus.sheet = "community";
+		// Note: dnd2024byroll20 uses a different architecture (relay system) - not yet supported
 		d20plus.ut.log(`Switched Character Sheet Template to ${d20plus.sheet}`);
 	};
-
 	// Return Initiative Tracker template with formulas
 	d20plus.initErrorHandler = null;
 	d20plus.setTurnOrderTemplate = function () {

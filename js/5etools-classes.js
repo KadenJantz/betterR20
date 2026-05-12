@@ -30,9 +30,6 @@ function d20plusClass () {
 
 		const handoutBuilder = playerMode ? d20plus.classes.playerImportBuilder : d20plus.classes.handoutBuilder;
 
-		// make sure the homebrew system knows about it
-		await BrewUtil2.pAddBrewFromUrl(url);
-
 		// If the url is for the official classes, combine them into the correct data structure
 		let classesDeref;
 		let subclassesDeref;
@@ -41,6 +38,9 @@ function d20plusClass () {
 			subclassesDeref = await DataLoader.pCacheAndGetAllSite("subclass");
 		}
 		else {
+			// make sure the homebrew system knows about it
+			await BrewUtil2.pAddBrewFromUrl(url);
+
 			// get the semi-processed data (this will merge `_copy` etc., but not dereference `ref*`)
 			const data = await DataUtil.loadJSON(url);
 			// From the semi-processed data, get the final dereferenced data, by asking the `DataLoader` (which has a pipeline to resolve all refs) for it
@@ -180,7 +180,7 @@ function d20plusClass () {
 
 	d20plus.classes._getHandoutData = function (data) {
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 
 		const renderStack = [];
 		// make a copy of the data to modify
@@ -223,7 +223,7 @@ function d20plusClass () {
 		const maxLevel = Math.max(...levels);
 
 		const clss = data.Vetoolscontent;
-		const renderer = Renderer.get().setBaseUrl(BASE_SITE_URL);
+		const renderer = Renderer.get().setBaseUrl(LINK_BASE_URL);
 		const shapedSheetPreFilledFeaturesByClass = {
 			"Artificer": [
 				"Magic Item Analysis",
@@ -583,7 +583,7 @@ function d20plusClass () {
 
 	d20plus.subclasses._getHandoutData = function (data) {
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 
 		const renderStack = [];
 
@@ -622,7 +622,7 @@ function d20plusClass () {
 		if (!levels || !levels.size) return;
 
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 		let firstFeatures = true;
 		for (let i = 0; i < sc.subclassFeatures.length; i++) {
 			const lvlFeatureList = sc.subclassFeatures[i];

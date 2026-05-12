@@ -108,23 +108,62 @@ function d20plusImporter () {
 		/* eslint-disable */
 
 		// BEGIN ROLL20 CODE
-		const d = !!o.data ? o : JSON.parse(o);
+		let d;
+		if (!!o.data) {
+			d = o;
+		} else {
+			// Validate JSON before parsing
+			if (typeof o === 'string' && o.trim()) {
+				try {
+					d = JSON.parse(o);
+				} catch (e) {
+					console.error('Failed to parse drop data:', e);
+					return;
+				}
+			} else {
+				console.warn('Invalid drop data received, skipping import');
+				return;
+			}
+		}
+
+		// Validate that the parsed data has the required structure
+		if (!d || !d.data) {
+			console.warn('Drop data missing required "data" property, skipping import');
+			return;
+		}
+
 		const g = _.clone(d.data);
-		g.Name = d.name, g.data = JSON.stringify(d.data), g.uniqueName = t, g.Content = d.content, g.dropSubhead = n,
+		g.Name = d.name;
+		g.data = JSON.stringify(d.data);
+		g.uniqueName = t;
+		if (d.content) g.Content = d.content;
+		if (n !== undefined) g.dropSubhead = n;
+
+		// Set values AND trigger sheet worker for each field (like original Roll20 code)
 		e.$currentDropTarget.find("*[accept]").each(function() {
 			const v = $(this), C = v.attr("accept");
-			g[C] && (v[0].tagName.toLowerCase() === "input" && v.attr("type") === "checkbox" || v[0].tagName.toLowerCase() === "input" && v.attr("type") === "radio" ? v.val() === g[C] ? v.prop("checked", !0) : v.prop("checked", !1) : v[0].tagName.toLowerCase() === "select" ? v.find("option").each(function() {
-				const E = $(this);
-				(E.val() === g[C] || E.text() === g[C]) && E.prop("selected", !0)
-			}) : $(this).val(g[C]), e.saveSheetValues(this, "compendium"))
-		})
+			if (g[C]) {
+				if (v[0].tagName.toLowerCase() === "input" && v.attr("type") === "checkbox" || v[0].tagName.toLowerCase() === "input" && v.attr("type") === "radio") {
+					v.prop("checked", v.val() === g[C]);
+				} else if (v[0].tagName.toLowerCase() === "select") {
+					v.find("option").each(function() {
+						const E = $(this);
+						if (E.val() === g[C] || E.text() === g[C]) E.prop("selected", !0);
+					});
+				} else {
+					v.val(g[C]);
+				}
+				// Trigger sheet worker for each field like original Roll20 code
+				e.saveSheetValues(this, "compendium");
+			}
+		});
 		// END ROLL20 CODE
 
 		/* eslint-enable */
 
 		// reset the drag UI
 		characterView.activeDrop = false;
-		characterView.compendiumDragOver()
+		characterView.compendiumDragOver();
 	};
 
 	// caller should run `$iptFilter.off("keydown").off("keyup");` before calling this
@@ -202,6 +241,46 @@ function d20plusImporter () {
 			case "Top Overlapping": defaulttoken.bar_location = "overlap_top"; break;
 			case "Bottom Overlapping": defaulttoken.bar_location = "overlap_bottom"; break;
 			case "Below": defaulttoken.bar_location = "below"; break;
+		}
+
+		// Link token bars to character sheet attributes
+		if (character.attribs) {
+			// Bar 1 - link to configured attribute (default: npc_hpbase for HP)
+			const bar1AttrName = d20plus.cfg.getOrDefault("token", "bar1");
+			if (bar1AttrName) {
+				const bar1Attr = character.attribs.find(a => a.get("name").toLowerCase() === bar1AttrName.toLowerCase());
+				if (bar1Attr) {
+					defaulttoken.bar1_link = bar1Attr.id;
+					defaulttoken.bar1_value = bar1Attr.get("current");
+					if (d20plus.cfg.getOrDefault("token", "bar1_max")) {
+						defaulttoken.bar1_max = bar1Attr.get("max") || bar1Attr.get("current");
+					}
+				}
+			}
+			// Bar 2 - link to configured attribute (default: npc_ac for AC)
+			const bar2AttrName = d20plus.cfg.getOrDefault("token", "bar2");
+			if (bar2AttrName) {
+				const bar2Attr = character.attribs.find(a => a.get("name").toLowerCase() === bar2AttrName.toLowerCase());
+				if (bar2Attr) {
+					defaulttoken.bar2_link = bar2Attr.id;
+					defaulttoken.bar2_value = bar2Attr.get("current");
+					if (d20plus.cfg.getOrDefault("token", "bar2_max")) {
+						defaulttoken.bar2_max = bar2Attr.get("max") || bar2Attr.get("current");
+					}
+				}
+			}
+			// Bar 3 - link to configured attribute (default: passive for Passive Perception)
+			const bar3AttrName = d20plus.cfg.getOrDefault("token", "bar3");
+			if (bar3AttrName) {
+				const bar3Attr = character.attribs.find(a => a.get("name").toLowerCase() === bar3AttrName.toLowerCase());
+				if (bar3Attr) {
+					defaulttoken.bar3_link = bar3Attr.id;
+					defaulttoken.bar3_value = bar3Attr.get("current");
+					if (d20plus.cfg.getOrDefault("token", "bar3_max")) {
+						defaulttoken.bar3_max = bar3Attr.get("max") || bar3Attr.get("current");
+					}
+				}
+			}
 		}
 
 		// ensure any portrait URL exists
@@ -439,6 +518,188 @@ function d20plusImporter () {
 	d20plus.importer.addVehicleAction = function (character, name, actionText, index) {
 		const expand = d20plus.cfg.getOrDefault("import", "tokenactionsExpanded");
 		d20plus.importer._baseAddAction(character, "repeating_vehicleactions", name, actionText, "Vehicle", index, expand);
+	};
+
+	// Create token actions from an already-imported character's attributes
+	// Used by module importer to generate token actions after character import
+	d20plus.importer._createTokenActionsFromCharacter = function (character) {
+		// Get all attributes
+		const attribs = character.attribs.toJSON();
+
+		// Helper to extract repeating section entries
+		const getRepeatingSections = (prefix) => {
+			const entries = {};
+			attribs.forEach(attr => {
+				const match = attr.name.match(new RegExp(`^${prefix}_([-\\w]+)_(\\w+)$`));
+				if (match) {
+					const rowId = match[1];
+					const field = match[2];
+					if (!entries[rowId]) entries[rowId] = {};
+					entries[rowId][field] = attr.current;
+				}
+			});
+			return Object.values(entries);
+		};
+
+		// Create token actions for regular actions (including attacks)
+		const actions = getRepeatingSections("repeating_npcaction").filter(a => a.name);
+		if (actions.length > 0) {
+			actions.forEach((action, i) => {
+				character.abilities.create({
+					name: `${i}: ${action.name}`,
+					istokenaction: true,
+					action: d20plus.macro.actionMacroAction("repeating_npcaction", i),
+				});
+			});
+		}
+
+		// Create token actions for bonus actions
+		const bonusActions = getRepeatingSections("repeating_npcbonusaction").filter(a => a.name);
+		if (bonusActions.length > 0) {
+			bonusActions.forEach((action, i) => {
+				character.abilities.create({
+					name: `Bonus${i}: ${action.name}`,
+					istokenaction: true,
+					action: d20plus.macro.actionMacroAction("repeating_npcbonusaction", i),
+				});
+			});
+		}
+
+		// Create token actions for reactions
+		const reactions = getRepeatingSections("repeating_npcreaction").filter(r => r.name);
+		if (reactions.length > 0) {
+			reactions.forEach((reaction, i) => {
+				character.abilities.create({
+					name: `Reaction: ${reaction.name}`,
+					istokenaction: true,
+					action: d20plus.macro.actionMacroReaction(i),
+				});
+			});
+		}
+
+		// Create token actions for traits
+		const traits = getRepeatingSections("repeating_npctrait").filter(t => t.name);
+		if (traits.length > 0 && d20plus.cfg.getOrDefault("import", "tokenactionsTraits")) {
+			traits.forEach((trait, i) => {
+				character.abilities.create({
+					name: `Trait: ${trait.name}`,
+					istokenaction: true,
+					action: d20plus.macro.actionMacroTrait(i),
+				});
+			});
+		}
+
+		// Create token actions for legendary actions
+		const legendaryActions = getRepeatingSections("repeating_npcaction-l").filter(a => a.name);
+		if (legendaryActions.length > 0) {
+			const expand = d20plus.cfg.getOrDefault("import", "tokenactionsExpanded");
+
+			if (expand) {
+				// Create individual token actions for each legendary action
+				legendaryActions.forEach((action, i) => {
+					character.abilities.create({
+						name: `Legendary${i}: ${action.name}`,
+						istokenaction: true,
+						action: d20plus.macro.actionMacroAction("repeating_npcaction-l", i),
+					});
+				});
+			} else {
+				// Create single token action with all legendary actions
+				const tokenactiontext = legendaryActions
+					.map((action, i) => {
+						return `[${action.name}](~selected|repeating_npcaction-l_$${i}_npc_action)`;
+					}).join("\n\r");
+
+				character.abilities.create({
+					name: "Legendary Actions",
+					istokenaction: true,
+					action: d20plus.macro.actionMacroLegendary(tokenactiontext),
+				});
+			}
+		}
+
+		// Create token actions for mythic actions
+		const mythicActions = getRepeatingSections("repeating_npcaction-m").filter(a => a.name);
+		if (mythicActions.length > 0) {
+			const expand = d20plus.cfg.getOrDefault("import", "tokenactionsExpanded");
+
+			if (expand) {
+				// Create individual token actions for each mythic action
+				mythicActions.forEach((action, i) => {
+					character.abilities.create({
+						name: `Mythic${i}: ${action.name}`,
+						istokenaction: true,
+						action: d20plus.macro.actionMacroAction("repeating_npcaction-m", i),
+					});
+				});
+			} else {
+				// Create single token action with all mythic actions
+				const tokenactiontext = mythicActions
+					.map((action, i) => {
+						return `[${action.name}](~selected|repeating_npcaction-m_$${i}_npc_action)`;
+					}).join("\n\r");
+
+				character.abilities.create({
+					name: "Mythic Actions",
+					istokenaction: true,
+					action: d20plus.macro.actionMacroMythic(tokenactiontext),
+				});
+			}
+		}
+
+		// Create common token actions (skills, perception, saves, initiative, ability checks)
+		if (d20plus.cfg.getOrDefault("import", "tokenactionsSkills")) {
+			character.abilities.create({
+				name: "Skill Check",
+				istokenaction: true,
+				action: d20plus.macro.actionMacroSkillCheck,
+			});
+		}
+
+		if (d20plus.cfg.getOrDefault("import", "tokenactionsPerception")) {
+			character.abilities.create({
+				name: "Perception",
+				istokenaction: true,
+				action: d20plus.macro.actionMacroPerception,
+			});
+		}
+
+		if (d20plus.cfg.getOrDefault("import", "tokenactionsSaves")) {
+			character.abilities.create({
+				name: "Saving Throw",
+				istokenaction: true,
+				action: d20plus.macro.actionMacroSaves,
+			});
+		}
+
+		if (d20plus.cfg.getOrDefault("import", "tokenactionsInitiative")) {
+			character.abilities.create({
+				name: "Initiative",
+				istokenaction: true,
+				action: d20plus.macro.actionMacroInit,
+			});
+		}
+
+		if (d20plus.cfg.getOrDefault("import", "tokenactionsChecks")) {
+			character.abilities.create({
+				name: "Ability Check",
+				istokenaction: true,
+				action: d20plus.macro.actionMacroAbilityCheck,
+			});
+		}
+
+		if (d20plus.cfg.getOrDefault("import", "tokenactionsOther")) {
+			character.abilities.create({
+				name: "DR/Immunities",
+				istokenaction: true,
+				action: d20plus.macro.actionMacroDrImmunities,
+			});
+			character.abilities.create({
+				name: "Stats",
+				istokenaction: true,
+				action: d20plus.macro.actionMacroStats,
+			});
+		}
 	};
 
 	// Add individual weapons to the npc ship stat block
@@ -1074,8 +1335,8 @@ function d20plusImporter () {
 					default:
 						if (it.type) {
 							folderName = Renderer.item.getItemTypeName(it.type);
-						} else if (it._typeListText) {
-							folderName = it._typeListText.join(", ");
+						} else if (it._textTypes) {
+							folderName = it._textTypes.join(", ");
 						} else {
 							folderName = "Unknown";
 						}
@@ -1476,6 +1737,1013 @@ function d20plusImporter () {
 		notifySheetWorkers () {
 			d20.journal.notifyWorkersOfAttrChanges(this.character.model.id, this._changedAttrs);
 			this._changedAttrs = [];
+		}
+	};
+
+	// D&D Beyond PDF Importer
+	// PDF.js is bundled in the build, no need to load it
+	d20plus.importer.loadPdfJs = async function() {
+		if (typeof pdfjsLib !== 'undefined') {
+			// Configure PDF.js to disable workers (since we're in a userscript environment)
+			pdfjsLib.GlobalWorkerOptions.workerSrc = false;
+			return; // Already loaded
+		}
+		throw new Error("PDF.js library not available in build");
+	};
+
+	d20plus.importer.parseDnDBeyondPDF = async function(arrayBuffer) {
+		if (typeof pdfjsLib === 'undefined') {
+			throw new Error("PDF.js library not loaded.");
+		}
+
+		try {
+			// Disable worker for userscript environment
+			pdfjsLib.GlobalWorkerOptions.workerSrc = false;
+
+			const pdf = await pdfjsLib.getDocument({
+				data: arrayBuffer,
+				useWorkerFetch: false,
+				isEvalSupported: false,
+				useSystemFonts: true
+			}).promise;
+
+			console.log(`PDF has ${pdf.numPages} pages`);
+
+			// Build a map of field names to values from ALL pages
+			const fields = {};
+
+			// Read all pages
+			for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+				const page = await pdf.getPage(pageNum);
+				const annotations = await page.getAnnotations();
+
+				annotations.forEach(annot => {
+					if (annot.subtype === 'Widget' && annot.fieldName) {
+						fields[annot.fieldName] = annot.fieldValue || annot.buttonValue || '';
+					}
+				});
+			}
+
+			console.log("PDF Form Fields extracted:", Object.keys(fields).length);
+			console.log("Fields:", fields);
+
+			// Parse the D&D Beyond character sheet format
+			return d20plus.importer._parseDnDBeyondFields(fields);
+		} catch (error) {
+			console.error("PDF parsing error:", error);
+			throw new Error(`Failed to parse PDF: ${error.message}`);
+		}
+	};
+
+	d20plus.importer._parseDnDBeyondFields = function(fields) {
+		const characterData = {
+			abilities: {},
+			savingThrows: {},
+			skills: {},
+			weapons: [],
+			equipment: [],
+			currency: {},
+			spells: [],
+			personality: {}
+		};
+
+		// Extract character name
+		characterData.name = fields['CharacterName'] || 'Imported Character';
+
+		// Extract class and level from "CLASS  LEVEL" field (note: two spaces in field name)
+		const classLevel = fields['CLASS  LEVEL'] || '';
+		const classMatch = classLevel.match(/^(.+?)\s+(\d+)$/);
+		if (classMatch) {
+			characterData.class = classMatch[1].trim();
+			characterData.level = classMatch[2];
+		} else {
+			characterData.class = classLevel || '';
+			characterData.level = '1';
+		}
+
+		// Extract race/species
+		characterData.species = fields['RACE'] || '';
+
+		// Extract background
+		characterData.background = fields['BACKGROUND'] || '';
+
+		// Extract experience points
+		characterData.experience = fields['EXPERIENCE POINTS'] || '0';
+
+		// Extract ability scores
+		characterData.abilities.strength = parseInt(fields['STR']) || 10;
+		characterData.abilities.dexterity = parseInt(fields['DEX']) || 10;
+		characterData.abilities.constitution = parseInt(fields['CON']) || 10;
+		characterData.abilities.intelligence = parseInt(fields['INT']) || 10;
+		characterData.abilities.wisdom = parseInt(fields['WIS']) || 10;
+		characterData.abilities.charisma = parseInt(fields['CHA']) || 10;
+
+		// Extract combat stats
+		characterData.ac = fields['AC'] || '10';
+		characterData.initiative = fields['Init'] || '0';
+
+		// Extract speed and clean it up (remove " ft. (Walking)")
+		const speedRaw = fields['Speed'] || '30';
+		const speedMatch = speedRaw.match(/(\d+)/);
+		characterData.speed = speedMatch ? speedMatch[1] : '30';
+
+		// Extract HP
+		characterData.maxHP = fields['MaxHP'] || '1';
+		characterData.currentHP = fields['CurrentHP'] || fields['MaxHP'] || '1';
+
+		// Extract proficiency bonus and clean it up (remove "+")
+		const profRaw = fields['ProfBonus'] || '2';
+		characterData.proficiencyBonus = profRaw.replace('+', '');
+
+		// Extract hit dice
+		characterData.hitDice = fields['Total'] || '1d6';
+
+		// Extract saving throw bonuses directly from the calculated values
+		const savingThrowBonusMap = {
+			'ST Strength': 'strength',
+			'ST Dexterity': 'dexterity',
+			'ST Constitution': 'constitution',
+			'ST Intelligence': 'intelligence',
+			'ST Wisdom': 'wisdom',
+			'ST Charisma': 'charisma'
+		};
+		characterData.savingThrowBonuses = {};
+		Object.entries(savingThrowBonusMap).forEach(([fieldName, abilityName]) => {
+			const bonusStr = fields[fieldName] || '+0';
+			// Convert "+3" to 3, "-1" to -1, etc.
+			characterData.savingThrowBonuses[abilityName] = parseInt(bonusStr) || 0;
+		});
+
+		// Also track proficiency flags (marked with "•") for reference
+		const savingThrowProfMap = {
+			'StrProf': 'strength',
+			'DexProf': 'dexterity',
+			'ConProf': 'constitution',
+			'IntProf': 'intelligence',
+			'WisProf': 'wisdom',
+			'ChaProf': 'charisma'
+		};
+		Object.entries(savingThrowProfMap).forEach(([fieldName, abilityName]) => {
+			const value = (fields[fieldName] || '').trim();
+			const isProficient = value === '•' || value.includes('•') || value === 'P';
+			characterData.savingThrows[abilityName] = isProficient;
+		});
+
+		// Extract skill bonuses directly from the calculated values
+		const skillBonusMap = {
+			'Acrobatics': 'acrobatics',
+			'Animal': 'animal_handling',
+			'Arcana': 'arcana',
+			'Athletics': 'athletics',
+			'Deception': 'deception',
+			'History': 'history',
+			'Insight': 'insight',
+			'Intimidation': 'intimidation',
+			'Investigation': 'investigation',
+			'Medicine': 'medicine',
+			'Nature': 'nature',
+			'Perception': 'perception',
+			'Performance': 'performance',
+			'Persuasion': 'persuasion',
+			'Religion': 'religion',
+			'SleightofHand': 'sleight_of_hand',
+			'Stealth ': 'stealth',  // Note: has trailing space in PDF
+			'Survival': 'survival'
+		};
+		characterData.skillBonuses = {};
+		Object.entries(skillBonusMap).forEach(([fieldName, skillName]) => {
+			const bonusStr = fields[fieldName] || '+0';
+			// Convert "+5" to 5, "-1" to -1, etc.
+			characterData.skillBonuses[skillName] = parseInt(bonusStr) || 0;
+		});
+
+		// Also track proficiency flags (marked with "P") for reference
+		const skillProfMap = {
+			'AcrobaticsProf': 'acrobatics',
+			'AnimalHandlingProf': 'animal_handling',
+			'ArcanaProf': 'arcana',
+			'AthleticsProf': 'athletics',
+			'DeceptionProf': 'deception',
+			'HistoryProf': 'history',
+			'InsightProf': 'insight',
+			'IntimidationProf': 'intimidation',
+			'InvestigationProf': 'investigation',
+			'MedicineProf': 'medicine',
+			'NatureProf': 'nature',
+			'PerceptionProf': 'perception',
+			'PerformanceProf': 'performance',
+			'PersuasionProf': 'persuasion',
+			'ReligionProf': 'religion',
+			'SleightOfHandProf': 'sleight_of_hand',
+			'StealthProf': 'stealth',
+			'SurvivalProf': 'survival'
+		};
+		Object.entries(skillProfMap).forEach(([fieldName, skillName]) => {
+			const value = (fields[fieldName] || '').trim();
+			characterData.skills[skillName] = value === 'P' || value.includes('P');
+		});
+
+		// Extract proficiencies and languages
+		// The PDF uses structured sections like "=== ARMOR ===", "=== WEAPONS ===", "=== TOOLS ===", "=== LANGUAGES ==="
+		const proficienciesLang = fields['ProficienciesLang'] || '';
+
+		// Extract languages section
+		const langMatch = proficienciesLang.match(/===\s*LANGUAGES?\s*===\s*\n(.+?)(?:\n===|$)/is);
+		if (langMatch) {
+			characterData.languages = langMatch[1].trim();
+		} else {
+			characterData.languages = '';
+		}
+
+		// Extract armor, weapons, and tools sections - all go to "TOOL PROFICIENCIES & CUSTOM SKILLS"
+		const armorMatch = proficienciesLang.match(/===\s*ARMOR\s*===\s*\n(.+?)(?:\n===|$)/is);
+		const armorProfs = armorMatch ? armorMatch[1].trim() : '';
+
+		const weaponsMatch = proficienciesLang.match(/===\s*WEAPONS?\s*===\s*\n(.+?)(?:\n===|$)/is);
+		const weaponProfs = weaponsMatch ? weaponsMatch[1].trim() : '';
+
+		const toolsMatch = proficienciesLang.match(/===\s*TOOLS?\s*===\s*\n(.+?)(?:\n===|$)/is);
+		const toolProfs = toolsMatch ? toolsMatch[1].trim() : '';
+
+		// Combine all proficiencies (armor, weapons, tools) for repeating_tool section
+		characterData.toolProficiencies = [armorProfs, weaponProfs, toolProfs].filter(p => p).join(', ');
+
+		// Extract weapons (up to 6)
+		for (let i = 1; i <= 6; i++) {
+			const wpnField = i === 1 ? '' : ` ${i}`;
+			const name = fields[`Wpn Name${wpnField}`];
+			if (name && name.trim()) {
+				// Note: weapon 2-6 have trailing spaces in their field names
+				const atkBonusField = i === 1 ? 'Wpn1 AtkBonus' : `Wpn${i} AtkBonus `;
+				const damageField = i === 1 ? 'Wpn1 Damage' : `Wpn${i} Damage `;
+
+				characterData.weapons.push({
+					name: name,
+					bonus: fields[atkBonusField] || '+0',
+					damage: fields[damageField] || '1d4'
+				});
+			}
+		}
+
+		// Extract player name
+		characterData.playerName = fields['PLAYER NAME'] || '';
+
+		// Extract defenses (resistances, immunities, etc.)
+		characterData.defenses = fields['Defenses'] || '';
+
+		// Extract additional senses
+		characterData.senses = fields['AdditionalSenses'] || '';
+
+		// Extract temp HP
+		characterData.tempHP = fields['TempHP'] && fields['TempHP'] !== '--' ? fields['TempHP'] : '';
+
+		// Extract current hit dice
+		characterData.currentHD = fields['HD'] || '';
+
+		// Extract inspiration
+		characterData.inspiration = fields['Inspiration'] === 'On' ? '1' : '0';
+
+		// Extract actions/features
+		characterData.actions1 = fields['Actions1'] || '';
+		characterData.actions2 = fields['Actions2'] || '';
+
+		// Extract ability save DC
+		characterData.abilitySaveDC = fields['AbilitySaveDC'] || '';
+
+		// Extract currency
+		characterData.currency.cp = fields['CP'] || '0';
+		characterData.currency.sp = fields['SP'] || '0';
+		characterData.currency.ep = fields['EP'] || '0';
+		characterData.currency.gp = fields['GP'] || '0';
+		characterData.currency.pp = fields['PP'] || '0';
+
+		// Extract equipment (up to 26 items: Eq Name0-25)
+		for (let i = 0; i <= 25; i++) {
+			const name = fields[`Eq Name${i}`];
+			if (name && name.trim()) {
+				characterData.equipment.push({
+					name: name,
+					quantity: fields[`Eq Qty${i}`] || '1',
+					weight: fields[`Eq Weight${i}`] || ''
+				});
+			}
+		}
+
+		// Extract spells (up to 50: spellName0-49)
+		let currentSpellLevel = 'cantrip';
+		let spellSlots = {};
+
+		for (let i = 0; i <= 49; i++) {
+			// Process spell at current index FIRST (before header changes the level)
+			const spellName = fields[`spellName${i}`];
+			if (spellName && spellName.trim()) {
+				characterData.spells.push({
+					name: spellName,
+					level: currentSpellLevel,
+					castingTime: fields[`spellCastingTime${i}`] || '',
+					range: fields[`spellRange${i}`] || '',
+					components: fields[`spellComponents${i}`] || '',
+					duration: fields[`spellDuration${i}`] || '',
+					saveOrHit: fields[`spellSaveHit${i}`] || '',
+					source: fields[`spellSource${i}`] || '',
+					page: fields[`spellPage${i}`] || '',
+					prepared: fields[`spellPrepared${i}`] === 'O',
+					notes: fields[`spellNotes${i}`] || ''
+				});
+			}
+
+			// NOW check for spell level headers to update level for NEXT spells
+			const header = fields[`spellHeader${i}`];
+			if (header) {
+				if (header.includes('CANTRIPS')) currentSpellLevel = 'cantrip';
+				else if (header.includes('1st')) currentSpellLevel = '1';
+				else if (header.includes('2nd')) currentSpellLevel = '2';
+				else if (header.includes('3rd')) currentSpellLevel = '3';
+				else if (header.includes('4th')) currentSpellLevel = '4';
+				else if (header.includes('5th')) currentSpellLevel = '5';
+				else if (header.includes('6th')) currentSpellLevel = '6';
+				else if (header.includes('7th')) currentSpellLevel = '7';
+				else if (header.includes('8th')) currentSpellLevel = '8';
+				else if (header.includes('9th')) currentSpellLevel = '9';
+
+				// Extract spell slots from header like "3 Slots OOO"
+				const slotHeader = fields[`spellSlotHeader${i}`];
+				if (slotHeader && currentSpellLevel !== 'cantrip') {
+					const slotMatch = slotHeader.match(/(\d+)\s+Slots/);
+					if (slotMatch) {
+						spellSlots[currentSpellLevel] = slotMatch[1];
+					}
+				}
+			}
+		}
+
+		// Store spell slots
+		characterData.spellSlots = spellSlots;
+
+		// Extract spellcasting info
+		characterData.spellcastingClass = fields['spellCastingClass0'] || '';
+		characterData.spellcastingAbility = fields['spellCastingAbility0'] || '';
+		characterData.spellAttackBonus = fields['spellAtkBonus0'] || '';
+		characterData.spellSaveDC = fields['spellSaveDC0'] || '';
+
+		// Extract personality traits
+		characterData.personality.traits = fields['PersonalityTraits '] || '';  // Note: has trailing space
+		characterData.personality.ideals = fields['Ideals'] || '';
+		characterData.personality.bonds = fields['Bonds'] || '';
+		characterData.personality.flaws = fields['Flaws'] || '';
+		characterData.personality.backstory = fields['Backstory'] || '';
+
+		// Extract additional bio info
+		characterData.age = fields['AGE'] || '';
+		characterData.height = fields['HEIGHT'] || '';
+		characterData.weight = fields['WEIGHT'] || '';
+		characterData.eyes = fields['EYES'] || '';
+		characterData.hair = fields['HAIR'] || '';
+		characterData.skin = fields['SKIN'] || '';
+		characterData.gender = fields['GENDER'] || '';
+		characterData.alignment = fields['ALIGNMENT'] || '';
+
+		// Extract class features
+		const featuresTraits = [
+			fields['FeaturesTraits1'] || '',
+			fields['FeaturesTraits2'] || '',
+			fields['FeaturesTraits3'] || ''
+		].filter(f => f).join('\n\n');
+		characterData.featuresTraits = featuresTraits;
+
+		return characterData;
+	};
+
+
+	d20plus.importer.importDnDBeyondCharacter = async function(characterData) {
+		return new Promise((resolve, reject) => {
+			// Create a new character in Roll20 with callback
+			d20.Campaign.characters.create(
+				{
+					name: characterData.name || "Imported Character",
+					inplayerjournals: "",
+					controlledby: "",
+				},
+				{
+					success: async (character) => {
+						try {
+							d20plus.importer._populateDnDBeyondCharacter(character, characterData);
+
+							// Import items and weapons with full data from 5etools database
+							const itemsToImport = character._dndbEquipmentToImport;
+							const weaponsToImport = character._dndbWeaponsToImport;
+							const spellsToImport = character._dndbSpellsToImport;
+
+							delete character._dndbEquipmentToImport;
+							delete character._dndbWeaponsToImport;
+							delete character._dndbSpellsToImport;
+
+							if (itemsToImport || weaponsToImport || spellsToImport) {
+								// Wait for character to be fully created, then import
+								setTimeout(async () => {
+									try {
+										if (itemsToImport || weaponsToImport) {
+											console.log("Importing items and weapons from 5etools database...");
+											await d20plus.importer.importDnDBeyondItems(character, itemsToImport, weaponsToImport);
+										}
+										if (spellsToImport) {
+											console.log("Importing spells from 5etools database...");
+											await d20plus.importer.importDnDBeyondSpells(character, spellsToImport);
+										}
+									} catch (importError) {
+										console.error("Error importing items/spells:", importError);
+									}
+								}, 1500);
+							}
+
+							resolve(character);
+						} catch (error) {
+							reject(error);
+						}
+					},
+					error: (error) => {
+						reject(error);
+					}
+				}
+			);
+		});
+	};
+
+	d20plus.importer._populateDnDBeyondCharacter = function(character, characterData) {
+		// Wrap character for the proxy (it expects {model: character})
+		const wrappedChar = { model: character };
+		const attrs = new d20plus.importer.CharacterAttributesProxy(wrappedChar);
+
+		// Helper to calculate ability modifier
+		const calcMod = (score) => Math.floor((Number(score) - 10) / 2);
+
+		// Set ability scores using the 2014 character sheet format
+		const abilities = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"];
+		abilities.forEach(ability => {
+			const score = characterData.abilities?.[ability] || 10;
+			const mod = calcMod(score);
+
+			attrs.add(ability, score, score); // Set current and max
+			attrs.add(`${ability}_base`, `${score}`);
+			attrs.add(`${ability}_mod`, mod);
+		});
+
+		// Set basic character info
+		attrs.add("character_name", characterData.name || "");
+		attrs.add("class", characterData.class || "");
+		attrs.add("level", characterData.level || "1");
+		attrs.add("base_level", characterData.level || "1");
+		attrs.add("race", characterData.species || "");
+		attrs.add("background", characterData.background || "");
+		attrs.add("experience", characterData.experience || "0");
+
+		// Set combat stats
+		attrs.add("ac", characterData.ac || "10");
+		attrs.add("hp", characterData.currentHP || characterData.maxHP || "1", characterData.maxHP || "1");
+		attrs.add("hp_max", characterData.maxHP || "1");
+		attrs.add("speed", characterData.speed || "30");
+		attrs.add("initiative_bonus", characterData.initiative || calcMod(characterData.abilities?.dexterity || 10));
+		attrs.add("pb", characterData.proficiencyBonus || "2");
+
+		// Set hit dice
+		if (characterData.hitDice) {
+			attrs.add("hit_dice", characterData.hitDice);
+		}
+
+		// Set saving throw bonuses (calculated values from PDF)
+		if (characterData.savingThrowBonuses) {
+			Object.entries(characterData.savingThrowBonuses).forEach(([ability, bonus]) => {
+				attrs.add(`${ability}_save_bonus`, bonus);
+			});
+		}
+
+		// Set saving throw proficiencies (only for proficient saves)
+		if (characterData.savingThrows) {
+			Object.entries(characterData.savingThrows).forEach(([ability, proficient]) => {
+				if (proficient) {
+					// Set save type: 1 = proficient
+					attrs.add(`${ability}_save_prof_type`, "1");
+					// Set proficiency formula (just proficiency bonus, not multiplied by type)
+					attrs.add(`${ability}_save_prof`, `(@{pb})`);
+				}
+			});
+		}
+
+		// Set skill bonuses (calculated values from PDF)
+		if (characterData.skillBonuses) {
+			Object.entries(characterData.skillBonuses).forEach(([skill, bonus]) => {
+				attrs.add(`${skill}_bonus`, bonus);
+			});
+		}
+
+		// Set skill proficiencies (only for proficient skills)
+		if (characterData.skills) {
+			Object.entries(characterData.skills).forEach(([skill, proficient]) => {
+				if (proficient) {
+					// Set skill type: 1 = proficient, 2 = expertise
+					attrs.add(`${skill}_type`, "1");
+					// Set proficiency formula
+					attrs.add(`${skill}_prof`, `(@{pb}*@{${skill}_type})`);
+				}
+			});
+		}
+
+		// Set tool proficiencies in repeating_tool section
+		if (characterData.toolProficiencies) {
+			// Split by comma or newline and create separate rows
+			const tools = characterData.toolProficiencies.split(/[,\n]+/).map(t => t.trim()).filter(t => t);
+			tools.forEach(tool => {
+				const rowId = d20plus.ut.generateRowId();
+				attrs.add(`repeating_tool_${rowId}_toolname`, tool);
+				attrs.add(`repeating_tool_${rowId}_toolbonus_base`, "@{pb}");
+				attrs.add(`repeating_tool_${rowId}_options-flag`, "0");
+			});
+		}
+
+		// Set languages in repeating_proficiencies section
+		if (characterData.languages) {
+			// Split by comma or newline and create separate rows
+			const langs = characterData.languages.split(/[,\n]+/).map(l => l.trim()).filter(l => l);
+			langs.forEach(lang => {
+				const rowId = d20plus.ut.generateRowId();
+				attrs.add(`repeating_proficiencies_${rowId}_name`, lang);
+				attrs.add(`repeating_proficiencies_${rowId}_options-flag`, "0");
+			});
+		}
+
+		// Store weapons for later import from 5etools database
+		if (characterData.weapons && characterData.weapons.length > 0) {
+			character._dndbWeaponsToImport = characterData.weapons;
+		}
+
+		// Set currency
+		if (characterData.currency) {
+			if (characterData.currency.cp) attrs.add("cp", characterData.currency.cp);
+			if (characterData.currency.sp) attrs.add("sp", characterData.currency.sp);
+			if (characterData.currency.ep) attrs.add("ep", characterData.currency.ep);
+			if (characterData.currency.gp) attrs.add("gp", characterData.currency.gp);
+			if (characterData.currency.pp) attrs.add("pp", characterData.currency.pp);
+		}
+
+		// Store equipment for later import from 5etools database
+		if (characterData.equipment && characterData.equipment.length > 0) {
+			character._dndbEquipmentToImport = characterData.equipment;
+		}
+
+		// Add spells - store for async import after character is created
+		// We'll import these after the character is saved using the spell database
+		if (characterData.spells && characterData.spells.length > 0) {
+			// Store spells for later import
+			character._dndbSpellsToImport = characterData.spells;
+		}
+
+		// Set spell slots
+		if (characterData.spellSlots) {
+			Object.entries(characterData.spellSlots).forEach(([level, slots]) => {
+				attrs.add(`lvl${level}_slots_total`, slots);
+			});
+		}
+
+		// Set spellcasting info
+		if (characterData.spellcastingClass) {
+			attrs.add("spellcasting_class", characterData.spellcastingClass);
+		}
+		if (characterData.spellcastingAbility) {
+			attrs.add("spellcasting_ability", characterData.spellcastingAbility);
+		}
+		if (characterData.spellAttackBonus) {
+			attrs.add("spell_attack_bonus", characterData.spellAttackBonus);
+		}
+		if (characterData.spellSaveDC) {
+			attrs.add("spell_save_dc", characterData.spellSaveDC);
+		}
+
+		// Set personality traits
+		if (characterData.personality) {
+			if (characterData.personality.traits) {
+				attrs.add("personality_traits", characterData.personality.traits);
+			}
+			if (characterData.personality.ideals) {
+				attrs.add("ideals", characterData.personality.ideals);
+			}
+			if (characterData.personality.bonds) {
+				attrs.add("bonds", characterData.personality.bonds);
+			}
+			if (characterData.personality.flaws) {
+				attrs.add("flaws", characterData.personality.flaws);
+			}
+			if (characterData.personality.backstory) {
+				attrs.add("character_backstory", characterData.personality.backstory);
+			}
+		}
+
+		// Set bio info
+		if (characterData.age) attrs.add("age", characterData.age);
+		if (characterData.height) attrs.add("height", characterData.height);
+		if (characterData.weight) attrs.add("weight", characterData.weight);
+		if (characterData.eyes) attrs.add("eyes", characterData.eyes);
+		if (characterData.hair) attrs.add("hair", characterData.hair);
+		if (characterData.skin) attrs.add("skin", characterData.skin);
+		if (characterData.gender) attrs.add("gender", characterData.gender);
+		if (characterData.alignment) attrs.add("alignment", characterData.alignment);
+
+		// Set features and traits
+		if (characterData.featuresTraits) {
+			// Add as a single trait entry
+			const rowId = d20plus.ut.generateRowId();
+			attrs.add(`repeating_traits_${rowId}_name`, "Features & Traits");
+			attrs.add(`repeating_traits_${rowId}_description`, characterData.featuresTraits);
+			attrs.add(`repeating_traits_${rowId}_source`, "Class");
+		}
+
+		// Set player name
+		if (characterData.playerName) {
+			attrs.add("player_name", characterData.playerName);
+		}
+
+		// Set defenses (resistances/immunities)
+		if (characterData.defenses) {
+			attrs.add("damage_resistances", characterData.defenses);
+		}
+
+		// Set senses
+		if (characterData.senses) {
+			attrs.add("senses", characterData.senses);
+		}
+
+		// Set temp HP
+		if (characterData.tempHP) {
+			attrs.add("hp_temp", characterData.tempHP);
+		}
+
+		// Set current hit dice (if different from max)
+		if (characterData.currentHD) {
+			attrs.add("hit_dice_current", characterData.currentHD);
+		}
+
+		// Set inspiration
+		if (characterData.inspiration) {
+			attrs.add("inspiration", characterData.inspiration);
+		}
+
+		// Add class features/actions from Actions1 and Actions2
+		if (characterData.actions1 || characterData.actions2) {
+			const combinedActions = [characterData.actions1, characterData.actions2]
+				.filter(a => a)
+				.join('\n\n');
+
+			// Parse actions and add as features
+			const actionSections = combinedActions.split(/===\s*([^=]+)\s*===/);
+			for (let i = 1; i < actionSections.length; i += 2) {
+				const sectionName = actionSections[i].trim();
+				const sectionContent = actionSections[i + 1].trim();
+
+				if (sectionName !== 'ACTIONS' && sectionContent) {
+					// Split by feature (look for patterns like "Feature Name • Uses")
+					const features = sectionContent.split(/\n(?=[A-Z])/);
+					features.forEach(feature => {
+						if (feature.trim()) {
+							const rowId = d20plus.ut.generateRowId();
+							const lines = feature.trim().split('\n');
+							const name = lines[0].split('•')[0].trim();
+							const description = lines.slice(1).join('\n').trim() || feature;
+
+							attrs.add(`repeating_traits_${rowId}_name`, name);
+							attrs.add(`repeating_traits_${rowId}_description`, description);
+							attrs.add(`repeating_traits_${rowId}_source`, sectionName);
+						}
+					});
+				}
+			}
+		}
+
+		// Set ability save DC if present
+		if (characterData.abilitySaveDC) {
+			attrs.add("spell_save_dc", characterData.abilitySaveDC);
+		}
+
+		// Notify sheet workers of changes
+		attrs.notifySheetWorkers();
+
+		console.log("Character imported successfully:", character);
+		return character;
+	};
+
+	/**
+	 * Import equipment and weapons from D&D Beyond using the 5etools item database
+	 */
+	d20plus.importer.importDnDBeyondItems = async function(character, itemsToImport, weaponsToImport) {
+		if ((!itemsToImport || itemsToImport.length === 0) && (!weaponsToImport || weaponsToImport.length === 0)) {
+			return;
+		}
+
+		try {
+			// Load the item database
+			console.log("Loading item database...");
+			const itemList = await Renderer.item.pBuildList();
+
+			if (!itemList || itemList.length === 0) {
+				console.error("Failed to load item database");
+				return;
+			}
+
+			console.log(`Loaded ${itemList.length} items from database`);
+
+			// Create a map for quick lookup (case-insensitive)
+			const itemMap = new Map();
+			itemList.forEach(item => {
+				const key = item.name.toLowerCase().trim();
+				itemMap.set(key, item);
+			});
+
+			let importedCount = 0;
+			let fallbackCount = 0;
+			const notFoundItems = [];
+
+			// Import weapons first
+			if (weaponsToImport && weaponsToImport.length > 0) {
+				for (const pdfWeapon of weaponsToImport) {
+					const weaponName = pdfWeapon.name.trim();
+					const weaponKey = weaponName.toLowerCase();
+					const item5e = itemMap.get(weaponKey);
+
+					const rowId = d20plus.ut.generateRowId();
+
+					// Set weapon name and attack bonus from PDF
+					character.attribs.create({name: `repeating_attack_${rowId}_atkname`, current: weaponName});
+					character.attribs.create({name: `repeating_attack_${rowId}_atkbonus`, current: pdfWeapon.bonus || '+0'});
+
+					// Parse damage: "1d10+3" -> base: "1d10", bonus implicit in ability mod
+					// Extract just the dice part (before +/-)
+					const damageStr = pdfWeapon.damage || '1d4';
+					const diceMatch = damageStr.match(/^(\d+d\d+)/);
+					const baseDice = diceMatch ? diceMatch[1] : damageStr;
+
+					character.attribs.create({name: `repeating_attack_${rowId}_dmgbase`, current: baseDice});
+					character.attribs.create({name: `repeating_attack_${rowId}_dmgflag`, current: "{{damage=1}} {{dmg1flag=1}}"});
+
+					// Default ability modifier based on weapon name (fallback if not in database)
+					let dmgAttr = "0";
+					// Extract the bonus from PDF damage string to determine ability
+					const bonusMatch = damageStr.match(/([+-]\d+)/);
+					if (bonusMatch) {
+						const bonus = parseInt(bonusMatch[1]);
+
+						// Get ability scores from character attributes
+						const getDexScore = () => {
+							const attr = character.attribs.models.find(a => a.get('name') === 'dexterity');
+							return attr ? parseInt(attr.get('current')) : 10;
+						};
+						const getStrScore = () => {
+							const attr = character.attribs.models.find(a => a.get('name') === 'strength');
+							return attr ? parseInt(attr.get('current')) : 10;
+						};
+
+						const dexScore = getDexScore();
+						const strScore = getStrScore();
+
+						// Calculate ability modifiers from scores
+						const calcMod = (score) => Math.floor((score - 10) / 2);
+						const dexMod = calcMod(dexScore);
+						const strMod = calcMod(strScore);
+
+						// If bonus matches DEX mod, use DEX; otherwise check STR
+						if (bonus === dexMod) {
+							dmgAttr = "@{dexterity_mod}";
+						} else if (bonus === strMod) {
+							dmgAttr = "@{strength_mod}";
+						} else {
+							// Default to STR if bonus doesn't match either modifier
+							dmgAttr = "@{strength_mod}";
+						}
+					}
+
+					// If found in database, get damage type and other properties
+					if (item5e) {
+						const [notecontents, gmnotes] = d20plus.items._getHandoutData(item5e);
+						const r20json = JSON.parse(gmnotes);
+
+						// Set damage type from 5etools
+						if (item5e.dmgType) {
+							const dmgTypeMap = {
+								'P': 'Piercing',
+								'S': 'Slashing',
+								'B': 'Bludgeoning'
+							};
+							const dmgType = dmgTypeMap[item5e.dmgType] || item5e.dmgType;
+							character.attribs.create({name: `repeating_attack_${rowId}_dmgtype`, current: dmgType});
+						}
+
+						// Determine ability modifier for damage from database properties
+						// Finesse weapons can use DEX or STR, others usually use STR for melee, DEX for ranged
+						if (item5e.property) {
+							const hasFinesse = item5e.property.includes("F");
+							const isRanged = item5e.property.includes("T") || item5e.property.includes("A");
+
+							if (hasFinesse) {
+								dmgAttr = "@{dexterity_mod}"; // Finesse weapons typically use DEX
+							} else if (isRanged) {
+								dmgAttr = "@{dexterity_mod}";
+							} else {
+								dmgAttr = "@{strength_mod}";
+							}
+						}
+
+						// Build description with properties
+						let description = r20json.content || '';
+						if (item5e.property) {
+							const props = item5e.property.map(p => {
+								const propData = Renderer.item.getProperty(p);
+								return propData ? propData.name : p;
+							}).join(", ");
+							if (props) {
+								description = description ? `${description}\n\nProperties: ${props}` : `Properties: ${props}`;
+							}
+						}
+
+						if (description) {
+							character.attribs.create({name: `repeating_attack_${rowId}_atkdesc`, current: description});
+						}
+					} else {
+						console.warn(`Weapon not found in database, using PDF data only: ${weaponName}`);
+						notFoundItems.push(weaponName);
+						fallbackCount++;
+					}
+
+					// Set damage ability modifier (uses fallback determined above)
+					character.attribs.create({name: `repeating_attack_${rowId}_dmgattr`, current: dmgAttr});
+
+					importedCount++;
+				}
+			}
+
+			// Import equipment
+			if (itemsToImport && itemsToImport.length > 0) {
+				for (const pdfItem of itemsToImport) {
+					const itemName = pdfItem.name.trim();
+					const itemKey = itemName.toLowerCase();
+					const item5e = itemMap.get(itemKey);
+
+					const rowId = d20plus.ut.generateRowId();
+
+					if (!item5e) {
+						// Fall back to PDF data
+						console.warn(`Item not found in database, using PDF data: ${itemName}`);
+						notFoundItems.push(itemName);
+						fallbackCount++;
+
+						character.attribs.create({name: `repeating_inventory_${rowId}_itemname`, current: itemName});
+						character.attribs.create({name: `repeating_inventory_${rowId}_itemcount`, current: pdfItem.quantity || '1'});
+						if (pdfItem.weight) {
+							character.attribs.create({name: `repeating_inventory_${rowId}_itemweight`, current: pdfItem.weight});
+						}
+					} else {
+						// Use 5etools data
+						const [notecontents, gmnotes] = d20plus.items._getHandoutData(item5e);
+						const r20json = JSON.parse(gmnotes);
+
+						character.attribs.create({name: `repeating_inventory_${rowId}_itemname`, current: item5e.name});
+						character.attribs.create({name: `repeating_inventory_${rowId}_itemcount`, current: pdfItem.quantity || '1'});
+						if (item5e.weight) {
+							character.attribs.create({name: `repeating_inventory_${rowId}_itemweight`, current: String(item5e.weight)});
+						}
+						if (r20json.content) {
+							character.attribs.create({name: `repeating_inventory_${rowId}_itemcontent`, current: r20json.content});
+						}
+					}
+
+					importedCount++;
+				}
+			}
+
+			console.log(`D&D Beyond item import complete: ${importedCount} imported${fallbackCount > 0 ? ` (${fallbackCount} using PDF data)` : ''}`);
+			if (notFoundItems.length > 0) {
+				console.log("Items not found in database:", notFoundItems.join(", "));
+			}
+
+		} catch (error) {
+			console.error("Error importing D&D Beyond items:", error);
+		}
+	};
+
+	/**
+	 * Import spells from D&D Beyond using the 5etools spell database
+	 */
+	d20plus.importer.importDnDBeyondSpells = async function(character, spellsToImport) {
+		if (!spellsToImport || spellsToImport.length === 0) return;
+
+		try {
+			// Load the spell database
+			console.log("Loading spell database...");
+			const spellData = await DataUtil.spell.loadJSON();
+
+			if (!spellData || !spellData.spell) {
+				console.error("Failed to load spell database");
+				return;
+			}
+
+			console.log(`Loaded ${spellData.spell.length} spells from database`);
+
+			// Create a map for quick lookup (case-insensitive)
+			const spellMap = new Map();
+			spellData.spell.forEach(spell => {
+				const key = spell.name.toLowerCase().trim();
+				spellMap.set(key, spell);
+			});
+
+			// Import each spell
+			let importedCount = 0;
+			let fallbackCount = 0;
+			const notFoundSpells = [];
+
+			for (const pdfSpell of spellsToImport) {
+				const spellName = pdfSpell.name.trim();
+				const level = pdfSpell.level; // Roll20 uses 'cantrip', '1', '2', etc.
+
+				// Try to find spell in database, stripping common suffixes like [R] for Ritual
+				let spellKey = spellName.toLowerCase();
+				let spell5e = spellMap.get(spellKey);
+
+				// If not found, try stripping ritual/concentration markers
+				if (!spell5e) {
+					const cleanedName = spellName.replace(/\s*\[R\]\s*$/i, '').replace(/\s*\[C\]\s*$/i, '').trim();
+					spellKey = cleanedName.toLowerCase();
+					spell5e = spellMap.get(spellKey);
+				}
+
+				const rowId = d20plus.ut.generateRowId();
+
+				if (!spell5e) {
+					// Fall back to PDF data
+					console.warn(`Spell not found in database, using PDF data: ${spellName}`);
+					notFoundSpells.push(spellName);
+					fallbackCount++;
+
+					character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellname`, current: spellName});
+					if (pdfSpell.castingTime) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellcastingtime`, current: pdfSpell.castingTime});
+					}
+					if (pdfSpell.range) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellrange`, current: pdfSpell.range});
+					}
+					if (pdfSpell.components) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellcomp`, current: pdfSpell.components});
+					}
+					if (pdfSpell.duration) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellduration`, current: pdfSpell.duration});
+					}
+					if (pdfSpell.notes) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spelldescription`, current: pdfSpell.notes});
+					}
+					if (pdfSpell.prepared) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellprepared`, current: "1"});
+					}
+				} else {
+					// Use 5etools data
+					const [notecontents, gmnotes] = d20plus.spells._getHandoutData(spell5e);
+					const r20json = JSON.parse(gmnotes);
+
+					character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellname`, current: spell5e.name});
+
+					if (r20json.data["Casting Time"]) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellcastingtime`, current: r20json.data["Casting Time"]});
+					}
+					if (r20json.data["Range"]) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellrange`, current: r20json.data["Range"]});
+					}
+					if (r20json.data["Components"]) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellcomp`, current: r20json.data["Components"]});
+					}
+					if (r20json.data["Duration"]) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellduration`, current: r20json.data["Duration"]});
+					}
+					if (r20json.data["School"]) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellschool`, current: r20json.data["School"]});
+					}
+					if (r20json.content) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spelldescription`, current: r20json.content});
+					}
+					if (r20json.data["Ritual"]) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellritual`, current: "Yes"});
+					}
+					if (r20json.data["Concentration"]) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellconcentration`, current: "Yes"});
+					}
+					if (pdfSpell.prepared) {
+						character.attribs.create({name: `repeating_spell-${level}_${rowId}_spellprepared`, current: "1"});
+					}
+				}
+
+				importedCount++;
+			}
+
+			console.log(`D&D Beyond spell import complete: ${importedCount} imported${fallbackCount > 0 ? ` (${fallbackCount} using PDF data)` : ''}`);
+			if (notFoundSpells.length > 0) {
+				console.log("Spells not found in database:", notFoundSpells.join(", "));
+			}
+
+		} catch (error) {
+			console.error("Error importing D&D Beyond spells:", error);
 		}
 	};
 }

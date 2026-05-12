@@ -8,6 +8,9 @@ B20_REPO_URL = `%B20_REPO_URL%`;
 // TODO automate to use mirror if main site is unavailable
 BASE_SITE_URL = `%B20_BASE_URL%`; // "https://5e.tools/";
 
+// Separate URL for rendered links (book.html, etc.) - main site has CORS but HTML pages exist there
+LINK_BASE_URL = `https://5e.tools/`;
+
 SITE_JS_URL = `${BASE_SITE_URL}js/`;
 DATA_URL = `${BASE_SITE_URL}data/`;
 

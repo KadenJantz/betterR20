@@ -183,6 +183,8 @@ function d20plusVehicles () {
 					Parser.vehicleTypeToFull(data.vehicleType),
 					Parser.sourceJsonToFull(data.source),
 				], "vehicle"),
+				// Force use of OGL 5e sheet (works in both 2014 and 2024 games)
+				charactersheetname: "ogl5e",
 			},
 			{
 				success: function (character) {
@@ -195,7 +197,7 @@ function d20plusVehicles () {
 						character.hp = data.hp;
 
 						const renderer = new Renderer();
-						renderer.setBaseUrl(BASE_SITE_URL);
+						renderer.setBaseUrl(LINK_BASE_URL);
 
 						character.attribs.create({name: "npc", current: 1});
 						character.attribs.create({name: "npc_options-flag", current: "on"});

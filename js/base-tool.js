@@ -696,6 +696,110 @@ function baseTool () {
 					});
 			},
 		},
+		{
+			name: "Upload D&D Beyond Character",
+			desc: "Import a D&D Beyond character sheet from a PDF export.",
+			html: `
+				<div id="d20plus-dndbeyond-import" title="BetteR20 - D&D Beyond Importer">
+					<p>Upload a PDF export from D&D Beyond to import a character sheet.</p>
+					<p style="margin-top: 10px;">
+						<input type="file" id="dndb-pdf-upload" accept=".pdf" style="width: 100%;"/>
+					</p>
+					<hr>
+					<div id="dndb-import-status" style="margin-top: 10px; min-height: 100px;">
+						<p>Select a PDF file to begin import.</p>
+					</div>
+					<hr>
+					<p style="margin-top: 10px;">
+						<button id="dndb-btn-import" class="btn" disabled>Import Character</button>
+					</p>
+				</div>
+			`,
+			dialogFn: () => {
+				$("#d20plus-dndbeyond-import").dialog({
+					autoOpen: false,
+					resizable: true,
+					width: 600,
+					height: 500,
+				});
+			},
+			openFn: async function() {
+				const $win = $("#d20plus-dndbeyond-import");
+				$win.dialog("open");
+
+				const $fileInput = $("#dndb-pdf-upload");
+				const $status = $("#dndb-import-status");
+				const $btnImport = $("#dndb-btn-import");
+
+				let characterData = null;
+
+				// Initialize PDF.js (bundled in build)
+				try {
+					await d20plus.importer.loadPdfJs();
+				} catch (error) {
+					console.error("Error initializing PDF.js:", error);
+					$status.html(`<p style="color: red;">PDF library not available: ${error.message}</p>`);
+					return;
+				}
+
+				// Handle file selection
+				$fileInput.off("change").on("change", async function(e) {
+					const file = e.target.files[0];
+					if (!file) return;
+
+					$status.html("<p>Reading PDF...</p>");
+					$btnImport.prop("disabled", true);
+
+					try {
+						// Read the PDF file
+						const arrayBuffer = await file.arrayBuffer();
+
+						// Parse the PDF and extract character data
+						characterData = await d20plus.importer.parseDnDBeyondPDF(arrayBuffer);
+
+						// Display extracted data
+						$status.html(`
+							<p><strong>Character Found:</strong></p>
+							<ul style="margin-left: 20px;">
+								<li><strong>Name:</strong> ${characterData.name || "Unknown"}</li>
+								<li><strong>Class:</strong> ${characterData.class || "Unknown"}</li>
+								<li><strong>Level:</strong> ${characterData.level || "1"}</li>
+								<li><strong>Species:</strong> ${characterData.species || "Unknown"}</li>
+							</ul>
+							<p style="margin-top: 10px; color: green;">Ready to import!</p>
+						`);
+
+						$btnImport.prop("disabled", false);
+					} catch (error) {
+						console.error("Error parsing PDF:", error);
+						$status.html(`<p style="color: red;">Error reading PDF: ${error.message}</p>`);
+						$btnImport.prop("disabled", true);
+					}
+				});
+
+				// Handle import button
+				$btnImport.off("click").on("click", async function() {
+					if (!characterData) {
+						alert("No character data loaded!");
+						return;
+					}
+
+					$btnImport.prop("disabled", true);
+					$status.html("<p>Creating character in Roll20...</p>");
+
+					try {
+						await d20plus.importer.importDnDBeyondCharacter(characterData);
+						$status.html("<p style='color: green;'>Character imported successfully!</p>");
+						alert("Character imported successfully!");
+					} catch (error) {
+						console.error("Error importing character:", error);
+						$status.html(`<p style="color: red;">Error importing: ${error.message}</p>`);
+						alert(`Error importing character: ${error.message}`);
+						$btnImport.prop("disabled", false);
+					}
+				});
+			},
+		},
 	];
 
 	d20plus.tool.get = (toolId) => {

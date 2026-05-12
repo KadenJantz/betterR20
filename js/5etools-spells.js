@@ -160,7 +160,7 @@ function d20plusSpells () {
 		const renderer = new Renderer();
 		const renderStack = [];
 		const entryList = {type: "entries", entries: data.entries};
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 		renderer.recursiveRender(entryList, renderStack, {depth: 1});
 		r20json.content = d20plus.importer.getCleanText(renderStack.join(" "));
 		r20json.data["data-description"] = r20json.content;

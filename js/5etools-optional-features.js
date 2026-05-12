@@ -59,7 +59,7 @@ function d20plusOptionalFeatures () {
 
 	d20plus.optionalfeatures._getHandoutData = function (data) {
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 
 		const renderStack = [];
 
@@ -84,7 +84,7 @@ function d20plusOptionalFeatures () {
 	d20plus.optionalfeatures.importOptionalFeature = function (character, data) {
 		const optionalFeature = data.Vetoolscontent;
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 		const rendered = renderer.render({entries: optionalFeature.entries});
 		const optionalFeatureText = d20plus.importer.getCleanText(rendered);
 

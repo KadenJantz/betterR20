@@ -73,14 +73,14 @@ function d20plusAdventure () {
 		});
 
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 
 		const $stsName = $("#import-name");
 		const $stsRemain = $("#import-remaining");
 		const interval = d20plus.cfg.get("import", "importIntervalHandout") || d20plus.cfg.getDefault("import", "importIntervalHandout");
 
 		/// /////////////////////////////////////////////////////////////////////////////////////////////////////
-		Renderer.get().setBaseUrl(BASE_SITE_URL);
+		Renderer.get().setBaseUrl(LINK_BASE_URL);
 		// pre-import tags
 		const tags = {};
 		renderer.doExportTags(tags);

@@ -215,7 +215,14 @@ function d20plusMonsters () {
 			.map(src => d20plus.monsters.formMonsterUrl(monsterDataUrls[src]));
 
 		if (toLoad.length) {
-			const dataStack = (await Promise.all(toLoad.map(async url => DataUtil.loadJSON(url)))).flat();
+			const dataStack = (await Promise.all(toLoad.map(async url => {
+				try {
+					return await DataUtil.loadJSON(url);
+				} catch (e) {
+					console.warn(`betteR20: Failed to load monster data from ${url} - skipping. Error:`, e.message);
+					return [];
+				}
+			}))).flat();
 
 			let toShow = [];
 
@@ -301,7 +308,7 @@ function d20plusMonsters () {
 			const pType = Parser.monTypeToFullObj(data.type);
 
 			const renderer = new Renderer();
-			renderer.setBaseUrl(BASE_SITE_URL);
+			renderer.setBaseUrl(LINK_BASE_URL);
 
 			let fluff;
 			if (data.fluff) fluff = data.fluff;
@@ -1491,6 +1498,8 @@ function d20plusMonsters () {
 						...(data.environment || []),
 						data.isNPC ? "npc" : undefined,
 					], "creature"),
+					// Force use of OGL 5e sheet (works in both 2014 and 2024 games)
+					charactersheetname: "ogl5e",
 					...options.charOptions,
 				},
 				{

@@ -34,6 +34,7 @@ const betteR20Core = function () {
 			d20plus.ui.addHtmlHeader();
 			d20plus.ui.addHtmlFooter();
 			d20plus.art.initArtFromUrlButtons();
+			if (d20plus.characterIo && d20plus.characterIo.initCharacterJsonButtons) d20plus.characterIo.initCharacterJsonButtons();
 			if (window.is_gm) {
 				d20plus.journal.addJournalCommands();
 				d20plus.menu.addSelectedTokenCommands();
@@ -48,6 +49,7 @@ const betteR20Core = function () {
 				d20plus.remoteLibre.init();
 				d20plus.jukeboxWidget.init();
 			}
+			d20plus.engine.fixHandleHtmlInput();
 			d20plus.engine.enhancePathWidths();
 			// d20plus.ut.fix3dDice(); // FIXME(165) re-enable when we have a better solution
 			d20plus.engine.addLayers();

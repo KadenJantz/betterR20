@@ -34,8 +34,12 @@ function baseToolModule () {
 					<div name="selection-summary" style="margin-top: 5px;"></div>
 				</div>
 				<hr>
-				<p><button class="btn" style="float: right;" name="import">Import Selected</button></p>
-				</div>
+<p>
+    <label style="display: inline-block; padding-top: 4px;">
+        <input type="checkbox" name="force-ogl5e"> Force OGL 5e Sheet for Characters
+    </label>
+    <button class="btn" style="float: right;" name="import">Import Selected</button>
+</p>				</div>
 
 				<div id="d20plus-module-importer-list" title="Select Entries">
 					<div id="module-importer-list">
@@ -145,6 +149,7 @@ function baseToolModule () {
 
 			const $win = $("#d20plus-module-importer");
 			$win.dialog("open");
+			const $cbForceOgl = $win.find(`[name="force-ogl5e"]`);
 
 			const $winProgress = $(`#d20plus-module-importer-progress`);
 			const $btnCancel = $winProgress.find(".cancel").off("click");
@@ -184,6 +189,33 @@ function baseToolModule () {
 			});
 
 			let selected = getFreshSelected();
+
+			function preprocessModuleData (data) {
+				// Recursively fix all S3 URLs in the module data
+				const fixUrlsInObject = (obj) => {
+					if (!obj || typeof obj !== "object") return;
+
+					// Fix common image URL properties
+					if (obj.imgsrc) obj.imgsrc = d20plus.ut.fixS3Url(obj.imgsrc);
+					if (obj.sides) obj.sides = d20plus.ut.fixS3Url(obj.sides);
+					if (obj.avatar) obj.avatar = d20plus.ut.fixS3Url(obj.avatar);
+					if (obj.thumbnail) obj.thumbnail = d20plus.ut.fixS3Url(obj.thumbnail);
+
+					// Recursively process nested objects and arrays
+					for (const key in obj) {
+						if (obj.hasOwnProperty(key) && obj[key]) {
+							if (Array.isArray(obj[key])) {
+								obj[key].forEach(item => fixUrlsInObject(item));
+							} else if (typeof obj[key] === "object") {
+								fixUrlsInObject(obj[key]);
+							}
+						}
+					}
+				};
+
+				fixUrlsInObject(data);
+				return data;
+			}
 
 			function handleLoadedData (data) {
 				lastLoadedData = data;
@@ -369,12 +401,51 @@ function baseToolModule () {
 								switch (prop) {
 									case "maps": {
 										const map = d20.Campaign.pages.create(entry.attributes);
-										entry.graphics.forEach(it => map.thegraphics.create(it));
-										entry.paths.forEach(it => map.thepaths.create(it));
-										entry.text.forEach(it => map.thetexts.create(it));
-										entry.doors?.forEach(it => map.doors.create(it));
-										entry.windows?.forEach(it => map.windows.create(it));
 										map.save();
+
+										// Wait for Roll20 to initialize, then add graphics
+										setTimeout(async () => {
+											const savedMap = d20.Campaign.pages.get(map.id);
+											if (!savedMap) return;
+
+											// Roll20 creates thegraphics on page load, not page creation
+											// We need to fully load the page to initialize thegraphics
+											if (!savedMap.thegraphics) {
+												await savedMap.fullyLoadPage();
+											}
+
+											// Helper to fix S3 URLs to files.d20.io
+											const fixImageUrls = (obj) => {
+												if (obj.imgsrc) obj.imgsrc = d20plus.ut.fixS3Url(obj.imgsrc, false);
+												if (obj.sides) obj.sides = d20plus.ut.fixS3Url(obj.sides, false);
+												if (obj.avatar) obj.avatar = d20plus.ut.fixS3Url(obj.avatar, false);
+											};
+
+											// Process graphics with URL fixes
+											entry.graphics?.forEach(it => {
+												fixImageUrls(it);
+												it.page_id = savedMap.id;
+												savedMap.thegraphics && savedMap.thegraphics.create(it);
+											});
+
+											// Process other elements
+											entry.paths?.forEach(it => {
+												it.page_id = savedMap.id;
+												savedMap.thepaths && savedMap.thepaths.create(it);
+											});
+											entry.text?.forEach(it => {
+												it.page_id = savedMap.id;
+												savedMap.thetexts && savedMap.thetexts.create(it);
+											});
+											entry.doors?.forEach(it => {
+												it.page_id = savedMap.id;
+												savedMap.doors && savedMap.doors.create(it);
+											});
+											entry.windows?.forEach(it => {
+												it.page_id = savedMap.id;
+												savedMap.windows && savedMap.windows.create(it);
+											});
+										}, 100);
 										break;
 									}
 									case "rolltables": {
@@ -409,23 +480,50 @@ function baseToolModule () {
 										break;
 									}
 									case "characters": {
-										d20.Campaign.characters.create(entry.attributes,
+										const forceOgl = $cbForceOgl.prop("checked");
+										const charAttrs = forceOgl ? {...entry.attributes, charactersheetname: "ogl5e"} : {...entry.attributes};
+
+										// 1. Save the old Character ID before we delete it!
+										const oldCharId = charAttrs.id;
+										delete charAttrs.id;
+
+										d20.Campaign.characters.create(charAttrs,
 											{
 												success: function (character) {
+													const newCharId = character.id;
+
+													// 2. THE VTTES TRICK: Global String Replace for Attributes
+													let attribsStr = JSON.stringify(entry.attribs);
+													attribsStr = attribsStr.split(oldCharId).join(newCharId); // Safe global replace
+													const rebasedAttribs = JSON.parse(attribsStr);
+
+													// 3. THE VTTES TRICK: Global String Replace for Default Token
+													let tokenStr = entry.blobDefaultToken;
+													if (tokenStr) {
+														tokenStr = tokenStr.split(oldCharId).join(newCharId);
+													}
+
+													// Proceed with saving using the rebased data
 													character.attribs.reset();
-													const toSave = entry.attribs.map(a => character.attribs.push(a));
+													const toSave = rebasedAttribs.map(a => character.attribs.push(a));
 													toSave.forEach(s => s.syncedSave());
 
-													character.abilities.reset();
-													if (entry.abilities) entry.abilities.map(a => character.abilities.push(a)).forEach(s => s.save());
+													character.abilities.fetch({
+														success: function () {
+															character.abilities.models.slice().forEach(ability => ability.destroy());
+															if (d20plus.cfg.getOrDefault("import", "tokenactions")) {
+																d20plus.importer._createTokenActionsFromCharacter(character);
+															}
+														},
+													});
 
 													character.updateBlobs({
 														bio: entry.blobBio,
 														gmnotes: entry.blobGmNotes,
-														defaulttoken: entry.blobDefaultToken,
+														defaulttoken: tokenStr, // Use the rebased token!
 													});
 
-													addToJournal(entry.attributes.id, character.id);
+													addToJournal(oldCharId, newCharId);
 												},
 											},
 										);
@@ -499,6 +597,7 @@ function baseToolModule () {
 						DataUtil.loadJSON(`${DATA_URL_MODULES}/roll20-module-${sel.id.toLowerCase()}.json`)
 							.then(moduleFile => {
 								$wrpDataLoadingMessage.html("");
+								preprocessModuleData(moduleFile);
 								return handleLoadedData(moduleFile);
 							})
 							.catch(e => {
@@ -556,9 +655,10 @@ function baseToolModule () {
 						$win.dialog("open");
 						$wrpDataLoadingMessage.html("<i>Loading...</i>");
 						// Load the chosen module
-						DataUtil.loadJSON(`${urlbase}${sel.filename}`)
+						DataUtil.loadJSON(`${urlbase}${encodeURIComponent(sel.filename)}`)
 							.then(moduleFile => {
 								$wrpDataLoadingMessage.html("");
+								preprocessModuleData(moduleFile);
 								return handleLoadedData(moduleFile);
 							})
 							.catch(e => {
@@ -580,7 +680,10 @@ function baseToolModule () {
 			$btnLoadFile.off("click").click(async () => {
 				const data = await InputUiUtil.pGetUserUploadJson();
 				// Due to the new util functon, need to account for data being an array
-				data.jsons.forEach(d => handleLoadedData(d));
+				data.jsons.forEach(d => {
+					preprocessModuleData(d);
+					handleLoadedData(d);
+				});
 			});
 
 			const $winExportP1 = $("#d20plus-module-importer-select-exports-p1");
@@ -618,6 +721,11 @@ function baseToolModule () {
 						// eslint-disable-next-line no-console
 						console.log("Exporting maps..."); // shoutouts to Stormy
 						maps = await Promise.all(d20.Campaign.pages.models.map(async map => {
+							// Ensure the page is fully loaded so we get all graphics/elements
+							if (!map.thegraphics) {
+								await map.fullyLoadPage();
+							}
+
 							const getOut = () => {
 								return {
 									attributes: map.attributes,

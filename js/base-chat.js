@@ -549,7 +549,7 @@ function baseChat () {
 				const value = `value="${addressee.name}"`;
 				result += `<option ${value}>${option}</option>`;
 				return result;
-			}, `<option value="">All</option><option value="ttms">None</option>`);
+			}, `<option value="">All</option><option value="ttms">None</option><option value="GM">GM</option>`);
 		})());
 		$speakingTo.val(prev);
 	}

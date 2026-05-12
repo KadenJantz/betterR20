@@ -84,7 +84,7 @@ function d20plusPsionics () {
 		}
 
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 		const r20json = {
 			"name": data.name,
 			"Vetoolscontent": data,
@@ -107,7 +107,7 @@ function d20plusPsionics () {
 
 	d20plus.psionics.importPsionicAbility = function (character, data) {
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 
 		const attrs = new d20plus.importer.CharacterAttributesProxy(character);
 		data = data.Vetoolscontent;

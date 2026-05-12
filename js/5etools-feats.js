@@ -59,7 +59,7 @@ function d20plusFeats () {
 
 	d20plus.feats._getHandoutData = function (data) {
 		const renderer = new Renderer();
-		renderer.setBaseUrl(BASE_SITE_URL);
+		renderer.setBaseUrl(LINK_BASE_URL);
 		const prerequisite = Renderer.utils.prerequisite.getHtml(data.prerequisite);
 		Renderer.feat.initFullEntries(data);
 

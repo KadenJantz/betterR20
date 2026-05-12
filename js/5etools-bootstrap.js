@@ -11,7 +11,7 @@ const betteR205etools = function () {
 			d20plus.ut.addAllCss();
 			if (window.is_gm) {
 				d20plus.ut.log("Is GM");
-				d20plus.engine.enhancePageSelector();
+				// d20plus.engine.enhancePageSelector();
 			} else d20plus.ut.log("Not GM. Some functionality will be unavailable.");
 
 			d20plus.setSheet();
@@ -22,15 +22,18 @@ const betteR205etools = function () {
 			JqueryUtil.initEnhancements();
 			await loadHomebrewMetadata();
 
-			await d20plus.pAddJson();
-			await monkeyPatch5etoolsCode();
-
+			// Load config first so custom base URL is available
 			if (window.is_gm) await d20plus.cfg.pLoadConfig();
 			else await d20plus.cfg.pLoadPlayerConfig();
 
 			d20plus.ut.showLoadingMessage();
 
+			// Update URLs from config before loading JSON data
 			d20plus.cfg5e.updateBaseSiteUrl();
+			await monkeyPatch5etoolsCode();
+
+			// Now load JSON using the configured URLs
+			await d20plus.pAddJson();
 
 			if (window.is_gm) await d20plus.art.pLoadArt();
 
@@ -43,37 +46,39 @@ const betteR205etools = function () {
 			d20plus.engine.enhanceMarkdown();
 			d20plus.engine.addProFeatures();
 			d20plus.art.initArtFromUrlButtons();
+			if (d20plus.characterIo && d20plus.characterIo.initCharacterJsonButtons) d20plus.characterIo.initCharacterJsonButtons();
 			if (window.is_gm) {
 				d20plus.journal.addJournalCommands();
 				d20plus.menu.addSelectedTokenCommands();
 				d20plus.art.addCustomArtSearch();
-				d20plus.engine.addTokenHover();
+				// d20plus.engine.addTokenHover();
 				d20plus.engine.enhanceTransmogrifier();
 				d20plus.engine.removeLinkConfirmation();
 				d20plus.artBrowse.initRepoBrowser();
-				d20plus.ui.addQuickUiGm();
+				// d20plus.ui.addQuickUiGm();
 				d20plus.anim.animatorTool.init();
 				// Better20 jukebox tab
 				d20plus.remoteLibre.init();
 				d20plus.jukeboxWidget.init();
 			}
-			d20.Campaign.pages.each(d20plus.bindGraphics);
-			d20.Campaign.activePage().collection.on("add", d20plus.bindGraphics);
-			d20plus.engine.enhanceStatusEffects();
-			d20plus.engine.enhanceMouseDown();
-			d20plus.engine.enhanceMouseMove();
+			d20plus.engine.fixHandleHtmlInput();
+			// d20.Campaign.pages.each(d20plus.bindGraphics);
+			// d20.Campaign.activePage().collection.on("add", d20plus.bindGraphics);
+			// d20plus.engine.enhanceStatusEffects();
+			// d20plus.engine.enhanceMouseDown();
+			// d20plus.engine.enhanceMouseMove();
 			// It doesn't work with current version of roll20
 			// d20plus.engine.addLineCutterTool();
 			d20plus.engine.enhancePathWidths();
 			// d20plus.ut.fix3dDice(); // FIXME(165) re-enable when we have a better solution
-			d20plus.engine.addLayers();
-			d20plus.weather.addWeather();
-			d20plus.engine.repairPrototypeMethods();
-			d20plus.engine.disableFrameRecorder();
-			d20plus.engine.fixPolygonTool();
+			// d20plus.engine.addLayers();
+			// d20plus.weather.addWeather();
+			// d20plus.engine.repairPrototypeMethods();
+			// d20plus.engine.disableFrameRecorder();
+			// d20plus.engine.fixPolygonTool();
 			// d20plus.ut.fixSidebarLayout();
 			d20plus.chat.enhanceChat();
-			d20plus.ba.initBetterActions();
+			// d20plus.ba.initBetterActions();
 
 			// Clear BrewUtil cache
 			BrewUtil2._storage = new StorageUtilMemory();
@@ -82,6 +87,8 @@ const betteR205etools = function () {
 			if (window.is_gm) {
 				d20plus.cfg.baseHandleConfigChange();
 				d20plus.cfg5e.handleConfigChange();
+				// Initialize auto-backup system (GM only)
+				d20plus.autoBackup.init();
 			} else {
 				d20plus.cfg.startPlayerConfigHandler();
 			}
@@ -114,7 +121,7 @@ const betteR205etools = function () {
 	async function monkeyPatch5etoolsCode () {
 		IS_VTT = true; // global variable from 5etools' utils.js
 
-		Renderer.get().setBaseUrl(BASE_SITE_URL);
+		Renderer.get().setBaseUrl(LINK_BASE_URL);
 	}
 };
 

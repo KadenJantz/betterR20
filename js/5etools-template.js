@@ -291,6 +291,8 @@ const d20plusTemplate = function () {
 		})
 
 		// bind tokens button
+		const $btnImportCharacter = $(`<button id="b20-import-character" class="btn" title="Import a character from JSON">Import Character</button>`);
+		$btnImportCharacter.on("click", () => d20plus.characterIo && d20plus.characterIo.importCharacterFromJson && d20plus.characterIo.importCharacterFromJson());
 		const altBindButton = $(`<button id="bind-drop-locations-alt" class="btn bind-drop-locations" title="Bind drop locations and handouts">Bind Drag-n-Drop</button>`);
 		altBindButton.on("click", function () {
 			d20plus.bindDropLocations();
@@ -298,8 +300,10 @@ const d20plusTemplate = function () {
 
 		if (window.is_gm) {
 			const $addPoint = $(`#journal button.btn.superadd`);
+			$btnImportCharacter.css("margin-right", "5px");
 			altBindButton.css("margin-right", "5px");
 			$addPoint.after(altBindButton);
+			$addPoint.after($btnImportCharacter);
 		} else {
 			altBindButton.css("margin-top", "5px");
 			const $wrprControls = $(`#search-wrp-controls`);
